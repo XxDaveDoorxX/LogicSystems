@@ -17,6 +17,9 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Black.eot" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Black.ttf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Black.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Bold.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Bold.woff" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Light.eot" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Light.ttf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Light.woff" />
@@ -49,6 +52,13 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/ionicons.eot" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/ionicons.ttf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/ionicons.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/alianza-comercial.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/slider.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/team-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/team-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/team-3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/team-4.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/fonts/Arimo-Regular.eot" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/fonts/Arimo-Regular.ttf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/fonts/Arimo-Regular.woff" />
@@ -83,6 +93,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/animate.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/default.css" />
@@ -92,6 +103,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Oswald-Medium.svg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Oswald-Regular.svg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Bold.svg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Light.svg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Medium.svg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Regular.svg" />
@@ -101,6 +113,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery.fancybox.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery.fancybox.min.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/owl.carousel.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/responsive.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/responsive.css.map" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/scrolling-nav.css" />
@@ -125,8 +138,12 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/main - copia.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/map-dark.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/owl.carousel.min.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/scrolling-nav.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/slick.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/wow.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/default.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/default.css.map" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/default.scss" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/font-awesome.min.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/fonts/Arimo-Regular.svg" />
@@ -138,6 +155,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/fonts/Raleway-Regular.svg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/fonts/Raleway-SemiBold.svg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/responsive.css.map" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/responsive.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -150,31 +169,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="193" column="8" lean-forward="false" selection-start-line="193" selection-start-column="8" selection-end-line="193" selection-end-column="8" />
+            <state relative-caret-position="306">
+              <caret line="328" column="69" lean-forward="false" selection-start-line="328" selection-start-column="69" selection-end-line="328" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/default.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-575">
-              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="responsive.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/responsive.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="265" column="23" lean-forward="false" selection-start-line="265" selection-start-column="23" selection-end-line="265" selection-end-column="23" />
+            <state relative-caret-position="414">
+              <caret line="442" column="43" lean-forward="false" selection-start-line="442" selection-start-column="43" selection-end-line="442" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -192,10 +201,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>class=&quot;team&quot;</find>
+      <find>class=&quot;product&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>product</replace>
       <replace>class=&quot;product&quot;</replace>
+      <replace>class=&quot;event&quot;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -205,10 +216,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/scss/responsive.scss" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/scss/default.scss" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -251,34 +262,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="logicsystem" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logicsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logicsystem" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logicsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logicsystem" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,16 +359,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495474631674</updated>
-      <workItem from="1495474633502" duration="9219000" />
+      <workItem from="1495474633502" duration="16125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9219000" />
+    <option name="totallyTimeSpent" value="16125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -427,11 +409,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="211" column="51" lean-forward="true" selection-start-line="211" selection-start-column="51" selection-end-line="211" selection-end-column="51" />
+        <state relative-caret-position="297">
+          <caret line="228" column="20" lean-forward="false" selection-start-line="228" selection-start-column="20" selection-end-line="228" selection-end-column="20" />
           <folding>
-            <marker date="1495481417901" expanded="true" signature="3957:3986" ph="..." />
-            <marker date="1495481417901" expanded="true" signature="7591:7620" ph="..." />
+            <marker date="1495490399656" expanded="true" signature="3957:3986" ph="..." />
+            <marker date="1495490399656" expanded="true" signature="7591:7620" ph="..." />
           </folding>
         </state>
       </provider>
@@ -444,18 +426,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/scss/default.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="193" column="8" lean-forward="false" selection-start-line="193" selection-start-column="8" selection-end-line="193" selection-end-column="8" />
+        <state relative-caret-position="414">
+          <caret line="442" column="43" lean-forward="false" selection-start-line="442" selection-start-column="43" selection-end-line="442" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/default.scss">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-575">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        <state relative-caret-position="306">
+          <caret line="328" column="69" lean-forward="false" selection-start-line="328" selection-start-column="69" selection-end-line="328" selection-end-column="69" />
           <folding />
         </state>
       </provider>

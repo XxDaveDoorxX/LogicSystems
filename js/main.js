@@ -205,7 +205,7 @@ $(document).ready(function () {
 
 
 /*-----------------------------------------------------------------------------------*/
-/* 		Team Slider
+/* 		PRODUCTS Slider
  /*-----------------------------------------------------------------------------------*/
 $(document).ready(function() {
     $("#owl-products").owlCarousel({
@@ -220,3 +220,34 @@ $(document).ready(function() {
         navigationText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
     });
 });
+
+
+/*-----------------------------------------------------------------------------------*/
+/* 		EVENTS Slider
+ /*-----------------------------------------------------------------------------------*/
+$(document).ready(function() {
+    $("#owl-events").owlCarousel({
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+        items : 3,
+        itemsDesktop : [1199,2],
+        itemsDesktopSmall : [979,2],
+        slideBy: 4,
+        stopOnHover : true,
+        navigation : true, // Show next and prev buttons
+        pagination : false,
+        navigationText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+    });
+});
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/* 	ANIMATION
+ /*-----------------------------------------------------------------------------------*/
+var wow = new WOW({
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       100,          // distance to the element when triggering the animation (default is 0)
+    mobile:       false        // trigger animations on mobile devices (true is default)
+});
+wow.init();
