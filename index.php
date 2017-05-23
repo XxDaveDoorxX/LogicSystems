@@ -308,7 +308,7 @@
                                     <div class="col-xs-12 col-sm-7 col-md-7">
                                         <div class="form-group">
                                             <div class="captcha">
-                                                <div id="recaptchaContacto"></div>
+                                                <div id="recaptchaFooter"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -325,13 +325,41 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <i class="fa fa-phone-square" aria-hidden="true"></i>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="row info">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <a href="tel:9999280005"> <i class="fa fa-phone-square fa-fw" aria-hidden="true"></i> &nbsp;(999) 928-0005</a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <a href="mailto:info@logicsystems.com.mx"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> &nbsp;info@logicsystems.com.mx</a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <a href="javascript:;">
+                            <table>
+                                <tr>
+                                    <td><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i> &nbsp;</td>
+                                    <td>
+                                        Calle 70 #422 por 45 y 47, Centro, C.P. 97000<br>
+                                        Mérida, Yucatán, México.
+                                    </td>
+                                </tr>
+                            </table>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <a href=""><i class="fa fa-facebook-square fa-fw" aria-hidden="true"></i> &nbsp;LogicSystemsMX</a>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="logo-footer">
+                            <img src="images/logo_footer.png" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div>
-
+            <div class="copyright">
+                <p>© Copyright 2017 Logic Systems. Todos los derechos reservados. |  <a href="">Aviso de privacidad</a>.</p>
             </div>
         </div>
     </div>
@@ -357,5 +385,17 @@
 
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <script src="js/main.js"></script>
+
+
+<script type="text/javascript">
+    var widgetIdP;
+    var widgetIdF;
+    var onloadCallback = function() {
+        widgetIdF = grecaptcha.render('recaptchaFooter', {
+            'sitekey' : '6LfMLREUAAAAALlMy1l66mbpk7rwPgzMCMWlimCf'
+        });
+    };
+</script>
+
 </body>
 </html>
