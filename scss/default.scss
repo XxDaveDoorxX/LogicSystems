@@ -500,6 +500,57 @@ a:active,a:focus{outline: none;
 #recaptchaFooter{transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;}
 
 
+
+
+/*=======================================================
+                PRODUCTS
+========================================================*/
+
+#bg-product{
+  background: url(../images/bg-product.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: 0 0;
+}
+
+.product-item{
+  padding: 10%;
+}
+
+.info-product {
+  text-align: center;
+  color: #fff;
+  font-family: "Raleway light", sans-serif;
+}
+.info-product h1 {
+  font-size: 36px;
+}
+.info-product p span {
+  font-family: 'Raleway-Bold' , sans-serif;
+  font-size: 20px;
+}
+.info-product p {
+  font-size: 20px;
+}
+
+.btn-row-produc-demo{
+  text-align: center;
+}
+
+.btn-demo-product{
+  display: block;
+  font-family: "Raleway Light";
+  font-size: 23px;
+  text-align: center;
+  color: #ffffff;
+  width: 300px;
+  margin: auto;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin-top: 25px;
+  padding: 6px 0;
+}
+
 /*=======================================================
                 PAGE THANK YOU
 ========================================================*/

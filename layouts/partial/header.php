@@ -1,3 +1,8 @@
+<?php
+if (!isset($statnav)) {
+    $statnav = array("active","","","","","","");
+}
+?>
 <header>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -19,11 +24,11 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="active">
+                    <li class="<?php echo $statnav[0]; ?>">
                         <a href=".">Inicio</a>
                     </li>
-                    <li>
-                        <a href="">Productos</a>
+                    <li class="<?php echo $statnav[1]; ?>">
+                        <a href="productos">Productos</a>
                     </li>
                     <li>
                         <a href="">Servicios</a>
