@@ -99,6 +99,9 @@ section {
   padding: 22px 18px;
   /*modificado*/ }
 
+.nav > li > a > i {
+  font-size: 23px; }
+
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #169fd8;
   background-color: transparent; }
