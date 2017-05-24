@@ -1,0 +1,366 @@
+<?php
+include_once('../../Class/Seguridad.php');
+$seguridad = new Seguridad();
+$seguridad->candado();
+
+require_once('../../Class/Product.php');
+
+$tmpproduct = new Product(0,'','','','','','');
+$products = $tmpproduct->listar();
+
+
+
+// ** Tabla de imagenes **//
+$tabla = include('tabla_imagenes.php');
+// ** ** //
+
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- META SECTION -->
+    <title>LOGIC SYSTEMS - Listado de Productos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- END META SECTION -->
+
+    <!-- CSS INCLUDE -->
+    <link rel="stylesheet" type="text/css" id="theme" href="../css/theme-default.css"/>
+    <link rel="stylesheet" type="text/css" id="fakeLoader" href="../css/pleasewait/fakeLoader.css">
+    <!-- EOF CSS INCLUDE -->
+</head>
+<body>
+<!-- preloader -->
+<div class="fakeloader"></div>
+<!-- preloader-->
+
+<!-- START PAGE CONTAINER -->
+<div class="page-container">
+
+    <!-- START PAGE SIDEBAR -->
+    <div class="page-sidebar">
+        <!-- START X-NAVIGATION -->
+        <ul class="x-navigation">
+            <li class="xn-logo">
+                <a href="../home">LOGIC SYSTEM</a>
+                <a href="#" class="x-navigation-control"></a>
+            </li>
+            <li class="xn-profile">
+                <a href="#" class="profile-mini">
+                    <img src="../assets/images/users/avatar-new.jpg" alt="CEFEMEX"/>
+                </a>
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="../assets/images/users/avatar-new.jpg" alt="CEFEMEX"/>
+                    </div>
+                    <div class="profile-data">
+                        <div class="profile-data-name">
+                            <?php
+                            if(isset($_SESSION['id'])){
+                                $nombre_user = $_SESSION['username'];
+                                echo $nombre_user;
+                            }else{
+                                $nombre_user = "";
+                                echo $nombre_user;
+                            }
+                            ?>
+                        </div>
+                        <div class="profile-data-title">Administrador</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="../home.php"><span class="fa fa-dashboard"></span> <span class="xn-text">Home Admin</span></a>
+            </li>
+            <li class="xn-title">Seccion inicio</li>
+            <li class="xn-openable">
+                <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i><span class="xn-text">Banner inicio</span></a>
+                <ul>
+                    <li><a href="../banner/lbanner.php"><span class="fa fa-list"></span>Listado</a></li>
+                </ul>
+            </li>
+            <li class="xn-openable active">
+                <a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i><span class="xn-text">Productos</span></a>
+                <ul>
+                    <li class="active"><a href="lproduct"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="fproduct"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                </ul>
+            </li>
+            <li class="xn-title">Seccion casas</li>
+            <li class="xn-openable">
+                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Características</span></a>
+                <ul>
+                    <li><a href="../caracteristicas/lcaracteristica"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../caracteristicas/fcaracteristica"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                </ul>
+            </li>
+            <li class="xn-openable">
+                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Características plantas</span></a>
+                <ul>
+                    <li><a href="../descripcion/ldescripcion.php"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../descripcion/fdescripcion.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                </ul>
+            </li>
+            <li class="xn-openable">
+                <a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="xn-text">Propiedades</span></a>
+                <ul>
+                    <li><a href="lproduct.php"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="fproduct.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                </ul>
+            </li>
+            <li class="xn-openable">
+                <a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="xn-text">Financiamiento</span></a>
+                <ul>
+                    <li><a href="../financiamiento/lbancos.php"><span class="fa fa-list"></span>Listado</a></li>
+                    <!--<li><a href="../financiamiento/fbancos.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>-->
+                </ul>
+            </li>
+            <li class="xn-title">Seccion Contacto</li>
+            <li class="xn-openable">
+                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">informacion de contacto</span></a>
+                <ul>
+                    <li><a href="../contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
+                </ul>
+            </li>
+            <li class="xn-title">Seccion Registros</li>
+            <li class="xn-openable">
+                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Registros</span></a>
+                <ul>
+                    <li><a href="../registros/lusuariocontacto"><span class="fa fa-list"></span>Listado</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- END X-NAVIGATION -->
+    </div>
+    <!-- END PAGE SIDEBAR -->
+
+    <!-- PAGE CONTENT -->
+    <div class="page-content">
+
+        <!-- START X-NAVIGATION VERTICAL -->
+        <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+            <!-- TOGGLE NAVIGATION -->
+            <li class="xn-icon-button">
+                <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+            </li>
+            <!-- POWER OFF -->
+            <li class="xn-icon-button pull-right last">
+                <a href="#"><span class="fa fa-power-off"></span></a>
+                <ul class="xn-drop-left animated zoomIn">
+                    <li><a href="javascript:;" class="mb-control" data-box="#mb-signout"><span class="fa fa-sign-out"></span> Cerrar Sesión</a></li>
+                </ul>
+            </li>
+            <!-- END POWER OFF -->
+        </ul>
+        <!-- END X-NAVIGATION VERTICAL -->
+
+        <!-- START BREADCRUMB -->
+        <ul class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Secciones administrables</a></li>
+            <li><a href="#">Productos</a></li>
+            <li class="active">Listado</li>
+        </ul>
+        <!-- END BREADCRUMB -->
+
+        <!-- PAGE TITLE -->
+        <div class="page-title">
+            <h2><span class="fa fa-arrow-circle-o-left"></span> Productos</h2>
+        </div>
+        <!-- END PAGE TITLE -->
+
+        <!-- PAGE CONTENT WRAPPER -->
+        <div class="page-content-wrap">
+
+
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <!-- START DATATABLE EXPORT -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Agrega una nuevo producto</h3>
+                            <div class="btn-group pull-right">
+                                <a href="fproduct" class="btn btn-danger"><i class="fa fa-bars"></i> Agregar nuevo producto</a>
+                            </div>
+
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table id="customers2" class="table datatable table-actions table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th width="50">#</th>
+                                        <th width="100">Nombre del producto</th>
+                                        <th width="100">Codigo</th>
+                                        <th width="100">Galeria top</th>
+                                        <th width="100">Galería</th>
+                                        <th width="150">Acciones</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                    $cont=0;
+                                    foreach ($products as $e){
+                                        $cont++;
+                                        ?>
+
+                                        <tr id="trow_<?php echo $e['id']; ?>">
+                                            <td><?php echo $cont; ?></td>
+                                            <td><?php echo $e['name'] ?></td>
+                                            <td><?php echo $e['code'] ?></td>
+                                            <td style="text-align: center;"><a href="../ubicacion/fubicacion?id=<?php echo $e['id'] ?>" style="text-align: center; font-size: 25px;"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                                            <td style="text-align: center;"><a href="../plantas/lplantas?id_prop=<?php echo $e['id'] ?>" style="text-align: center; font-size: 25px;"><i class="fa fa-picture-o" aria-hidden="true"></i></a></td>
+                                            <td>
+                                                <a href="fproduct.php?id=<?php echo $e['id']; ?>" class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></a>
+                                                <button class="btn btn-danger btn-rounded btn-condensed btn-sm delte_row_data" onClick="delete_row('trow_<?php echo $e['id']; ?>',this);" data-idb="<?php echo $e['id']; ?>" data-tbl="<?php echo $tabla; ?>"><span class="fa fa-times"></span></button>
+                                            </td>
+                                        </tr>
+                                    <?php }?>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END DATATABLE EXPORT -->
+
+                </div>
+            </div>
+
+        </div>
+        <!-- END PAGE CONTENT WRAPPER -->
+    </div>
+    <!-- END PAGE CONTENT -->
+</div>
+<!-- END PAGE CONTAINER -->
+
+<!-- MESSAGE BOX-->
+<div class="message-box animated fadeIn" data-sound="alert" id="mb-remove-row">
+    <div class="mb-container">
+        <div class="mb-middle">
+            <div class="mb-title"><span class="fa fa-times"></span> Eliminar <strong>Datos</strong> ?</div>
+            <div class="mb-content">
+                <p>¿Seguro que quieres eliminar esta fila?</p>
+                <p>Presione Sí, si Seguro.</p>
+            </div>
+            <div class="mb-footer">
+                <div class="pull-right">
+                    <button class="btn btn-success btn-lg mb-control-yes">Si</button>
+                    <button class="btn btn-default btn-lg mb-control-close">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MESSAGE BOX-->
+
+
+<!-- MESSAGE BOX-->
+<div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+    <div class="mb-container">
+        <div class="mb-middle">
+            <div class="mb-title"><span class="fa fa-sign-out"></span> Cerrar <strong>Sesión</strong> ?</div>
+            <div class="mb-content">
+                <p>¿ Seguro que quieres cerrar sesión ?</p>
+                <p>Pulse No si desea continuar con el trabajo . Pulse Sí para cerrar la sesión de usuario actual.</p>
+            </div>
+            <div class="mb-footer">
+                <div class="pull-right">
+                    <a href="../login/logout.php" class="btn btn-success btn-lg">Si</a>
+                    <button class="btn btn-default btn-lg mb-control-close">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MESSAGE BOX-->
+
+<!-- START PRELOADS -->
+<audio id="audio-alert" src="../audio/alert.mp3" preload="auto"></audio>
+<audio id="audio-fail" src="../audio/fail.mp3" preload="auto"></audio>
+<!-- END PRELOADS -->
+
+<!-- START SCRIPTS -->
+<!-- START PLUGINS -->
+<script type="text/javascript" src="../js/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../js/plugins/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- END PLUGINS -->
+
+<!-- START THIS PAGE PLUGINS-->
+<script type='text/javascript' src='../js/plugins/icheck/icheck.min.js'></script>
+<script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="../js/plugins/bootstrap/bootstrap-file-input.js"></script>
+<script type="text/javascript" src="../js/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../js/plugins/tableexport/tableExport.js"></script>
+<script type="text/javascript" src="../js/plugins/tableexport/jquery.base64.js"></script>
+<script type="text/javascript" src="../js/plugins/tableexport/html2canvas.js"></script>
+<script type="text/javascript" src="../js/plugins/tableexport/jspdf/libs/sprintf.js"></script>
+<script type="text/javascript" src="../js/plugins/tableexport/jspdf/jspdf.js"></script>
+<script type="text/javascript" src="../js/plugins/tableexport/jspdf/libs/base64.js"></script>
+<script type="text/javascript" src="../js/plugins/form/jquery.form.js"></script>
+<!-- END THIS PAGE PLUGINS-->
+
+<!-- START TEMPLATE -->
+
+<script type="text/javascript" src="../js/plugins.js"></script>
+<script type="text/javascript" src="../js/actions.js"></script>
+<!-- END TEMPLATE -->
+
+<script src="../js/plugins/pleasewait/fakeLoader.min.js"></script>
+
+<script type="application/x-javascript">
+    $(document).ready(function(){
+
+        $(".fakeloader").fakeLoader({
+            timeToHide:1200,
+            bgColor:"#e5e5e5",
+            spinner:"spinner1"
+        });
+
+
+
+    });
+
+
+    /*DELETE ROW DATABASE*/
+
+    function delete_row(row,obj){
+
+        var box = $("#mb-remove-row");
+        box.addClass("open");
+
+        var $_this = $(obj);
+
+        box.find(".mb-control-yes").on("click",function(){
+            box.removeClass("open");
+            $("#"+row).hide("slow",function(){
+                //alert($_this);
+                //console.log($_this);
+                $.ajax({
+                    data:  {'op':'Eliminar', 'id':$_this.data('idb'), 'tbl':$_this.data('tbl'),},
+                    url:   'oppropiedad.php',
+                    type:  'post',
+                    success:  function (response) {
+                        //alert(response);
+                    }
+                });
+
+                $(this).remove();
+            });
+        });
+
+    }
+
+
+
+</script>
+
+<!-- END SCRIPTS -->
+</body>
+</html>
