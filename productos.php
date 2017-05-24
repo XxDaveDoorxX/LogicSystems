@@ -60,7 +60,89 @@ include_once('layouts/partial/header.php');
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="row">
+                    <div class="product-item">
+                        <div class="video">
+                            <img class="img-responsive center-block" src="images/video.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="thumb">
+                            <img class="img-responsive center-block" src="images/thumb-1.jpg">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="thumb">
+                            <img class="img-responsive center-block" src="images/thumb-2.jpg">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="thumb">
+                            <img class="img-responsive center-block" src="images/thumb-3.jpg">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="thumb">
+                            <img class="img-responsive center-block" src="images/thumb-4.jpg">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="thumb">
+                            <img class="img-responsive center-block" src="images/thumb-5.jpg">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="thumb">
+                            <img class="img-responsive center-block" src="images/thumb-6.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section id="info-product">
+    <div class="container">
+        <div class="row">
+            <div class="tittle">
+                <h1>DESCRIPCIÓN</h1>
+                <hr>
+                <p>Es el software de control y operación para financieras/SOFOMS más completo y fácil de operar. En él se reflejan más de 10 años de experiencia y mejores prácticas de operación de este giro. Toma el control total y obtén una visión global de tu negocio que te permitirá enfocar tus esfuerzos a donde más se necesiten.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <div class="row">
+                    <div class="tittle">
+                        <h1>CARACTERÍSTICAS</h1>
+                        <hr>
+                        <ul>
+                            <li>Multi-Empresa</li>
+                            <li>Multi-Sucursal</li>
+                            <li>Multi-Caja</li>
+                            <li>Multi-Almacen</li>
+                            <li>Multi-Divisas</li>
+                            <li>100% personalizable</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-7 col-md-offset-1">
+                <div class="row">
+                    <div class="tittle">
+                        <h1>FUNCIONALIDADES</h1>
+                        <hr>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-sm-6">
+
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-sm-6">
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
