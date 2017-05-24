@@ -1,0 +1,158 @@
+a:active,a:focus{outline: none;
+    text-decoration:none;}
+
+/* flexslider */
+
+.flexslider{overflow:hidden;}
+
+.flexslider .slides, .flex-direction-nav{list-style:none; margin:0; padding:0;}
+
+.flexslider .slides > li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+}
+.flexslider .slides img {
+    width: 100%;
+    display: block;
+}
+.flexslider .slides:after {
+    content: "\0020";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+html[xmlns] .flexslider .slides {
+    display: block;
+}
+* html .flexslider .slides {
+    height: 1%;
+}
+.no-js .flexslider .slides > li:first-child {
+    display: block;
+}
+
+.flexslider .slides > li.flex-active-slide{display:block;}
+
+.slides li{position:relative;}
+
+.flex-caption{ height: 100%;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    margin-top:130px;
+    color:#ffffff;}
+
+.flex-caption h2{font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:32px;
+    font-size:72px;}
+.flex-caption h4{font-style:italic;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    padding-top:32px;
+    position:relative;}
+
+.flex-caption h4:before{ background-color: #ffffff;
+    top: 0px;
+    content: "";
+    height: 1px;
+    left: 50%;
+    margin-left:-50px;
+    position: absolute;
+    width: 100px;}
+
+.flex-container-home .flex-direction-nav a {
+    background: url("../images/flexslider-arrows.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: block;
+    height: 76px;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 39px;
+    z-index: 10;
+    border:none;
+    margin: -20px 0 0;
+    opacity: 0.5;
+
+}
+.flex-container-home .flex-direction-nav .flex-prev {
+    background-position: 0 0;
+    left: 15px;
+    top:50%;
+}
+
+.flex-container-home .flex-direction-nav .flex-next {
+    background-position: -39px 0;
+    right: 15px;
+    top:50%;
+}
+.flex-container-home .flex-prev:hover, .flexslider-home .flex-next:hover {opacity: 1;}
+
+/* end flexslider */
+
+
+
+/*************************************
+
+MEDIA QUERIES
+
+************************************/
+
+
+@media (min-width: 1200px) {
+
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .flex-container-home .flex-direction-nav .flex-prev {
+        background-position: 0 0;
+        left: 15px;
+        top: 24%;
+    }
+
+    .flex-container-home .flex-direction-nav .flex-next {
+        background-position: -39px 0;
+        right: 15px;
+        top: 24%;
+    }
+}
+
+@media(min-width:992px) and (max-width:1199px) {
+
+    .flex-container-home .flex-direction-nav .flex-prev {
+        background-position: 0 0;
+        left: 15px;
+        top: 36%;
+    }
+
+    .flex-container-home .flex-direction-nav .flex-next {
+        background-position: -39px 0;
+        right: 15px;
+        top: 36%;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+    .flex-direction-nav {
+        display: none;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+
+
+}
+
+@media (max-width: 320px) {
+
+}

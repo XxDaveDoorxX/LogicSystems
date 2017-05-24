@@ -1,0 +1,411 @@
+/*======================================
+			RESPONSIVE CSS
+=======================================*/
+/* Large */
+@media(max-width:1024px) {
+
+}
+
+
+@media (max-width: 600px) {
+
+}
+
+
+@media(max-width:540px) {
+  .contact-form form {
+    width: 100%;
+    padding: 0;
+  }
+
+}
+
+
+@media(max-width:400px) {/*360 x 640px*/
+  #recaptchaContacto {
+    -ms-transform: scale(0.99);
+    transform: scale(0.99);
+    -webkit-transform: scale(0.99);
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+}
+
+@media screen and (max-device-width: 640px) and (orientation: landscape){
+
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+}
+
+
+@media(max-width:320px) {
+
+  #recaptchaContacto {
+    -ms-transform: scale(0.86);
+    transform: scale(0.86);
+    -webkit-transform: scale(0.86);
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+
+  #recaptchaPopup {
+    -ms-transform: scale(0.71);
+    transform: scale(0.71);
+    -webkit-transform: scale(0.71);
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+
+}
+
+
+
+/* Extra Small */
+@media(max-width:980px) {
+}
+
+
+
+/* Small */
+@media(min-width:768px) and (max-width:991px) {
+
+  /*menu*/
+  .img-logo {
+  }
+  header .navbar-default .navbar-nav > li > a {
+    padding: 10px 8px !important;
+  }
+
+  header .navbar-default .navbar-nav > li > a {
+    font-size: 17px !important;
+  }
+
+  .navbar-header {
+    float: left;
+    padding: 2px;
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-brand {
+    float:none;
+  }
+
+  #slider-home{
+    padding-top: 4%;
+  }
+
+  /*interiores*/
+
+  .bg-c, .bg-s, .bg-t, .bg-a-d {
+    padding-top: 12% ;
+  }
+
+  .modal-dialog-show {
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+
+  .modal-title {
+    font-size: 24px;
+  }
+
+  #recaptchaPopup {
+    -ms-transform: scale(0.63);
+    transform: scale(0.63);
+    -webkit-transform: scale(0.63);
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+
+  .btn_frm_contact2 {
+    margin-top: 5px;
+  }
+
+  #blog h1 {
+    font-size: 14px;
+    height: 90px;
+  }
+
+  #blog p {
+    height: auto;
+  }
+
+  #notas-interioes h2 {
+    font-size: 14px;
+  }
+
+  #info-blog h1 {
+    font-size: 18px;
+  }
+
+  #info-blog {
+    margin-top: 7%;
+  }
+
+  #servicios h2 {
+    font-size: 14px;
+  }
+
+  #servicios p {
+    font-size: 12px;
+  }
+
+  #padre-servicios {
+    height: auto;
+  }
+
+  #tecnologia h2 {
+    font-size: 48px;
+  }
+
+  #tecnologia h3 {
+    font-size: 26px;
+  }
+
+  .map {
+    min-height: 400px;
+  }
+
+  #recaptchaContacto {
+    -ms-transform: scale(0.85);
+    transform: scale(0.85);
+    -webkit-transform: scale(0.85);
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+
+  .btn_frm_contact {
+    margin-top: 10px;
+  }
+
+
+}
+
+
+
+/* Medium */
+@media(min-width:992px) and (max-width:1199px) {
+
+  header .navbar-default .navbar-nav > li > a {
+    padding: 22px 8px !important;
+  }
+
+  header .navbar-default .navbar-nav > li > a {
+    font-size: 16px !important;
+  }
+
+  /*interiores*/
+
+  .modal-title {
+    font-size: 28px;
+  }
+
+  #recaptchaPopup {
+    -ms-transform: scale(0.63);
+    transform: scale(0.63);
+    -webkit-transform: scale(0.63);
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+
+  .btn_frm_contact2 {
+    margin-top: 5px;
+  }
+
+  #padre-servicios {
+    height: 220px;
+  }
+
+  #contacto ul li a {
+    font-size: 12px;
+  }
+
+  #recaptchaContacto {
+    -ms-transform: scale(0.88);
+    transform: scale(0.88);
+    -webkit-transform: scale(0.88);
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+
+  .map {
+    min-height: 400px;
+  }
+
+  #blog h1 {
+    height: 90px;
+  }
+
+  #blog p {
+    height: auto;
+  }
+
+  #info-blog h1 {
+    font-size: 20px;
+  }
+
+  #notas-interioes h2 {
+    font-size: 16px;
+  }
+
+}
+
+
+@media(max-width:767px) {
+  .navbar-default {
+    background: #FFFFFF !important;
+  }
+
+  header nav {
+    width: 100%;
+    background: #fff;
+  }
+  header nav li {
+    width: 100% !important;
+  }
+  .nav > li {
+    width: 100%;
+  }
+  header nav {
+    float: left !important;
+    width: 100%;
+  }
+  header .navbar-default .navbar-nav > li > a {
+    padding: 10px 20px;
+    margin: 0;
+  }
+
+  header .navbar-default .navbar-nav > li > a {
+    width: 100%;
+  }
+  .animated {
+    -webkit-animation-duration: 0s;
+    animation-duration: 0s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+
+  .navbar-default .navbar-toggle {
+    border-color: #57e8ff;
+  }
+
+  .navbar-toggle {
+    border: 1px solid #ffffff;
+    margin-top: 17px;
+  }
+
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+  }
+
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #169fd8;
+  }
+
+  /*interiores*/
+
+  .bg-c, .bg-s, .bg-t, .bg-a-d {
+    padding-top: 20% ;
+  }
+
+  #servicios h1, #conocenos h1, #tecnologia h1, #antes-despues h1, #contacto h1 {
+    font-size: 32px;
+  }
+
+  #servicios h2 {
+    font-size: 14px;
+  }
+
+  #padre-servicios {
+    height: auto;
+    margin-top: 20px;
+  }
+
+  #tecnologia h2 {
+    font-size: 36px;
+  }
+
+  #tecnologia h3 {
+    font-size: 24px;
+  }
+
+  #antes-despues p {
+    font-size: 14px;
+    margin-top: -22%;
+  }
+
+  #contacto p {
+    font-size: 16px;
+  }
+
+  #contacto ul {
+    flex-wrap: wrap;
+  }
+
+  #contacto ul li a {
+    font-size: 14px;
+  }
+
+  .btn_frm_contact {
+    margin-top: 0;
+  }
+
+  .map {
+    min-height: 300px;
+  }
+
+  .modal-content-show {
+    background: #E0E2DF;
+  }
+
+  .modal-dialog-show {
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+
+  .modal-title {
+    font-size: 28px;
+  }
+
+  .btn_frm_contact2 {
+    margin-top: 0;
+  }
+
+
+}
+
+
+/* Large */
+/*@media(min-width:1200px) {
+}*/
+
+
+
+@media screen and (min-width: 1400px) {
+
+}
+
+
+@media screen and (min-width: 1600px) {
+
+}
+
+@media screen and (min-width: 1900px) {
+
+}
+
