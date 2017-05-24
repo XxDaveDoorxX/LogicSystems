@@ -263,7 +263,14 @@ section {
   padding-bottom: 2%;
 }
 
-.bg-ti{
+.bg-servicio-color1{
+  background-color: #ffffff;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.bg-servicio-color2{
+  background-color: #efefef;
   padding-top: 3%;
   padding-bottom: 3%;
 }
@@ -279,7 +286,7 @@ section {
 
 #servicios h2{
   font-family: "Raleway Light";
-  font-size: 34px;
+  font-size: 30px;
   color: #404040;
   padding: 0;
   margin: 0;
@@ -298,6 +305,16 @@ section {
   margin: 20px auto;
   margin-bottom: 20px;
   border-color: #404040;
+}
+
+#padre-servicios {
+  display: table;
+  height: 236px;
+}
+
+#hijo-servicios {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /*=======================================================

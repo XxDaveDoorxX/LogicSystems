@@ -45,7 +45,7 @@ include_once('layouts/partial/header.php');
             </div>
         </div>
     </div>
-    <div class="bg-ti">
+    <div class="bg-servicio-color1">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -54,12 +54,86 @@ include_once('layouts/partial/header.php');
                             <img src="images/ti.jpg" alt="" class="img-responsive center-block">
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8">
-                            <div>
-                                <h2>DESARROLLO DE SOLUCIONES DE TI</h2>
-                                <hr>
-                                <p>
-                                    Diseñamos y programamos sitios web con elementos vanguardistas, fáciles de utilizar que representan un punto de venta más en la captación de clientes y oportunidades de negocio.
-                                </p>
+                            <div id="padre-servicios">
+                                <div id="hijo-servicios">
+                                    <h2>DESARROLLO DE SOLUCIONES DE TI</h2>
+                                    <hr>
+                                    <p>
+                                        Nuestro equipo es experto en el desarrollo de soluciones tecnológicas que le ayudarán a mejorar y Sistematizar los procesos de su negocio a través de una plataforma confiable que le permita operar de manera eficiente.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-servicio-color2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <img src="images/pagina-web.jpg" alt="" class="img-responsive center-block">
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-8">
+                            <div id="padre-servicios">
+                                <div id="hijo-servicios">
+                                    <h2>DISEÑO Y PROGRAMACIÓN DE PÁGINAS WEB</h2>
+                                    <hr>
+                                    <p>
+                                        Diseñamos y programamos sitios web con elementos vanguardistas, fáciles de utilizar que representan un punto de venta más en la captación de clientes y oportunidades de negocio.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-servicio-color1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <img src="images/sitio-web.jpg" alt="" class="img-responsive center-block">
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-8">
+                            <div id="padre-servicios">
+                                <div id="hijo-servicios">
+                                    <h2>ALOJAMIENTO DE SITIOS WEB</h2>
+                                    <hr>
+                                    <p>
+                                        Proporcionamos servicio de hospedaje de sitios web de alta disponibilidad (24 x 7) y seguridad, siendo su principal característica la flexibilidad, ya que nos acomodamos para cubrir todos sus requerimientos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-servicio-color2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <img src="images/servidores.jpg" alt="" class="img-responsive center-block">
+                        </div>
+                        <div class="col-xs-12 col-sm-8 col-md-8">
+                            <div id="padre-servicios">
+                                <div id="hijo-servicios">
+                                    <h2>ALOJAMIENTO Y ADMINISTRACIÓN DE SERVIDORES</h2>
+                                    <hr>
+                                    <p>
+                                        Contamos con una infraestructura de procesamiento y almacenamiento de alta disponibilidad (24 x 7), 100% redundante que nos permite proporcionarle servicios de procesamiento, almacenamiento y respaldo en la nube de manera ininterrumpida. Nuestros planes son 100% flexibles y nos adaptamos a sus necesidades.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
