@@ -117,15 +117,35 @@ section {
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: #169fd8; }
 
+.dropdown-menu {
+  top: 108%;
+  background: rgba(2, 15, 47, 0.7); }
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #169fd8;
+  background-color: transparent; }
+
+.dropdown-menu > li > a {
+  font-family: "Raleway Regular", sans-serif;
+  font-size: 16px;
+  color: #ffffff; }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: #169fd8;
+  background-color: transparent; }
+
 .img-logo {
   margin-top: 6px; }
 
 /*=======================================================
 			HEADING TITTLE
 ========================================================*/
-.tittle {
+.tittle h1 {
   font-family: "Raleway Light", sans-serif;
   text-align: center; }
+
+.tittle h2 {
+  font-family: "Raleway Light", sans-serif; }
 
 .tittle hr {
   margin: 20px auto;
@@ -151,6 +171,40 @@ section {
 
 .t-mod {
   margin-bottom: 30px; }
+
+#gallery-prod {
+  background-color: #efefef;
+  padding-top: 4%;
+  padding-bottom: 4%; }
+
+#gallery-prod h1 {
+  font-family: "Raleway Light", sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0; }
+
+#gallery-prod a img {
+  margin-top: 30px;
+  border: 1px solid #7e7e7e; }
+
+.bg-demo-prod {
+  background: url(../images/bg-demo.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  border-top: 2px solid #c6c6c6; }
+
+#demo-prod a {
+  display: block;
+  font-family: "Raleway Regular";
+  font-size: 40px;
+  text-align: center;
+  color: #404040;
+  margin: auto;
+  border: 1px solid #404040;
+  border-radius: 10px;
+  padding: 6px 0; }
 
 /*=======================================================
 			PRODUCTS INDEX
@@ -319,7 +373,7 @@ section {
 .info a {
   display: block;
   font-family: "Arimo", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   color: #ffffff;
   padding-bottom: 23px; }
 
@@ -327,7 +381,7 @@ section {
   font-size: 24px; }
 
 .logo-footer {
-  margin-top: 20px; }
+  margin-top: 41px; }
 
 .copyright p {
   text-align: center;
