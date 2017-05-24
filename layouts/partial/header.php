@@ -1,6 +1,6 @@
 <?php
 if (!isset($statnav)) {
-    $statnav = array("active","","","","","","");
+    $statnav = array("active","","","","");
 }
 ?>
 <header>
@@ -35,8 +35,8 @@ if (!isset($statnav)) {
                             <li><a href="#">Something else here</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="">Servicios</a>
+                    <li class="<?php echo $statnav[1]; ?>">
+                        <a href="servicios">Servicios</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Casos de éxito <span class="caret"></span></a>
