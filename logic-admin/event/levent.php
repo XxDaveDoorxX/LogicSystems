@@ -3,11 +3,11 @@ include_once('../../Class/Seguridad.php');
 $seguridad = new Seguridad();
 $seguridad->candado();
 
-require_once ('../../Class/Cliente.php');
+require_once ('../../Class/Evento.php');
 
 
-$tmpclient = new Cliente(0,'','','','');
-$client = $tmpclient->listar();
+$tmpevent = new Evento(0,'','','');
+$event = $tmpevent->listar();
 
 
 
@@ -99,18 +99,19 @@ $tabla = include('tabla_imagenes.php');
                     <li><a href="../alianzas/falianza"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
-            <li class="xn-openable active">
+            <li class="xn-openable">
                 <a href="#"><i class="fa fa-users" aria-hidden="true"></i><span class="xn-text">Clientes</span></a>
                 <ul>
-                    <li class="active"><a href="lclient"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="fclient"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="../client/lclient"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../client/fclient"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <li class="xn-title">Seccion Eventos</li>
-            <li class="xn-openable">
+            <li class="xn-openable active">
                 <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="xn-text">Eventos</span></a>
                 <ul>
-                    <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
+                    <li class="active"><a href="levent"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="fevent"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <li class="xn-title">Seccion Descargas</li>
@@ -156,14 +157,14 @@ $tabla = include('tabla_imagenes.php');
         <ul class="breadcrumb">
             <li><a href="#">Home</a></li>
             <li><a href="#">Secciones administrables</a></li>
-            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Eventos</a></li>
             <li class="active">Listado</li>
         </ul>
         <!-- END BREADCRUMB -->
 
         <!-- PAGE TITLE -->
         <div class="page-title">
-            <h2><span class="fa fa-arrow-circle-o-left"></span> Clientes</h2>
+            <h2><span class="fa fa-arrow-circle-o-left"></span> Eventos</h2>
         </div>
         <!-- END PAGE TITLE -->
 
@@ -178,9 +179,9 @@ $tabla = include('tabla_imagenes.php');
                     <!-- START DATATABLE EXPORT -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Agrega un nuevo registro</h3>
+                            <h3 class="panel-title">Agrega un nuevo evento</h3>
                             <div class="btn-group pull-right">
-                                <a href="falianza" class="btn btn-danger"><i class="fa fa-bars"></i> Agregar registro</a>
+                                <a href="fevent" class="btn btn-danger"><i class="fa fa-bars"></i> Agregar evento</a>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -191,13 +192,14 @@ $tabla = include('tabla_imagenes.php');
                                         <th width="50">#</th>
                                         <th width="100">Titulo</th>
                                         <th width="100">Fecha</th>
+                                        <th width="100">Descripción</th>
                                         <th width="150">Acciones</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <?php
                                     $cont=0;
-                                    foreach ($client as $e){
+                                    foreach ($event as $e){
                                         $cont++;
                                         ?>
 
@@ -205,8 +207,9 @@ $tabla = include('tabla_imagenes.php');
                                             <td><?php echo $cont; ?></td>
                                             <td><?php echo $e['title'] ?></td>
                                             <td><?php echo $e['create_at'] ?></td>
+                                            <td><?php echo $e['description'] ?></td>
                                             <td>
-                                                <a href="falianza?id=<?php echo $e['id']; ?>" class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></a>
+                                                <a href="fevent?id=<?php echo $e['id']; ?>" class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></a>
                                                 <button class="btn btn-danger btn-rounded btn-condensed btn-sm delte_row_data" onClick="delete_row('trow_<?php echo $e['id']; ?>',this);" data-idb="<?php echo $e['id']; ?>" data-tbl="<?php echo $tabla; ?>"><span class="fa fa-times"></span></button>
                                             </td>
                                         </tr>
@@ -334,7 +337,7 @@ $tabla = include('tabla_imagenes.php');
                 //console.log($_this);
                 $.ajax({
                     data:  {'op':'Eliminar', 'id':$_this.data('idb'), 'tbl':$_this.data('tbl') },
-                    url:   'opalianza.php',
+                    url:   'opevent.php',
                     type:  'post',
                     success:  function (response) {
                         //alert(response);

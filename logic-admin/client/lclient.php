@@ -180,7 +180,7 @@ $tabla = include('tabla_imagenes.php');
                         <div class="panel-heading">
                             <h3 class="panel-title">Agrega un nuevo registro</h3>
                             <div class="btn-group pull-right">
-                                <a href="falianza" class="btn btn-danger"><i class="fa fa-bars"></i> Agregar registro</a>
+                                <a href="fclient" class="btn btn-danger"><i class="fa fa-bars"></i> Agregar registro</a>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -206,7 +206,7 @@ $tabla = include('tabla_imagenes.php');
                                             <td><?php echo $e['title'] ?></td>
                                             <td><?php echo $e['create_at'] ?></td>
                                             <td>
-                                                <a href="falianza?id=<?php echo $e['id']; ?>" class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></a>
+                                                <a href="fclient?id=<?php echo $e['id']; ?>" class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></a>
                                                 <button class="btn btn-danger btn-rounded btn-condensed btn-sm delte_row_data" onClick="delete_row('trow_<?php echo $e['id']; ?>',this);" data-idb="<?php echo $e['id']; ?>" data-tbl="<?php echo $tabla; ?>"><span class="fa fa-times"></span></button>
                                             </td>
                                         </tr>
@@ -334,7 +334,7 @@ $tabla = include('tabla_imagenes.php');
                 //console.log($_this);
                 $.ajax({
                     data:  {'op':'Eliminar', 'id':$_this.data('idb'), 'tbl':$_this.data('tbl') },
-                    url:   'opalianza.php',
+                    url:   'opclient.php',
                     type:  'post',
                     success:  function (response) {
                         //alert(response);

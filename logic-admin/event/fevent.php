@@ -3,7 +3,7 @@ include_once('../../Class/Seguridad.php');
 $seguridad = new Seguridad();
 $seguridad->candado();
 
-require_once ('../../Class/Cliente.php');
+require_once ('../../Class/Evento.php');
 
 $id = 0;
 $op = 'Agregar';
@@ -13,8 +13,8 @@ if (isset($_REQUEST['id'])) {
 }
 
 
-$tmpclient = new Cliente($id,'','','','');
-$tmpclient->obtener();
+$tmpevent = new Evento($id,'','','');
+$tmpevent->obtener();
 
 
 // ** Tabla de imagenes **//
@@ -26,7 +26,7 @@ $tabla = include('tabla_imagenes.php');
 <html lang="es">
 <head>
     <!-- META SECTION -->
-    <title>LOGIC SYSTEM - Formulario Clientes</title>
+    <title>LOGIC SYSTEM - Formulario Eventos</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -110,18 +110,19 @@ $tabla = include('tabla_imagenes.php');
                     <li><a href="../alianzas/falianza"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
-            <li class="xn-openable active">
+            <li class="xn-openable">
                 <a href="#"><i class="fa fa-users" aria-hidden="true"></i><span class="xn-text">Clientes</span></a>
                 <ul>
-                    <li><a href="lclient"><span class="fa fa-list"></span>Listado</a></li>
-                    <li class="active"><a href="fclient"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="../client/lclient"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../client/fclient"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <li class="xn-title">Seccion Eventos</li>
-            <li class="xn-openable">
+            <li class="xn-openable active">
                 <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="xn-text">Eventos</span></a>
                 <ul>
-                    <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="levent"><span class="fa fa-list"></span>Listado</a></li>
+                    <li class="active"><a href="fevent"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <li class="xn-title">Seccion Descargas</li>
@@ -168,14 +169,14 @@ $tabla = include('tabla_imagenes.php');
         <ul class="breadcrumb">
             <li><a href="#">Home</a></li>
             <li><a href="#">Secciones administrables</a></li>
-            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Eventos</a></li>
             <li class="active">Formulario</li>
         </ul>
         <!-- END BREADCRUMB -->
 
         <!-- PAGE TITLE -->
         <div class="page-title">
-            <h2><span class="fa fa-arrow-circle-o-left"></span> Formulario clientes</h2>
+            <h2><span class="fa fa-arrow-circle-o-left"></span> Formulario eventos</h2>
         </div>
         <!-- END PAGE TITLE -->
 
@@ -188,11 +189,10 @@ $tabla = include('tabla_imagenes.php');
                     <!-- START WIZARD WITH VALIDATION -->
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <h3>Formulario clientes</h3>
+                            <h3>Formulario eventos</h3>
                             <!-- begin form-wizard -->
                             <form action="javascript:;" method="POST" data-parsley-validate="true" name="form-wizard" class="form-input-flat">
                                 <input type="hidden" id="hdntblf1" name="tbl" value="<?php echo $tabla; ?>" />
-                                <input type="hidden" id="id_propied" name="id_propied" value="<?php echo $tmppropied->id ?>">
                                 <!-- begin #wizard -->
                                 <div id="wizard">
                                     <ol>
@@ -222,22 +222,12 @@ $tabla = include('tabla_imagenes.php');
                                                             <label>Titulo</label>
                                                             <div class="input-group">
                                                                 <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
-                                                                <input data-parsley-id="2967" name="titulo" id="titulo" class="form-control input-lg" data-parsley-group="wizard-step-1" value="<?php echo $tmpclient->title  ?>" required type="text"><ul id="parsley-id-2967" class="parsley-errors-list"></ul>
+                                                                <input data-parsley-id="2967" name="titulo" id="titulo" class="form-control input-lg" data-parsley-group="wizard-step-1" value="<?php echo $tmpevent->title  ?>" required type="text"><ul id="parsley-id-2967" class="parsley-errors-list"></ul>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Descripción</label>
-                                                            <textarea  name="comment" id="comment" class="form-control"><?php echo $tmpclient->comment;  ?></textarea>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">Rating</label>
-                                                                <select class="form-control select" name="rating" id="rating">
-                                                                    <option value="1">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                    <option value="4">4</option>
-                                                                    <option value="5">5</option>
-                                                                </select>
+                                                            <textarea  name="description" id="description" class="form-control"><?php echo $tmpevent->comment;  ?></textarea>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class=" control-label">Fecha</label>
@@ -264,15 +254,15 @@ $tabla = include('tabla_imagenes.php');
                                     <div class="col-md-12">
                                         <h3 class="form-header form-header-lg m-b-10">Suba su Imagen</h3>
                                         <br/>
-                                        <span>El tamaño de las imagenes debe ser de 360px de ancho por 225px de alto.</span><br/>
+                                        <span>El tamaño de las imagenes debe ser de 362px de ancho por 362px de alto.</span><br/>
                                         <div class="row">
                                             <div class="col-md-12 ">
                                                 <div><button class="btn btn-info" id="btnaddimg" >Agregar im&aacute;genes</button></div>
                                                 <form action="../opimagenes/upload.php" id="frmdzone" class="dropzone">
                                                     <input type="hidden" id="hdntbl" name="tbl" value="<?php echo $tabla; ?>" />
                                                     <input type="hidden" id="hdnid_c" name="id_c" value="0" />
-                                                    <input type="hidden" id="hdniw" name="iw[]" value="360" />
-                                                    <input type="hidden" id="hdnih" name="ih[]" value="225" />
+                                                    <input type="hidden" id="hdniw" name="iw[]" value="362" />
+                                                    <input type="hidden" id="hdnih" name="ih[]" value="362" />
                                                     <div class="dz-message"></div>
                                                     <div class="dropzone-previews" id="divdzone"> </div>
                                                 </form>
@@ -294,12 +284,12 @@ $tabla = include('tabla_imagenes.php');
                                 }
 
 
-                                echo 'Registro '.$st;
+                                echo 'Evento '.$st;
 
                                 ?>
                             </h2>
                             <!--<p class="m-b-20">Completo</p>-->
-                            <p><a href="lalianza" class="btn btn-success btn-lg">Finalizar</a></p>
+                            <p><a href="levent" class="btn btn-success btn-lg">Finalizar</a></p>
                         </div>
                         <!-- end wizard step-5 -->
                     </div>
@@ -389,7 +379,7 @@ $tabla = include('tabla_imagenes.php');
             todayHighlight: true
         });
 
-        $( ".dpicker" ).datepicker( "setDate", <?php echo "\"".$tmpclient->create_at."\""; ?> );
+        $( ".dpicker" ).datepicker( "setDate", <?php echo "\"".$tmpevent->create_at."\""; ?> );
 
     });
 
@@ -407,10 +397,10 @@ $tabla = include('tabla_imagenes.php');
      /****/
 
     var $contd;
-    var $id_client = <?php echo $id; ?>;
+    var $id_event = <?php echo $id; ?>;
     jQuery(document).ready(function(){
 
-        $('#hdnid_c').val($id_client);
+        $('#hdnid_c').val($id_event);
         // ** Dopzone  sortable **
         $contd = $("#divdzone");
         $contd.sortable({
@@ -576,26 +566,26 @@ $tabla = include('tabla_imagenes.php');
                     });
 
 
-                    //alert("id banner: "+$id_client);
-                    if ($id_client != 0) {
+                    //alert("id banner: "+$id_event);
+                    if ($id_event != 0) {
                         $.ajax({
-                            data:  {'op':'Modificar', 'id':$id_client, 'titulo':$('#titulo').val(), 'comment':$('#comment').val(), 'rating':$('#rating').val(), 'create_at':$('#fecha').val()},
-                            url:   'opclient.php',
+                            data:  {'op':'Modificar', 'id':$id_event, 'titulo':$('#titulo').val(), 'description':$('#description').val(), 'create_at':$('#fecha').val()},
+                            url:   'opevent.php',
                             type:  'post',
                             success:  function (response) {
                                 //alert("Modif:\n\n"+response);
-                                //$id_client = response;
+                                //$id_event = response;
                             }
                         });
                     } else {
                         $.ajax({
-                            data:  {'op':'Agregar', 'titulo':$('#titulo').val(), 'comment':$('#comment').val(), 'rating':$('#rating').val(), 'create_at':$('#fecha').val()},
-                            url:   'opclient.php',
+                            data:  {'op':'Agregar', 'titulo':$('#titulo').val(), 'description':$('#description').val(), 'create_at':$('#fecha').val()},
+                            url:   'opevent.php',
                             type:  'post',
                             success:  function (response) {
                                 //alert("Insert:\n\n"+response);
-                                $id_client = response;
-                                $('#hdnid_c').val($id_client);
+                                $id_event = response;
+                                $('#hdnid_c').val($id_event);
                             }
                         });
                     }
