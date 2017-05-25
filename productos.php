@@ -31,6 +31,7 @@
 </head>
 <body>
 <?php
+$statnav = array("","active","","","","","");
 include_once('layouts/partial/header.php');
 ?>
 

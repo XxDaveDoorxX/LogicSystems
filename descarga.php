@@ -31,7 +31,7 @@
 </head>
 <body>
 <?php
-$statnav = array("","","active","","");
+$statnav = array("","","","","active","","");
 include_once('layouts/partial/header.php');
 ?>
 
@@ -58,6 +58,7 @@ include_once('layouts/partial/header.php');
 
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a mi et lacus rhoncus varius. Curabitur ultricies erat ligula, eget tempor urna volutpat id. Aliquam placerat lacus ut tortor sollicitudin rhoncus.
                                 </p>
+                                <a href="#" class="btn-descarga" data-toggle="modal" data-target="#myModal">DESCARGA GRATUITA</a>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-md-4">
@@ -67,6 +68,7 @@ include_once('layouts/partial/header.php');
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a mi et lacus rhoncus varius. Curabitur ultricies erat ligula, eget tempor urna volutpat id. Aliquam placerat lacus ut tortor sollicitudin rhoncus.
                                 </p>
+                                <a href="#" class="btn-descarga" data-toggle="modal" data-target="#myModal">DESCARGA GRATUITA</a>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-md-4">
@@ -76,6 +78,7 @@ include_once('layouts/partial/header.php');
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a mi et lacus rhoncus varius. Curabitur ultricies erat ligula, eget tempor urna volutpat id. Aliquam placerat lacus ut tortor sollicitudin rhoncus.
                                 </p>
+                                <a href="#" class="btn-descarga" data-toggle="modal" data-target="#myModal">DESCARGA GRATUITA</a>
                             </div>
                         </div>
                     </div>
@@ -89,6 +92,70 @@ include_once('layouts/partial/header.php');
 include_once('layouts/partial/footer.php');
 ?>
 
+<!-- Modal -->
+<div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal-label">
+    <div class="modal-dialog-show" role="document">
+
+        <!-- Modal content-->
+        <div class="modal-content-show">
+            <div class="modal-header-show">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="row">
+                            <h5 class="modal-title">6 RECOMENDACIONES PARA MEJORAR EL MANEJO DE TU CARTERA DE CLIENTES</h5>
+                            <p class="modal-txt">
+                                Llena el siguiente formulario para continuar con la descarga.<br>
+                                Recibe cada mes nuestros e-book que te ayudarán a administrar tu empresa.
+                            </p>
+                            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                                <div class="contact-form">
+                                    <div class="contactForm">
+                                        <!-- Start Contact Form -->
+                                        <form id="formPopup" action="#" method="post" role="form">
+                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                <div class="form-group row">
+                                                    <input id="formNamep" type="text" class="input requiredp" name="nombrep" placeholder="* Nombre" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                <div class="form-group row">
+                                                    <input id="formEmailp" type="email" class="input email requiredp" name="emailp" placeholder="* Correo electrónico"  required>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                                <div class="form-group row">
+                                                    <select class="form-control" name="estadop" id="estadop">
+                                                        <option>Estado</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-4">
+                                                <div class="form-group row">
+                                                    <button value="Submit" id="contactForm_submit_popup" class="btn_frm_popup center-block" type="submit">ENVIAR</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="successMsg"></div>
+                                        <!-- End Contact Form -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <!-- jQuery -->
 <script src="js/jquery-1.9.1.min.js"></script>
 
@@ -101,6 +168,11 @@ include_once('layouts/partial/footer.php');
 <script type="text/javascript">
     var widgetIdP;
     var widgetIdF;
+    var onloadCallback = function() {
+        widgetIdP = grecaptcha.render('recaptchaPopup', {
+            'sitekey' : '6LfMLREUAAAAALlMy1l66mbpk7rwPgzMCMWlimCf'
+        });
+    };
     var onloadCallback = function() {
         widgetIdF = grecaptcha.render('recaptchaFooter', {
             'sitekey' : '6LfMLREUAAAAALlMy1l66mbpk7rwPgzMCMWlimCf'

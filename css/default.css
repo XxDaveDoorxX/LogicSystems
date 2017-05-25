@@ -210,7 +210,7 @@ section {
   border-radius: 10px;
   padding: 6px 0; }
 
-.bg-servicios, .bg-descargas {
+.bg-servicios, .bg-descargas, .bg-nosotros, .bg-contacto {
   background: url(../images/bg-servicios.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
@@ -227,7 +227,7 @@ section {
   padding-top: 3%;
   padding-bottom: 3%; }
 
-#servicios h1, #descargas h1 {
+#servicios h1, #descargas h1, #nosotros h1, #contacto h1 {
   font-family: "Raleway Light";
   font-size: 44px;
   text-align: center;
@@ -252,8 +252,7 @@ section {
 
 #servicios hr {
   margin: 20px auto;
-  margin-bottom: 20px;
-  border-color: #404040; }
+  border-color: #676767; }
 
 #padre-servicios {
   display: table;
@@ -303,7 +302,7 @@ section {
   padding: 0;
   margin: 0; }
 
-.contenido-descargas {
+.contenido-descargas, .contenido-nosotros {
   padding-top: 3%;
   padding-bottom: 3%; }
 
@@ -329,16 +328,99 @@ section {
 
 .btn-descarga {
   display: block;
-  font-family: "Raleway Light";
-  font-size: 23px;
+  font-family: "Raleway Medium";
+  font-size: 18px;
   text-align: center;
   color: #ffffff;
-  min-width: 100%;
+  width: 85%;
   margin: auto;
-  border: 1px solid #ffffff;
+  background-color: #133f6f;
+  border: 1px solid #133f6f;
   border-radius: 10px;
-  margin-top: 25px;
+  margin-top: 20px;
   padding: 6px 0; }
+
+#nosotros h2 {
+  font-family: "Raleway Light";
+  font-size: 30px;
+  text-align: center;
+  color: #404040;
+  padding-top: 20px;
+  margin: 0; }
+
+#nosotros h3 {
+  font-family: "Raleway Medium";
+  font-size: 20px;
+  color: #169fd8;
+  padding: 0;
+  margin: 0; }
+
+#nosotros p {
+  font-family: "Raleway Light";
+  text-align: justify;
+  font-size: 16px;
+  color: #404040;
+  padding-bottom: 20px;
+  margin: 0; }
+
+#nosotros hr {
+  margin: 20px auto;
+  border-color: #676767; }
+
+#nosotros img {
+  margin-top: 20px;
+  margin-bottom: 40px; }
+
+.caja-mision {
+  background-color: #124582;
+  padding: 50px;
+  border-radius: 10px;
+  margin-bottom: 20px; }
+
+.caja-mision h2 {
+  font-family: "Raleway Medium" !important;
+  color: #a3e4ff !important; }
+
+.caja-mision p {
+  font-size: 24px !important;
+  color: #a3e4ff !important;
+  padding-bottom: 0 !important;
+  padding-top: 20px !important; }
+
+.contenido-contacto {
+  background: url(../images/bg-contacto.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 5%;
+  padding-bottom: 5%; }
+
+#contacto ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+#contacto ul li {
+  display: list-item;
+  padding: 0px 10px;
+  color: white;
+  margin: 0 3px; }
+
+#contacto ul li a {
+  font-family: "Raleway Light";
+  font-size: 26px;
+  color: #0d4e9e; }
+
+#contacto ul li a i {
+  color: #00aeef; }
+
+.contact-form {
+  padding-top: 40px; }
 
 /*=======================================================
 			PRODUCTS INDEX
@@ -567,17 +649,6 @@ iframe {
   padding: 6px;
   margin-top: 15px; }
 
-.btn_frm_contact2 {
-  display: block;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 16px;
-  background-color: #23b5ea;
-  color: #ffffff;
-  border: 1px solid #23b5ea;
-  width: 100%;
-  padding: 6px;
-  margin-top: 12px; }
-
 .successMsg {
   font-family: "Raleway SemiBold";
   font-size: 16px;
@@ -588,14 +659,14 @@ a:active, a:focus {
   outline: none;
   text-decoration: none; }
 
-.contact-form input[type="text"], input[type="email"], input[type="password"], textarea {
+.contact-form input[type="text"], input[type="email"], input[type="password"], textarea, select {
   background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid #126985;
+  border: 1px solid #8e9495;
   -webkit-border-radius: 0;
   border-radius: 0;
   color: #000000;
   font-family: 'Titillium Web', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   padding: 6px 10px;
   margin: 0 0 8px 0;
   -webkit-transition: all 0.7s ease 0s;
@@ -604,6 +675,12 @@ a:active, a:focus {
   -o-transition: all 0.7s ease 0s;
   transition: all 0.7s ease 0s;
   width: 100%; }
+
+.form-control {
+  border: 1px solid #8e9495;
+  font-size: 16px;
+  height: 40px;
+  color: #7D7676; }
 
 #recaptchaPopup {
   transform: scale(0.82);
@@ -719,15 +796,13 @@ a:active, a:focus {
 
 .modal-dialog-show {
   margin: 7.5% auto;
-  margin-left: 13%;
-  margin-right: 13%; }
+  margin-left: 16%;
+  margin-right: 16%; }
 
 .modal-content-show {
   position: relative;
   background: url(../images/bg-popup.jpg) center center no-repeat;
-  background-size: cover;
-  padding-top: 0%;
-  padding-bottom: 0%; }
+  background-size: cover; }
 
 .modal-header-show {
   padding: 15px;
@@ -737,13 +812,31 @@ a:active, a:focus {
   padding: 5px;
   position: relative;
   z-index: 2;
-  background-color: #df1840; }
+  background-color: #133f6f; }
 
 .modal-title {
-  font-family: "Raleway Black";
-  font-size: 38px;
-  text-align: center;
-  color: #df1840;
+  font-family: "Raleway Regular";
+  font-size: 30px;
+  text-align: justify;
+  color: #404040;
   padding-bottom: 10px; }
+
+.modal-txt {
+  font-family: "Raleway Regular";
+  font-size: 22px;
+  color: #404040;
+  padding-bottom: 10px; }
+
+.btn_frm_popup {
+  display: block;
+  font-family: "Raleway Medium";
+  font-size: 16px;
+  background-color: #133f6f;
+  color: #ffffff;
+  border: 1px solid #133f6f;
+  border-radius: 20px;
+  width: 100%;
+  padding: 6px;
+  margin-top: 12px; }
 
 /*# sourceMappingURL=default.css.map */
