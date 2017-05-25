@@ -57,16 +57,16 @@ $tabla = include('tabla_imagenes.php');
         <!-- START X-NAVIGATION -->
         <ul class="x-navigation">
             <li class="xn-logo">
-                <a href="../home.php">Diamante</a>
+                <a href="../home">LOGIC SYSTEM</a>
                 <a href="#" class="x-navigation-control"></a>
             </li>
             <li class="xn-profile">
                 <a href="#" class="profile-mini">
-                    <img src="../assets/images/users/avatar-new.jpg" alt="CEFEMEX"/>
+                    <img src="../assets/images/users/avatar-new.jpg" alt="LOGIC SYSTEM"/>
                 </a>
                 <div class="profile">
                     <div class="profile-image">
-                        <img src="../assets/images/users/avatar-new.jpg" alt="CEFEMEX"/>
+                        <img src="../assets/images/users/avatar-new.jpg" alt="LOGIC SYSTEM"/>
                     </div>
                     <div class="profile-data">
                         <div class="profile-data-name">
@@ -85,7 +85,7 @@ $tabla = include('tabla_imagenes.php');
                 </div>
             </li>
             <li>
-                <a href="../home.php"><span class="fa fa-dashboard"></span> <span class="xn-text">Home Admin</span></a>
+                <a href="../home"><span class="fa fa-dashboard"></span> <span class="xn-text">Home Admin</span></a>
             </li>
             <li class="xn-title">Seccion inicio</li>
             <li class="xn-openable active">
@@ -102,48 +102,42 @@ $tabla = include('tabla_imagenes.php');
                     <li><a href="../product/fproduct"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
+            <li class="xn-title">Seccion Alianzas comerciales</li>
             <li class="xn-openable">
-                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Características</span></a>
+                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Alianzas Comerciales</span></a>
                 <ul>
-                    <li><a href="../caracteristicas/lcaracteristica"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="../caracteristicas/fcaracteristica"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="../alianzas/lalianza"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../alianzas/falianza"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <li class="xn-openable">
-                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Características plantas</span></a>
+                <a href="#"><i class="fa fa-users" aria-hidden="true"></i><span class="xn-text">Clientes</span></a>
                 <ul>
-                    <li><a href="../descripcion/ldescripcion.php"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="../descripcion/fdescripcion.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="../client/lclient"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../client/fclient"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
+            <li class="xn-title">Seccion Eventos</li>
             <li class="xn-openable">
-                <a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="xn-text">Propiedades</span></a>
+                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="xn-text">Eventos</span></a>
                 <ul>
-                    <li><a href="../propiedad/lpropiedad"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="../propiedad/fpropiedad"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
                 </ul>
             </li>
+            <li class="xn-title">Seccion Descargas</li>
             <li class="xn-openable">
-                <a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="xn-text">Financiamiento</span></a>
+                <a href="#"><i class="fa fa-download" aria-hidden="true"></i><span class="xn-text">Descargas</span></a>
                 <ul>
-                    <li><a href="../financiamiento/lbancos.php"><span class="fa fa-list"></span>Listado</a></li>
-                    <!--<li><a href="../financiamiento/fbancos.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>-->
+                    <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
                 </ul>
             </li>
-            <li class="xn-title">Seccion Contacto</li>
-            <li class="xn-openable">
-                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">informacion de contacto</span></a>
-                <ul>
-                    <li><a href="../contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
-                </ul>
-            </li>
-            <li class="xn-title">Seccion Registros</li>
+            <!--<li class="xn-title">Seccion Registros</li>
             <li class="xn-openable">
                 <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Registros</span></a>
                 <ul>
                     <li><a href="../registros/lusuariocontacto"><span class="fa fa-list"></span>Listado</a></li>
                 </ul>
-            </li>
+            </li>-->
         </ul>
         <!-- END X-NAVIGATION -->
     </div>

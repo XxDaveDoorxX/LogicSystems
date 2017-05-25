@@ -5,7 +5,7 @@ $seguridad->candado();
 
 require_once('../../Class/Product.php');
 
-$tmpproduct = new Product(0,'','','','','','');
+$tmpproduct = new Product(0,'','','','','','','');
 $products = $tmpproduct->listar();
 
 
@@ -73,7 +73,7 @@ $tabla = include('tabla_imagenes.php');
                 </div>
             </li>
             <li>
-                <a href="../home.php"><span class="fa fa-dashboard"></span> <span class="xn-text">Home Admin</span></a>
+                <a href="../home"><span class="fa fa-dashboard"></span> <span class="xn-text">Home Admin</span></a>
             </li>
             <li class="xn-title">Seccion inicio</li>
             <li class="xn-openable">
@@ -89,49 +89,42 @@ $tabla = include('tabla_imagenes.php');
                     <li><a href="fproduct"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
-            <li class="xn-title">Seccion casas</li>
+            <li class="xn-title">Seccion Alianzas comerciales</li>
             <li class="xn-openable">
-                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Características</span></a>
+                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Alianzas Comerciales</span></a>
                 <ul>
-                    <li><a href="../caracteristicas/lcaracteristica"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="../caracteristicas/fcaracteristica"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="../alianzas/lalianza"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../alianzas/falianza"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <li class="xn-openable">
-                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Características plantas</span></a>
+                <a href="#"><i class="fa fa-users" aria-hidden="true"></i><span class="xn-text">Clientes</span></a>
                 <ul>
-                    <li><a href="../descripcion/ldescripcion.php"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="../descripcion/fdescripcion.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="../client/lclient"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../client/fclient"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
+            <li class="xn-title">Seccion Eventos</li>
             <li class="xn-openable">
-                <a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="xn-text">Propiedades</span></a>
+                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="xn-text">Eventos</span></a>
                 <ul>
-                    <li><a href="lproduct.php"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="fproduct.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
                 </ul>
             </li>
+            <li class="xn-title">Seccion Descargas</li>
             <li class="xn-openable">
-                <a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="xn-text">Financiamiento</span></a>
+                <a href="#"><i class="fa fa-download" aria-hidden="true"></i><span class="xn-text">Descargas</span></a>
                 <ul>
-                    <li><a href="../financiamiento/lbancos.php"><span class="fa fa-list"></span>Listado</a></li>
-                    <!--<li><a href="../financiamiento/fbancos.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>-->
+                    <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
                 </ul>
             </li>
-            <li class="xn-title">Seccion Contacto</li>
-            <li class="xn-openable">
-                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">informacion de contacto</span></a>
-                <ul>
-                    <li><a href="../contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
-                </ul>
-            </li>
-            <li class="xn-title">Seccion Registros</li>
+            <!--<li class="xn-title">Seccion Registros</li>
             <li class="xn-openable">
                 <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Registros</span></a>
                 <ul>
                     <li><a href="../registros/lusuariocontacto"><span class="fa fa-list"></span>Listado</a></li>
                 </ul>
-            </li>
+            </li>-->
         </ul>
         <!-- END X-NAVIGATION -->
     </div>
@@ -213,8 +206,8 @@ $tabla = include('tabla_imagenes.php');
                                             <td><?php echo $cont; ?></td>
                                             <td><?php echo $e['name'] ?></td>
                                             <td><?php echo $e['code'] ?></td>
-                                            <td style="text-align: center;"><a href="../ubicacion/fubicacion?id=<?php echo $e['id'] ?>" style="text-align: center; font-size: 25px;"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
-                                            <td style="text-align: center;"><a href="../plantas/lplantas?id_prop=<?php echo $e['id'] ?>" style="text-align: center; font-size: 25px;"><i class="fa fa-picture-o" aria-hidden="true"></i></a></td>
+                                            <td style="text-align: center;"><a href="../thumbs/lthumbs?id_product=<?php echo $e['id'] ?>" style="text-align: center; font-size: 25px;"><i class="fa fa-picture-o" aria-hidden="true"></i></a></td>
+                                            <td style="text-align: center;"><a href="../gallery/lgallery?id_product=<?php echo $e['id'] ?>" style="text-align: center; font-size: 25px;"><i class="fa fa-file-image-o" aria-hidden="true"></i></a></td>
                                             <td>
                                                 <a href="fproduct.php?id=<?php echo $e['id']; ?>" class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></a>
                                                 <button class="btn btn-danger btn-rounded btn-condensed btn-sm delte_row_data" onClick="delete_row('trow_<?php echo $e['id']; ?>',this);" data-idb="<?php echo $e['id']; ?>" data-tbl="<?php echo $tabla; ?>"><span class="fa fa-times"></span></button>
@@ -344,7 +337,7 @@ $tabla = include('tabla_imagenes.php');
                 //console.log($_this);
                 $.ajax({
                     data:  {'op':'Eliminar', 'id':$_this.data('idb'), 'tbl':$_this.data('tbl'),},
-                    url:   'oppropiedad.php',
+                    url:   'opproduct.php',
                     type:  'post',
                     success:  function (response) {
                         //alert(response);

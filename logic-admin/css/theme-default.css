@@ -2335,7 +2335,7 @@ body {
   float: left;
   min-height: 100%;
   position: relative;
-  background: #012369; /*modif C*/
+  background: #efefef; /*modif C*/
   -webkit-transition: all 200ms ease;
   -moz-transition: all 200ms ease;
   -ms-transition: all 200ms ease;
@@ -2659,7 +2659,7 @@ body.page-container-boxed.wall_10 {
   color: #ffffff;
 }
 .x-navigation li > ul li.active > a {
-  background: #696969; /*modif C*/
+  background: #5b5b5b; /*modif C*/
   color: #ffffff;
 }
 .x-navigation li.xn-openable:before {

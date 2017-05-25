@@ -14,7 +14,12 @@ class ImagenesEx {
 		$dDIR = "http://".$_SERVER["SERVER_NAME"]."/logicsystem/";
 		$tbimgs = array (
 			'Product' => array('imagenes_productos', $uDIR.'assets/images/data/imagenes_productos/', $dDIR.'assets/images/data/imagenes_productos/'),
-            'Banner' => array('imagenes_banner', $uDIR.'assets/images/data/imagenes_banner/', $dDIR.'assets/images/data/imagenes_banner/')
+            'Banner' => array('imagenes_banner', $uDIR.'assets/images/data/imagenes_banner/', $dDIR.'assets/images/data/imagenes_banner/'),
+            'Thumbs' => array('imagenes_thumbs', $uDIR.'assets/images/data/imagenes_thumbs/', $dDIR.'assets/images/data/imagenes_thumbs/'),
+            'Gallery' => array('imagenes_gallery', $uDIR.'assets/images/data/imagenes_gallery/', $dDIR.'assets/images/data/imagenes_gallery/'),
+            'Alianza' => array('imagenes_alianzas', $uDIR.'assets/images/data/imagenes_alianzas/', $dDIR.'assets/images/data/imagenes_alianzas/'),
+            'Cliente' => array('imagenes_clientes', $uDIR.'assets/images/data/imagenes_clientes/', $dDIR.'assets/images/data/imagenes_clientes/'),
+            'Evento' => array('imagenes_eventos', $uDIR.'assets/images/data/imagenes_eventos/', $dDIR.'assets/images/data/imagenes_eventos/')
 						);
 		$this->tabla = $this->ruta = $this->dDIR = "";
 		if (array_key_exists($tabla_c,$tbimgs)) {

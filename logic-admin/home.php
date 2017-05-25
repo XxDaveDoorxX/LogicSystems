@@ -61,7 +61,7 @@ $seguridad->candado();
                         </div>                                                                        
                     </li>
                     <li class="active">
-                        <a href="home.php"><span class="fa fa-dashboard"></span> <span class="xn-text">Home Admin</span></a>
+                        <a href="home"><span class="fa fa-dashboard"></span> <span class="xn-text">Home Admin</span></a>
                     </li>
                     <li class="xn-title">Seccion inicio</li>
                     <li class="xn-openable">
@@ -78,41 +78,42 @@ $seguridad->candado();
                             <li><a href="product/fproduct"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                         </ul>
                     </li>
+                    <li class="xn-title">Seccion Alianzas comerciales</li>
                     <li class="xn-openable">
-                        <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Características plantas</span></a>
+                        <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Alianzas Comerciales</span></a>
                         <ul>
-                            <li><a href="descripcion/ldescripcion.php"><span class="fa fa-list"></span>Listado</a></li>
-                            <li><a href="descripcion/fdescripcion.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                            <li><a href="alianzas/lalianza"><span class="fa fa-list"></span>Listado</a></li>
+                            <li><a href="alianzas/falianza"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                         </ul>
                     </li>
                     <li class="xn-openable">
-                        <a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="xn-text">Propiedades</span></a>
+                        <a href="#"><i class="fa fa-users" aria-hidden="true"></i><span class="xn-text">Clientes</span></a>
                         <ul>
-                            <li><a href="propiedad/lpropiedad.php"><span class="fa fa-list"></span>Listado</a></li>
-                            <li><a href="propiedad/fpropiedad.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                            <li><a href="client/lclient"><span class="fa fa-list"></span>Listado</a></li>
+                            <li><a href="client/fclient.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                         </ul>
                     </li>
+                    <li class="xn-title">Seccion Eventos</li>
                     <li class="xn-openable">
-                        <a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="xn-text">Financiamiento</span></a>
-                        <ul>
-                            <li><a href="financiamiento/lbancos.php"><span class="fa fa-list"></span>Listado</a></li>
-                            <!--<li><a href="financiamiento/fbancos.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>-->
-                        </ul>
-                    </li>
-                    <li class="xn-title">Seccion Contacto</li>
-                    <li class="xn-openable">
-                        <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">informacion de contacto</span></a>
+                        <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="xn-text">Eventos</span></a>
                         <ul>
                             <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
                         </ul>
                     </li>
-					<li class="xn-title">Seccion Registros</li>
+                    <li class="xn-title">Seccion Descargas</li>
+                    <li class="xn-openable">
+                        <a href="#"><i class="fa fa-download" aria-hidden="true"></i><span class="xn-text">Descargas</span></a>
+                        <ul>
+                            <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
+                        </ul>
+                    </li>
+					<!--<li class="xn-title">Seccion Registros</li>
 					<li class="xn-openable">
-                        <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Registros</span></a>
+                        <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span class="xn-text">Registros</span></a>
                         <ul>
                             <li><a href="registros/lusuariocontacto"><span class="fa fa-list"></span>Listado</a></li>
                         </ul>
-                    </li>
+                    </li>-->
                 </ul>
                 <!-- END X-NAVIGATION -->
             </div>

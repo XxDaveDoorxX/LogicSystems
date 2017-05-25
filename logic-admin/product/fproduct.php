@@ -13,7 +13,7 @@ if (isset($_REQUEST['id'])) {
 }
 
 
-$tmpproduct= new Product($id,'','',0);
+$tmpproduct= new Product($id,'','','','','','','');
 $tmpproduct->obtener();
 
 // ** Tabla de imagenes **//
@@ -41,7 +41,6 @@ $tabla = include('tabla_imagenes.php');
     <!-- EOF CSS INCLUDE -->
     <!-- START STYLE -->
     <link rel="stylesheet" type="text/css" id="form-none-panel" href="../css/form-none-panel.css">
-    <link rel="stylesheet" type="text/css" href="../css/summernote/summernote.css">
     <!-- END STYLE -->
 </head>
 <body>
@@ -84,7 +83,7 @@ $tabla = include('tabla_imagenes.php');
                 </div>
             </li>
             <li>
-                <a href="../home.php"><span class="fa fa-dashboard"></span> <span class="xn-text">Home Admin</span></a>
+                <a href="../home"><span class="fa fa-dashboard"></span> <span class="xn-text">Home Admin</span></a>
             </li>
             <li class="xn-title">Seccion inicio</li>
             <li class="xn-openable">
@@ -101,48 +100,42 @@ $tabla = include('tabla_imagenes.php');
                     <li class="active"><a href="fproduct"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
+            <li class="xn-title">Seccion Alianzas comerciales</li>
             <li class="xn-openable">
-                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Características</span></a>
+                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Alianzas Comerciales</span></a>
                 <ul>
-                    <li><a href="../caracteristicas/lcaracteristica.php"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="../caracteristicas/fcaracteristica.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="../alianzas/lalianza"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../alianzas/falianza"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <li class="xn-openable">
-                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Características plantas</span></a>
+                <a href="#"><i class="fa fa-users" aria-hidden="true"></i><span class="xn-text">Clientes</span></a>
                 <ul>
-                    <li><a href="../descripcion/ldescripcion.php"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="../descripcion/fdescripcion.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="../client/lclient"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../client/fclient"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
+            <li class="xn-title">Seccion Eventos</li>
             <li class="xn-openable">
-                <a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="xn-text">Propiedades</span></a>
+                <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="xn-text">Eventos</span></a>
                 <ul>
-                    <li><a href="lproduct.php"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="fproduct.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
                 </ul>
             </li>
+            <li class="xn-title">Seccion Descargas</li>
             <li class="xn-openable">
-                <a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="xn-text">Financiamiento</span></a>
+                <a href="#"><i class="fa fa-download" aria-hidden="true"></i><span class="xn-text">Descargas</span></a>
                 <ul>
-                    <li><a href="../financiamiento/lbancos.php"><span class="fa fa-list"></span>Listado</a></li>
-                    <!--<li><a href="../financiamiento/fbancos.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>-->
+                    <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
                 </ul>
             </li>
-            <li class="xn-title">Seccion Contacto</li>
-            <li class="xn-openable">
-                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">informacion de contacto</span></a>
-                <ul>
-                    <li><a href="../contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
-                </ul>
-            </li>
-            <li class="xn-title">Seccion Registros</li>
+            <!--<li class="xn-title">Seccion Registros</li>
             <li class="xn-openable">
                 <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Registros</span></a>
                 <ul>
                     <li><a href="../registros/lusuariocontacto"><span class="fa fa-list"></span>Listado</a></li>
                 </ul>
-            </li>
+            </li>-->
 
         </ul>
         <!-- END X-NAVIGATION -->
@@ -247,7 +240,19 @@ $tabla = include('tabla_imagenes.php');
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Descripción</label>
-                                                            <textarea  name="descripcion" id="descripcion" class="summernote"><?php echo $tmpproduct->description_second;  ?></textarea>
+                                                            <textarea  name="description_second" id="description_second" class="form-control"><?php echo $tmpproduct->description_second;  ?></textarea>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Frame del video</label>
+                                                            <textarea  name="f_video" id="f_video" class="form-control"><?php echo $tmpproduct->f_video;  ?></textarea>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Características</label>
+                                                            <textarea  name="characteristics" id="characteristics" class="characteristics"><?php echo $tmpproduct->characteristics;  ?></textarea>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Funcionalidades</label>
+                                                            <textarea  name="functionalities" id="functionalities" class="functionalities"><?php echo $tmpproduct->functionalities;  ?></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -353,6 +358,7 @@ $tabla = include('tabla_imagenes.php');
 
 <!-- START SCRIPTS -->
 <!-- START PLUGINS -->
+<script src="../js/ckeditor.js"></script>
 <script type="text/javascript" src="../js/plugins/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="../js/plugins/jquery/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../js/plugins/bootstrap/bootstrap.min.js"></script>
@@ -367,7 +373,6 @@ $tabla = include('tabla_imagenes.php');
 <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
 <script type="text/javascript" src="../js/plugins/dropzone/dropzone.min.js"></script>
 <script type="text/javascript" src="../js/plugins/jquery-validation/jquery.validate.js"></script>
-<script type="text/javascript" src="../js/plugins/summernote/summernote.js"></script>
 
 <!-- END PAGE PLUGINS -->
 
@@ -382,34 +387,10 @@ $tabla = include('tabla_imagenes.php');
 
 <script>
     $(document).ready(function(){
-
-
         $(".fakeloader").fakeLoader({
             timeToHide:1200,
             bgColor:"#e5e5e5",
             spinner:"spinner1"
-        });
-
-        /*Summernote editor*/
-
-        $('.summernote').summernote({
-            callbacks: {
-                onPaste: function (e) {
-                    var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
-                    e.preventDefault();
-                    document.execCommand('insertText', false, bufferText);
-                }
-            },
-            toolbar: [
-                ['style', ['style']],
-                ['font', ['bold', 'italic', 'underline', 'superscript', 'subscript', 'strikethrough', 'clear']],
-                ['fontsize', ['fontsize']], // Still buggy
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['height', ['height']],
-                ['insert', ['link', 'picture', 'video', 'hr']],
-                ['view', ['fullscreen', 'codeview']]
-            ]
         });
 
     });
@@ -428,10 +409,15 @@ $tabla = include('tabla_imagenes.php');
      /****/
 
     var $contd;
-    var $id_prop = <?php echo $id; ?>;
+    var $id_product = <?php echo $id; ?>;
+
+    //CKEDITOR.replace( 'descripcion' );
+    var editorC = CKEDITOR.replace( 'characteristics' );
+    var editorF = CKEDITOR.replace( 'functionalities' );
+
     jQuery(document).ready(function(){
 
-        $('#hdnid_c').val($id_prop);
+        $('#hdnid_c').val($id_product);
         // ** Dopzone  sortable **
         $contd = $("#divdzone");
         $contd.sortable({
@@ -597,26 +583,26 @@ $tabla = include('tabla_imagenes.php');
                     });
 
 
-                    //alert("id banner: "+$id_prop);
-                    if ($id_prop != 0) {
+                    //alert("id banner: "+$id_product);
+                    if ($id_product != 0) {
                         $.ajax({
-                            data:  {'op':'Modificar', 'id':$id_prop, 'nombre':$('#nombre').val(), 'descripcion':$('#descripcion').val(), 'precio':$('#precio').val()},
-                            url:   'oppropiedad.php',
+                            data:  {'op':'Modificar', 'id':$id_product, 'nombre':$('#nombre').val(), 'codigo':$('#codigo').val(), 'f_video':$('#f_video').val(), 'description_first':$('#description_first').val(), 'description_second':$('#description_second').val(), 'characteristics':editorC.getData(), 'functionalities':editorF.getData()},
+                            url:   'opproduct.php',
                             type:  'post',
                             success:  function (response) {
                                 //alert("Modif:\n\n"+response);
-                                //$id_prop = response;
+                                //$id_product = response;
                             }
                         });
                     } else {
                         $.ajax({
-                            data:  {'op':'Agregar', 'nombre':$('#nombre').val(), 'descripcion':$('#descripcion').val(), 'precio':$('#precio').val()},
-                            url:   'oppropiedad.php',
+                            data:  {'op':'Agregar', 'nombre':$('#nombre').val(), 'codigo':$('#codigo').val(), 'f_video':$('#f_video').val(), 'description_first':$('#description_first').val(), 'description_second':$('#description_second').val(), 'characteristics':editorC.getData(), 'functionalities':editorF.getData()},
+                            url:   'opproduct.php',
                             type:  'post',
                             success:  function (response) {
                                 //alert("Insert:\n\n"+response);
-                                $id_prop = response;
-                                $('#hdnid_c').val($id_prop);
+                                $id_product = response;
+                                $('#hdnid_c').val($id_product);
                             }
                         });
                     }
