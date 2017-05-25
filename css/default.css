@@ -76,7 +76,8 @@ section {
   overflow: hidden; }
 
 .navbar-default {
-  background-color: #FFFFFF;
+  background: url(../images/bg-menu.jpg) top center no-repeat;
+  background-size: 100% 100%;
   border-color: #57e8ff; }
 
 .navbar-brand {
@@ -119,7 +120,7 @@ section {
 
 .dropdown-menu {
   top: 108%;
-  background: rgba(2, 15, 47, 0.7); }
+  background: rgba(2, 15, 47, 0.8); }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   color: #169fd8;
@@ -153,11 +154,14 @@ section {
   border-color: #676767; }
 
 .tittle p {
+  font-family: "Raleway Light", sans-serif;
   text-align: justify;
   font-size: 17px;
   color: #404040; }
 
 .tittle ul li {
+  font-family: "Raleway Light", sans-serif;
+  font-size: 14px;
   text-align: left;
   margin-left: 20px; }
 
@@ -206,24 +210,24 @@ section {
   border-radius: 10px;
   padding: 6px 0; }
 
-.bg-servicios {
+.bg-servicios, .bg-descargas {
   background: url(../images/bg-servicios.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
   padding-top: 2%;
   padding-bottom: 2%; }
 
-.bg-servicio-color1 {
-  background-color: #ffffff;
-  padding-top: 3%;
-  padding-bottom: 3%; }
-
-.bg-servicio-color2 {
+.bg-servicio-color {
   background-color: #efefef;
   padding-top: 3%;
   padding-bottom: 3%; }
 
-#servicios h1 {
+.bg-servicio-color:nth-child(even) {
+  background-color: #ffffff;
+  padding-top: 3%;
+  padding-bottom: 3%; }
+
+#servicios h1, #descargas h1 {
   font-family: "Raleway Light";
   font-size: 44px;
   text-align: center;
@@ -258,6 +262,83 @@ section {
 #hijo-servicios {
   display: table-cell;
   vertical-align: middle; }
+
+.bg-alianzas, .bg-clientes {
+  background: url(../images/bg-alinzas.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 16.5%;
+  padding-bottom: 16.5%; }
+
+.bg-alianzas-color, .bg-clientes-color {
+  background-color: #efefef;
+  padding-top: 3%;
+  padding-bottom: 3%; }
+
+.bg-alianzas-color:nth-child(even), .bg-clientes-color:nth-child(even) {
+  background-color: #ffffff;
+  padding-top: 3%;
+  padding-bottom: 3%; }
+
+#alianzas h1, #clientes h1 {
+  font-family: "Raleway Light";
+  font-size: 44px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0;
+  margin: 0; }
+
+#alianzas h2, #clientes h2 {
+  font-family: "Raleway Bold";
+  font-size: 26px;
+  color: #404040;
+  padding: 0;
+  margin: 0; }
+
+#alianzas p, #clientes p {
+  font-family: "Raleway Light";
+  text-align: justify;
+  font-size: 16px;
+  color: #404040;
+  padding: 0;
+  margin: 0; }
+
+.contenido-descargas {
+  padding-top: 3%;
+  padding-bottom: 3%; }
+
+.caja-descargas {
+  background-color: #efefef;
+  padding: 15px; }
+
+#descargas h2 {
+  font-family: "Raleway Bold";
+  font-size: 16px;
+  color: #404040;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0; }
+
+#descargas p {
+  font-family: "Raleway Light";
+  text-align: justify;
+  font-size: 14px;
+  color: #404040;
+  padding: 0;
+  margin: 0; }
+
+.btn-descarga {
+  display: block;
+  font-family: "Raleway Light";
+  font-size: 23px;
+  text-align: center;
+  color: #ffffff;
+  min-width: 100%;
+  margin: auto;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin-top: 25px;
+  padding: 6px 0; }
 
 /*=======================================================
 			PRODUCTS INDEX

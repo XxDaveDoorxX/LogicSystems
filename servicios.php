@@ -45,7 +45,7 @@ include_once('layouts/partial/header.php');
             </div>
         </div>
     </div>
-    <div class="bg-servicio-color1">
+    <div class="bg-servicio-color">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -69,7 +69,7 @@ include_once('layouts/partial/header.php');
             </div>
         </div>
     </div>
-    <div class="bg-servicio-color2">
+    <div class="bg-servicio-color">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -93,7 +93,7 @@ include_once('layouts/partial/header.php');
             </div>
         </div>
     </div>
-    <div class="bg-servicio-color1">
+    <div class="bg-servicio-color">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -117,7 +117,7 @@ include_once('layouts/partial/header.php');
             </div>
         </div>
     </div>
-    <div class="bg-servicio-color2">
+    <div class="bg-servicio-color">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -149,8 +149,6 @@ include_once('layouts/partial/footer.php');
 
 <!-- jQuery -->
 <script src="js/jquery-1.9.1.min.js"></script>
-<!-- WOW-->
-<script src="js/wow.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>

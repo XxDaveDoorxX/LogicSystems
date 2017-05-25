@@ -41,12 +41,12 @@ if (!isset($statnav)) {
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Casos de éxito <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Alianzas comerciales</a></li>
-                            <li><a href="#">Clientes</a></li>
+                            <li><a href="alianzas-comerciales">Alianzas comerciales</a></li>
+                            <li><a href="clientes">Clientes</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="">Descargas</a>
+                    <li class="<?php echo $statnav[2]; ?>">
+                        <a href="descarga">Descargas</a>
                     </li>
                     <li>
                         <a href="">Nosotros</a>
