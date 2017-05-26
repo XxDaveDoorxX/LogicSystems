@@ -27,23 +27,32 @@ if (!isset($statnav)) {
                     <li class="<?php echo $statnav[0]; ?>">
                         <a href=".">Inicio</a>
                     </li>
-                    <li class="<?php echo $statnav[1]; ?>">
-                        <a href="productos">Productos</a>
+                    <li class="dropdown <?php echo $statnav[1]; ?>">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="">Servicios</a>
+                    <li class="<?php echo $statnav[2]; ?>">
+                        <a href="servicios">Servicios</a>
                     </li>
-                    <li>
-                        <a href="">Casos de éxito</a>
+                    <li class="dropdown <?php echo $statnav[3]; ?>">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Casos de éxito <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="alianzas-comerciales">Alianzas comerciales</a></li>
+                            <li><a href="clientes">Clientes</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="">Descargas</a>
+                    <li class="<?php echo $statnav[4]; ?>">
+                        <a href="descarga">Descargas</a>
                     </li>
-                    <li>
-                        <a href="">Nosotros</a>
+                    <li class="<?php echo $statnav[5]; ?>">
+                        <a href="nosotros">Nosotros</a>
                     </li>
-                    <li>
-                        <a href="#contacto">Contacto</a>
+                    <li class="<?php echo $statnav[6]; ?>">
+                        <a href="contacto">Contacto</a>
                     </li>
                     <li>
                         <a href="" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>

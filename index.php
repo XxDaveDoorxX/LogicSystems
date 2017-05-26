@@ -13,6 +13,7 @@
     <!-- Custom CSS -->
     <link href="css/default.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/stars.css">
 
     <!--slider-->
     <link rel="stylesheet" href="css/slider/css/fexslider.css" type="text/css" media="all"/>
@@ -24,7 +25,7 @@
 
 
     <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700" rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -126,13 +127,13 @@ include_once('layouts/partial/header.php');
         <div class="row">
             <div class="col-md-4">
                 <div class="img-alianza">
-                    <img class="img-responsive" src="images/alianza-comercial.jpg">
+                    <img class="img-responsive center-block" src="images/alianza-comercial.jpg">
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="item-alianza-text">
                     <span>SUSTAINABLE CONSTRUCTION</span>
-                    <div>Stars</div>
+                    <div class="stars starrr" data-rating="1"></div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis pellentesque commodo. Nullam sed diam sit amet quam vestibulum tincidunt. Curabitur posuere lectus nisl, quis congue nunc mattis eu. Proin id vulputate eros. Ut nulla lacus, dapibus a facilisis vulputate, sollicitudin eget dui. Nullam rhoncus lacus tortor, nec semper ipsum suscipit at. Curabitur purus turpis, auctor eget tristique vitae, euismod vel elit. Quisque tempor elementum augue, eu vestibulum lacus pellentesque in. Nulla quis nulla vitae dolor ornare mollis. Mauris faucibus nisi metus, eget aliquam tellus bibendum nec.</p>
                 </div>
             </div>
@@ -238,13 +239,13 @@ include_once('layouts/partial/footer.php');
 <!--slider-->
 <script type='text/javascript' src='css/slider/js/jquery.flexslider-min.js'></script>
 
-<!--slick-->
-<script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
 <!--OWL -->
 <script src="js/owl.carousel.min.js"></script>
 
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <script src="js/main.js"></script>
+
+<script src="js/stars.js"></script>
 
 
 <script type="text/javascript">

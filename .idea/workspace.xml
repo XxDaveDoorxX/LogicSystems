@@ -2,12 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b8d68b-4417-4d56-a2bf-91bbe5415553" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logic-admin/download/opsubir_archivo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logic-admin/download/tabla_archivo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fancybox/images/blank.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fancybox/images/default.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fancybox/images/fancybox_loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fancybox/images/fancybox_loading@2x.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fancybox/images/fancybox_overlay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fancybox/images/fancybox_sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fancybox/images/fancybox_sprite@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg-alinzas.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg-clientes.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg-contacto.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg-menu.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg-popup.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bg-servicios.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/claves.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/edificio.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icono-contacto.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icono-descarga.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icono-nosotros.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icono-servicios.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/instructivo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pagina-web.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/recomendaciones.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/servidores.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sitio-web.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sustainable.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ti.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/fonts/Raleway-Bold.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/fonts/Raleway-Bold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/fonts/Raleway-Bold.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/alianzas-comerciales.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clientes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contacto.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fancybox/css/jquery.fancybox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fancybox/js/jquery.fancybox.pack.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fancybox/js/jquery.mousewheel-3.0.6.pack.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/fancybox/js/prettify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/stars.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/descarga.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.barrating.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/stars.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nosotros.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/animate.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/fonts/Raleway-Bold.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/servicios.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/default.css.map" afterPath="$PROJECT_DIR$/css/default.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fonts/Raleway-Bold.woff" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Bold.woff" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/assets/upload.php" afterPath="$PROJECT_DIR$/logic-admin/assets/upload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/download/ldownload.php" afterPath="$PROJECT_DIR$/logic-admin/download/ldownload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/js/plugins/form/jquery.form.js" afterPath="$PROJECT_DIR$/logic-admin/js/plugins/form/jquery.form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap.css" afterPath="$PROJECT_DIR$/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/default.css" afterPath="$PROJECT_DIR$/css/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fonts/Raleway-Bold.svg" afterPath="$PROJECT_DIR$/css/fonts/Raleway-Bold.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/responsive.css" afterPath="$PROJECT_DIR$/css/responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/responsive.css.map" afterPath="$PROJECT_DIR$/css/responsive.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/layouts/partial/footer.php" afterPath="$PROJECT_DIR$/layouts/partial/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/layouts/partial/header.php" afterPath="$PROJECT_DIR$/layouts/partial/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productos.php" afterPath="$PROJECT_DIR$/productos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/default.css" afterPath="$PROJECT_DIR$/scss/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/default.css.map" afterPath="$PROJECT_DIR$/scss/default.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/default.scss" afterPath="$PROJECT_DIR$/scss/default.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/responsive.css" afterPath="$PROJECT_DIR$/scss/responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/responsive.scss" afterPath="$PROJECT_DIR$/scss/responsive.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,36 +74,22 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ldownload.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/logic-admin/download/ldownload.php">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layouts/partial/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="364" column="88" lean-forward="true" selection-start-line="364" selection-start-column="88" selection-end-line="364" selection-end-column="88" />
-              <folding>
-                <element signature="e#11263#11270#1#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logic-admin/assets/upload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.form.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logic-admin/js/plugins/form/jquery.form.js">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/layouts/partial/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="159" column="31" lean-forward="true" selection-start-line="159" selection-start-column="31" selection-end-line="159" selection-end-column="31" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="441">
+              <caret line="71" column="55" lean-forward="false" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,6 +115,7 @@
       <find>$id_event</find>
       <find>tbla</find>
       <find>tbl</find>
+      <find>=======</find>
     </findStrings>
     <replaceStrings>
       <replace>$id_product</replace>
@@ -98,8 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/logic-admin/index.php" />
-        <option value="$PROJECT_DIR$/Class/user.php" />
         <option value="$PROJECT_DIR$/Class/Seguridad.php" />
         <option value="$PROJECT_DIR$/Class/banner.php" />
         <option value="$PROJECT_DIR$/logic-admin/product/tabla_imagenes.php" />
@@ -149,6 +189,8 @@
         <option value="$PROJECT_DIR$/logic-admin/js/plugins/form/jquery.form.js" />
         <option value="$PROJECT_DIR$/logic-admin/assets/upload.php" />
         <option value="$PROJECT_DIR$/logic-admin/download/ldownload.php" />
+        <option value="$PROJECT_DIR$/productos.php" />
+        <option value="$PROJECT_DIR$/layouts/partial/header.php" />
       </list>
     </option>
   </component>
@@ -191,6 +233,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="logicsystem" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logicsystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logicsystem" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partial" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -306,17 +366,17 @@
       <updated>1495635417301</updated>
       <workItem from="1495635418953" duration="18694000" />
       <workItem from="1495720813682" duration="25464000" />
-      <workItem from="1495807554791" duration="12589000" />
+      <workItem from="1495807554791" duration="13297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56747000" />
+    <option name="totallyTimeSpent" value="57455000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -365,39 +425,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/logic-admin/banner/tabla_imagenes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/product/tabla_imagenes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sdf.php" />
-    <entry file="file://$PROJECT_DIR$/logic-admin/thumbs/tabla_imagenes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/thumbs/opthumbs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logic-admin/gallery/tabla_imagenes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -819,12 +846,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/js/plugins/form/jquery.form.js">
+    <entry file="file://$PROJECT_DIR$/logic-admin/download/ldownload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="159" column="31" lean-forward="true" selection-start-line="159" selection-start-column="31" selection-end-line="159" selection-end-column="31" />
+        <state relative-caret-position="294">
+          <caret line="364" column="88" lean-forward="false" selection-start-line="364" selection-start-column="88" selection-end-line="364" selection-end-column="88" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#11263#11270#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -837,13 +864,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/download/ldownload.php">
+    <entry file="file://$PROJECT_DIR$/logic-admin/js/plugins/form/jquery.form.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="364" column="88" lean-forward="true" selection-start-line="364" selection-start-column="88" selection-end-line="364" selection-end-column="88" />
+        <state relative-caret-position="161">
+          <caret line="159" column="31" lean-forward="false" selection-start-line="159" selection-start-column="31" selection-end-line="159" selection-end-column="31" />
           <folding>
-            <element signature="e#11263#11270#1#HTML" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/productos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="358" column="0" lean-forward="true" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1173">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layouts/partial/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clientes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5861">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layouts/partial/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="71" column="55" lean-forward="false" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
