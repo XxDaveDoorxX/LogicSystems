@@ -8878,7 +8878,18 @@ div.datepicker th {
 div.datepicker td.day:hover {
   background: #F5F5F5;
   cursor: pointer;
+  color: #656d78;
 }
+
+div.datepicker td.today {
+  background: #8296a9;
+  cursor: pointer;
+  color: #fff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
 div.datepicker td.day.disabled {
   color: #CCC;
 }

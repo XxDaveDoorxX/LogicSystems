@@ -119,14 +119,16 @@ $tabla = include('tabla_imagenes.php');
             <li class="xn-openable">
                 <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="xn-text">Eventos</span></a>
                 <ul>
-                    <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../event/levent"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../event/fevent"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <li class="xn-title">Seccion Descargas</li>
             <li class="xn-openable">
                 <a href="#"><i class="fa fa-download" aria-hidden="true"></i><span class="xn-text">Descargas</span></a>
                 <ul>
-                    <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../download/ldownload"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../download/fdownload"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <!--<li class="xn-title">Seccion Registros</li>
@@ -272,17 +274,19 @@ $tabla = include('tabla_imagenes.php');
                                     <div class="col-md-12">
                                         <h3 class="form-header form-header-lg m-b-10">Suba su Imagen</h3>
                                         <br/>
-                                            <span>El tamaño de las imagenes debe ser de 1420px de ancho por 960px de alto.</span><br/>
+                                            <span>El tamaño de las imagenes debe ser de 216px de ancho por 400px de alto, formato PNG.</span><br/><br/>
+                                            <span>La primara imagen es el thumbnail de la página de inicio y la segunda imagen es la de interior del producto</span><br/><br/>
                                             <div class="row">
                                                 <div class="col-md-12 ">
-                                                    <div><button class="btn btn-info" id="btnaddimg" >Agregar im&aacute;genes</button></div>
+                                                    <div><button class="btn btn-info" id="btnaddimg" >Agregar im&aacute;genes</button></div> <br/>
+                                                    <br/>
                                                     <form action="../opimagenes/upload.php" id="frmdzone" class="dropzone">
                                                         <input type="hidden" id="hdntbl" name="tbl" value="<?php echo $tabla; ?>" />
                                                         <input type="hidden" id="hdnid_c" name="id_c" value="0" />
-                                                        <input type="hidden" id="hdniw" name="iw[]" value="100" />
-                                                        <input type="hidden" id="hdnih" name="ih[]" value="75" />
-                                                        <input type="hidden" id="hdniwx" name="iw[]" value="370" />
-                                                        <input type="hidden" id="hdnihx" name="ih[]" value="538" />
+                                                        <input type="hidden" id="hdniw" name="iw[]" value="216" />
+                                                        <input type="hidden" id="hdnih" name="ih[]" value="400" />
+                                                        <input type="hidden" id="hdniwx" name="iw[]" value="362" />
+                                                        <input type="hidden" id="hdnihx" name="ih[]" value="362" />
 
                                                         <div class="dz-message"></div>
                                                         <div class="dropzone-previews" id="divdzone"> </div>

@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b8d68b-4417-4d56-a2bf-91bbe5415553" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logic-admin/download/fdownload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logic-admin/download/ldownload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logic-admin/download/opdownload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logic-admin/download/tabla_imagenes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Class/Descarga.php" afterPath="$PROJECT_DIR$/Class/Descarga.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Class/imagenesEx.php" afterPath="$PROJECT_DIR$/Class/imagenesEx.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/alianzas/falianza.php" afterPath="$PROJECT_DIR$/logic-admin/alianzas/falianza.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/alianzas/lalianza.php" afterPath="$PROJECT_DIR$/logic-admin/alianzas/lalianza.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/banner/fbanner.php" afterPath="$PROJECT_DIR$/logic-admin/banner/fbanner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/banner/lbanner.php" afterPath="$PROJECT_DIR$/logic-admin/banner/lbanner.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/client/fclient.php" afterPath="$PROJECT_DIR$/logic-admin/client/fclient.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/client/lclient.php" afterPath="$PROJECT_DIR$/logic-admin/client/lclient.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/css/theme-default.css" afterPath="$PROJECT_DIR$/logic-admin/css/theme-default.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/event/fevent.php" afterPath="$PROJECT_DIR$/logic-admin/event/fevent.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/event/levent.php" afterPath="$PROJECT_DIR$/logic-admin/event/levent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/event/opevent.php" afterPath="$PROJECT_DIR$/logic-admin/event/opevent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/gallery/fgallery.php" afterPath="$PROJECT_DIR$/logic-admin/gallery/fgallery.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/gallery/lgallery.php" afterPath="$PROJECT_DIR$/logic-admin/gallery/lgallery.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/home.php" afterPath="$PROJECT_DIR$/logic-admin/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/product/fproduct.php" afterPath="$PROJECT_DIR$/logic-admin/product/fproduct.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/product/lproduct.php" afterPath="$PROJECT_DIR$/logic-admin/product/lproduct.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/thumbs/fthumbs.php" afterPath="$PROJECT_DIR$/logic-admin/thumbs/fthumbs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/thumbs/lthumbs.php" afterPath="$PROJECT_DIR$/logic-admin/thumbs/lthumbs.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,34 +36,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fevent.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/logic-admin/event/fevent.php">
+      <file leaf-file-name="fproduct.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/logic-admin/product/fproduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="582" column="43" lean-forward="false" selection-start-line="582" selection-start-column="43" selection-end-line="582" selection-end-column="43" />
+            <state relative-caret-position="294">
+              <caret line="281" column="57" lean-forward="false" selection-start-line="281" selection-start-column="57" selection-end-line="281" selection-end-column="57" />
               <folding>
-                <marker date="1495752699572" expanded="true" signature="21186:21198" ph="..." />
+                <marker date="1495812110334" expanded="true" signature="24109:24121" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opevent.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logic-admin/event/opevent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" column="48" lean-forward="true" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="levent.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logic-admin/event/levent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3316">
-              <caret line="340" column="34" lean-forward="true" selection-start-line="340" selection-start-column="34" selection-end-line="340" selection-end-column="34" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -65,6 +64,9 @@
       <find>$id_alianza</find>
       <find>$alianza</find>
       <find>$id_client</find>
+      <find>$event</find>
+      <find>$tmpevent</find>
+      <find>$id_event</find>
     </findStrings>
     <replaceStrings>
       <replace>$id_product</replace>
@@ -78,6 +80,9 @@
       <replace>$tmpclient</replace>
       <replace>$client</replace>
       <replace>$id_event</replace>
+      <replace>$download</replace>
+      <replace>$tempdownload</replace>
+      <replace>$id_download</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -101,36 +106,40 @@
         <option value="$PROJECT_DIR$/logic-admin/thumbs/opthumbs.php" />
         <option value="$PROJECT_DIR$/logic-admin/gallery/tabla_imagenes.php" />
         <option value="$PROJECT_DIR$/logic-admin/gallery/opgallery.php" />
-        <option value="$PROJECT_DIR$/logic-admin/css/theme-default.css" />
-        <option value="$PROJECT_DIR$/Class/imagenesEx.php" />
         <option value="$PROJECT_DIR$/Class/Evento.php" />
-        <option value="$PROJECT_DIR$/Class/Descarga.php" />
         <option value="$PROJECT_DIR$/logic-admin/alianzas/tabla_imagenes.php" />
         <option value="$PROJECT_DIR$/Class/Alianza.php" />
         <option value="$PROJECT_DIR$/logic-admin/js/plugins.js" />
         <option value="$PROJECT_DIR$/logic-admin/alianzas/opalianza.php" />
         <option value="$PROJECT_DIR$/Class/Cliente.php" />
         <option value="$PROJECT_DIR$/logic-admin/client/tabla_imagenes.php" />
+        <option value="$PROJECT_DIR$/logic-admin/client/opclient.php" />
+        <option value="$PROJECT_DIR$/Class/Product.php" />
+        <option value="$PROJECT_DIR$/logic-admin/product/opproduct.php" />
+        <option value="$PROJECT_DIR$/logic-admin/event/tabla_imagenes.php" />
+        <option value="$PROJECT_DIR$/logic-admin/event/opevent.php" />
+        <option value="$PROJECT_DIR$/logic-admin/css/theme-default.css" />
+        <option value="$PROJECT_DIR$/Class/Descarga.php" />
+        <option value="$PROJECT_DIR$/logic-admin/download/tabla_imagenes.php" />
+        <option value="$PROJECT_DIR$/logic-admin/download/opdownload.php" />
+        <option value="$PROJECT_DIR$/Class/imagenesEx.php" />
         <option value="$PROJECT_DIR$/logic-admin/home.php" />
-        <option value="$PROJECT_DIR$/logic-admin/alianzas/lalianza.php" />
-        <option value="$PROJECT_DIR$/logic-admin/alianzas/falianza.php" />
-        <option value="$PROJECT_DIR$/logic-admin/banner/fbanner.php" />
-        <option value="$PROJECT_DIR$/logic-admin/banner/lbanner.php" />
-        <option value="$PROJECT_DIR$/logic-admin/gallery/fgallery.php" />
-        <option value="$PROJECT_DIR$/logic-admin/gallery/lgallery.php" />
         <option value="$PROJECT_DIR$/logic-admin/thumbs/fthumbs.php" />
         <option value="$PROJECT_DIR$/logic-admin/thumbs/lthumbs.php" />
-        <option value="$PROJECT_DIR$/logic-admin/client/opclient.php" />
-        <option value="$PROJECT_DIR$/logic-admin/client/fclient.php" />
-        <option value="$PROJECT_DIR$/Class/Product.php" />
         <option value="$PROJECT_DIR$/logic-admin/product/lproduct.php" />
-        <option value="$PROJECT_DIR$/logic-admin/product/opproduct.php" />
-        <option value="$PROJECT_DIR$/logic-admin/product/fproduct.php" />
-        <option value="$PROJECT_DIR$/logic-admin/event/tabla_imagenes.php" />
-        <option value="$PROJECT_DIR$/logic-admin/event/levent.php" />
-        <option value="$PROJECT_DIR$/logic-admin/client/lclient.php" />
+        <option value="$PROJECT_DIR$/logic-admin/gallery/fgallery.php" />
+        <option value="$PROJECT_DIR$/logic-admin/gallery/lgallery.php" />
         <option value="$PROJECT_DIR$/logic-admin/event/fevent.php" />
-        <option value="$PROJECT_DIR$/logic-admin/event/opevent.php" />
+        <option value="$PROJECT_DIR$/logic-admin/event/levent.php" />
+        <option value="$PROJECT_DIR$/logic-admin/client/fclient.php" />
+        <option value="$PROJECT_DIR$/logic-admin/client/lclient.php" />
+        <option value="$PROJECT_DIR$/logic-admin/banner/fbanner.php" />
+        <option value="$PROJECT_DIR$/logic-admin/banner/lbanner.php" />
+        <option value="$PROJECT_DIR$/logic-admin/alianzas/falianza.php" />
+        <option value="$PROJECT_DIR$/logic-admin/alianzas/lalianza.php" />
+        <option value="$PROJECT_DIR$/logic-admin/download/fdownload.php" />
+        <option value="$PROJECT_DIR$/logic-admin/download/ldownload.php" />
+        <option value="$PROJECT_DIR$/logic-admin/product/fproduct.php" />
       </list>
     </option>
   </component>
@@ -162,6 +171,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -208,23 +219,21 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\logicsystem\Class" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\logicsystem\logic-admin\download" />
       <recent name="C:\xampp\htdocs\logicsystem\logic-admin\event" />
       <recent name="C:\xampp\htdocs\logicsystem\logic-admin\client" />
       <recent name="C:\xampp\htdocs\logicsystem\logic-admin\alianzas" />
       <recent name="C:\xampp\htdocs\logicsystem\Class" />
-      <recent name="C:\xampp\htdocs\logicsystem\logic-admin\gallery" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\logicsystem\Class" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -319,17 +328,19 @@
       <option name="presentableId" value="Default" />
       <updated>1495635417301</updated>
       <workItem from="1495635418953" duration="18694000" />
-      <workItem from="1495720813682" duration="25202000" />
+      <workItem from="1495720813682" duration="25464000" />
+      <workItem from="1495807554791" duration="4610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43896000" />
+    <option name="totallyTimeSpent" value="48768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -378,36 +389,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Class/inc/datadb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class/inc/dbc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/opimagenes/get.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-304">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Class/user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -491,14 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/css/theme-default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="2661" column="21" lean-forward="false" selection-start-line="2661" selection-start-column="21" selection-end-line="2661" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logic-admin/gallery/opgallery.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -520,19 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class/Evento.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-          <folding>
-            <marker date="1495742446997" expanded="true" signature="483:558" ph="INSERT INTO ${$this-&gt;tabla}... " />
-            <marker date="1495742446997" expanded="true" signature="1300:1341" ph="DELETE FROM " />
-            <marker date="1495742446997" expanded="true" signature="1549:1622" ph="SELECT id, t... ${$this-&gt;tabla}" />
-            <marker date="1495742446997" expanded="true" signature="1944:1990" ph="SELECT id, t... ${$this-&gt;tabla}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Class/uarchivo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-713">
@@ -546,19 +506,6 @@
             <marker date="1453229016000" expanded="true" signature="4033:4099" ph="SELECT id,ti... ${$this-&gt;tabla}" />
             <marker date="1453229016000" expanded="true" signature="4612:4686" ph="SELECT id,ti... ${$this-&gt;tabla}" />
             <marker date="1453229016000" expanded="true" signature="5051:5097" ph="SELECT id FR... ${$this-&gt;tabla}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class/Descarga.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <marker date="1495742529215" expanded="true" signature="327:374" ph="INSERT INTO ${$this-&gt;tabla}... " />
-            <marker date="1495742529215" expanded="true" signature="1009:1050" ph="DELETE FROM " />
-            <marker date="1495742529215" expanded="true" signature="1259:1307" ph="SELECT id,ti... ${$this-&gt;tabla}" />
-            <marker date="1495742529215" expanded="true" signature="1593:1614" ph="SELECT id,ti... ${$this-&gt;tabla}" />
           </folding>
         </state>
       </provider>
@@ -650,14 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class/imagenesEx.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="21" column="138" lean-forward="false" selection-start-line="21" selection-start-column="138" selection-end-line="21" selection-end-column="138" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logic-admin/alianzas/tabla_imagenes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -674,101 +613,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="94" column="25" lean-forward="true" selection-start-line="88" selection-start-column="20" selection-end-line="94" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/alianzas/lalianza.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="105" column="50" lean-forward="true" selection-start-line="105" selection-start-column="50" selection-end-line="105" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/alianzas/falianza.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="116" column="50" lean-forward="false" selection-start-line="116" selection-start-column="50" selection-end-line="116" selection-end-column="50" />
-          <folding>
-            <marker date="1495749469942" expanded="true" signature="22196:22208" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/banner/fbanner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="116" column="50" lean-forward="true" selection-start-line="116" selection-start-column="50" selection-end-line="116" selection-end-column="50" />
-          <folding>
-            <marker date="1495749478480" expanded="true" signature="20001:20013" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/banner/lbanner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="105" column="50" lean-forward="false" selection-start-line="105" selection-start-column="50" selection-end-line="105" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/gallery/fgallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="124" column="50" lean-forward="false" selection-start-line="124" selection-start-column="50" selection-end-line="124" selection-end-column="50" />
-          <folding>
-            <marker date="1495749498263" expanded="true" signature="20238:20250" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/gallery/lgallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="115" column="50" lean-forward="false" selection-start-line="115" selection-start-column="50" selection-end-line="115" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/thumbs/fthumbs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="124" column="50" lean-forward="true" selection-start-line="124" selection-start-column="50" selection-end-line="124" selection-end-column="50" />
-          <folding>
-            <marker date="1495749539442" expanded="true" signature="20268:20280" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/thumbs/lthumbs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="115" column="50" lean-forward="false" selection-start-line="115" selection-start-column="50" selection-end-line="115" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logic-admin/client/opclient.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/client/fclient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="190" column="44" lean-forward="false" selection-start-line="190" selection-start-column="44" selection-end-line="190" selection-end-column="44" />
-          <folding>
-            <marker date="1495749692631" expanded="true" signature="22145:22157" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -785,28 +634,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/product/fproduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2856">
-          <caret line="595" column="27" lean-forward="true" selection-start-line="595" selection-start-column="27" selection-end-line="595" selection-end-column="27" />
-          <folding>
-            <marker date="1495750695327" expanded="true" signature="23618:23630" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logic-admin/product/opproduct.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/product/lproduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4232">
-          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -819,36 +650,221 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/client/lclient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3845">
-          <caret line="336" column="36" lean-forward="false" selection-start-line="336" selection-start-column="36" selection-end-line="336" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/event/levent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3316">
-          <caret line="340" column="34" lean-forward="true" selection-start-line="340" selection-start-column="34" selection-end-line="340" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logic-admin/event/opevent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
-          <caret line="13" column="48" lean-forward="true" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+          <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/css/theme-default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="8889" column="21" lean-forward="false" selection-start-line="8889" selection-start-column="21" selection-end-line="8889" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class/Evento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="75" selection-end-column="5" />
+          <folding>
+            <marker date="1495742446997" expanded="true" signature="483:558" ph="INSERT INTO ${$this-&gt;tabla}... " />
+            <marker date="1495742446997" expanded="true" signature="1300:1341" ph="DELETE FROM " />
+            <marker date="1495742446997" expanded="true" signature="1549:1622" ph="SELECT id, t... ${$this-&gt;tabla}" />
+            <marker date="1495742446997" expanded="true" signature="1944:1990" ph="SELECT id, t... ${$this-&gt;tabla}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class/Descarga.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1633">
+          <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+          <folding>
+            <marker date="1495810364520" expanded="true" signature="411:473" ph="INSERT INTO ${$this-&gt;tabla}... " />
+            <marker date="1495810364520" expanded="true" signature="1164:1205" ph="DELETE FROM " />
+            <marker date="1495810364520" expanded="true" signature="1413:1475" ph="SELECT id, t... ${$this-&gt;tabla}" />
+            <marker date="1495810364520" expanded="true" signature="1780:1815" ph="SELECT id, t... ${$this-&gt;tabla}" />
+            <marker date="1495810364520" expanded="true" signature="1809:1815" ph="SELECT id,ti... ${$this-&gt;tabla}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/download/tabla_imagenes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class/imagenesEx.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="22" column="146" lean-forward="false" selection-start-line="22" selection-start-column="146" selection-end-line="22" selection-end-column="146" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="110" column="25" lean-forward="true" selection-start-line="104" selection-start-column="20" selection-end-line="110" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/thumbs/lthumbs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="133" column="17" lean-forward="false" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/product/lproduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="121" column="17" lean-forward="false" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/gallery/lgallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="133" column="17" lean-forward="false" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/gallery/fgallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="142" column="17" lean-forward="false" selection-start-line="142" selection-start-column="17" selection-end-line="142" selection-end-column="17" />
+          <folding>
+            <marker date="1495811258240" expanded="true" signature="20472:20484" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logic-admin/event/fevent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="582" column="43" lean-forward="false" selection-start-line="582" selection-start-column="43" selection-end-line="582" selection-end-column="43" />
+        <state relative-caret-position="386">
+          <caret line="134" column="17" lean-forward="false" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
           <folding>
-            <marker date="1495752699572" expanded="true" signature="21186:21198" ph="..." />
+            <marker date="1495811288453" expanded="true" signature="21313:21325" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/event/levent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="123" column="17" lean-forward="false" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/client/fclient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="134" column="17" lean-forward="false" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
+          <folding>
+            <marker date="1495811310570" expanded="true" signature="22379:22391" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/client/lclient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="123" column="17" lean-forward="false" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/banner/lbanner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="123" column="17" lean-forward="false" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/banner/fbanner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="134" column="17" lean-forward="false" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
+          <folding>
+            <marker date="1495811332562" expanded="true" signature="20235:20247" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/alianzas/falianza.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="134" column="17" lean-forward="false" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
+          <folding>
+            <marker date="1495811354274" expanded="true" signature="22430:22442" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/alianzas/lalianza.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="123" column="17" lean-forward="false" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/download/opdownload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/download/fdownload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="569" column="46" lean-forward="false" selection-start-line="569" selection-start-column="46" selection-end-line="569" selection-end-column="46" />
+          <folding>
+            <marker date="1495811523356" expanded="true" signature="20422:20434" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/download/ldownload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="338" column="38" lean-forward="false" selection-start-line="338" selection-start-column="38" selection-end-line="338" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/thumbs/fthumbs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2279">
+          <caret line="142" column="17" lean-forward="true" selection-start-line="136" selection-start-column="12" selection-end-line="142" selection-end-column="17" />
+          <folding>
+            <marker date="1495811185350" expanded="true" signature="20502:20514" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/product/fproduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="281" column="57" lean-forward="false" selection-start-line="281" selection-start-column="57" selection-end-line="281" selection-end-column="57" />
+          <folding>
+            <marker date="1495812110334" expanded="true" signature="24109:24121" ph="..." />
           </folding>
         </state>
       </provider>

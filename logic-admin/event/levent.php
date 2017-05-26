@@ -118,7 +118,8 @@ $tabla = include('tabla_imagenes.php');
             <li class="xn-openable">
                 <a href="#"><i class="fa fa-download" aria-hidden="true"></i><span class="xn-text">Descargas</span></a>
                 <ul>
-                    <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../download/ldownload"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../download/fdownload"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <!--<li class="xn-title">Seccion Registros</li>
@@ -192,7 +193,6 @@ $tabla = include('tabla_imagenes.php');
                                         <th width="50">#</th>
                                         <th width="100">Titulo</th>
                                         <th width="100">Fecha</th>
-                                        <th width="100">Descripción</th>
                                         <th width="150">Acciones</th>
                                     </tr>
                                     </thead>
@@ -207,7 +207,6 @@ $tabla = include('tabla_imagenes.php');
                                             <td><?php echo $cont; ?></td>
                                             <td><?php echo $e['title'] ?></td>
                                             <td><?php echo $e['create_at'] ?></td>
-                                            <td><?php echo $e['description'] ?></td>
                                             <td>
                                                 <a href="fevent?id=<?php echo $e['id']; ?>" class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></a>
                                                 <button class="btn btn-danger btn-rounded btn-condensed btn-sm delte_row_data" onClick="delete_row('trow_<?php echo $e['id']; ?>',this);" data-idb="<?php echo $e['id']; ?>" data-tbl="<?php echo $tabla; ?>"><span class="fa fa-times"></span></button>

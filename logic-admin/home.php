@@ -90,21 +90,23 @@ $seguridad->candado();
                         <a href="#"><i class="fa fa-users" aria-hidden="true"></i><span class="xn-text">Clientes</span></a>
                         <ul>
                             <li><a href="client/lclient"><span class="fa fa-list"></span>Listado</a></li>
-                            <li><a href="client/fclient.php"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                            <li><a href="client/fclient"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                         </ul>
                     </li>
                     <li class="xn-title">Seccion Eventos</li>
                     <li class="xn-openable">
                         <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="xn-text">Eventos</span></a>
                         <ul>
-                            <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
+                            <li><a href="event/levent"><span class="fa fa-list"></span>Listado</a></li>
+                            <li><a href="event/fevent"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                         </ul>
                     </li>
                     <li class="xn-title">Seccion Descargas</li>
                     <li class="xn-openable">
                         <a href="#"><i class="fa fa-download" aria-hidden="true"></i><span class="xn-text">Descargas</span></a>
                         <ul>
-                            <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
+                            <li><a href="download/ldownload"><span class="fa fa-list"></span>Listado</a></li>
+                            <li><a href="download/fdownload"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                         </ul>
                     </li>
 					<!--<li class="xn-title">Seccion Registros</li>

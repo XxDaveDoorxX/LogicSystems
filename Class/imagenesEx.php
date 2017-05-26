@@ -19,7 +19,8 @@ class ImagenesEx {
             'Gallery' => array('imagenes_gallery', $uDIR.'assets/images/data/imagenes_gallery/', $dDIR.'assets/images/data/imagenes_gallery/'),
             'Alianza' => array('imagenes_alianzas', $uDIR.'assets/images/data/imagenes_alianzas/', $dDIR.'assets/images/data/imagenes_alianzas/'),
             'Cliente' => array('imagenes_clientes', $uDIR.'assets/images/data/imagenes_clientes/', $dDIR.'assets/images/data/imagenes_clientes/'),
-            'Evento' => array('imagenes_eventos', $uDIR.'assets/images/data/imagenes_eventos/', $dDIR.'assets/images/data/imagenes_eventos/')
+            'Evento' => array('imagenes_eventos', $uDIR.'assets/images/data/imagenes_eventos/', $dDIR.'assets/images/data/imagenes_eventos/'),
+            'Descarga' => array('imagenes_descargas', $uDIR.'assets/images/data/imagenes_descargas/', $dDIR.'assets/images/data/imagenes_descargas/')
 						);
 		$this->tabla = $this->ruta = $this->dDIR = "";
 		if (array_key_exists($tabla_c,$tbimgs)) {

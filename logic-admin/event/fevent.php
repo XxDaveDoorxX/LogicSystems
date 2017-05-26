@@ -129,7 +129,8 @@ $tabla = include('tabla_imagenes.php');
             <li class="xn-openable">
                 <a href="#"><i class="fa fa-download" aria-hidden="true"></i><span class="xn-text">Descargas</span></a>
                 <ul>
-                    <li><a href="contacto/lcontact"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../download/ldownload"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../download/fdownload"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <!--<li class="xn-title">Seccion Registros</li>
@@ -227,7 +228,7 @@ $tabla = include('tabla_imagenes.php');
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Descripción</label>
-                                                            <textarea  name="description" id="description" class="form-control"><?php echo $tmpevent->comment;  ?></textarea>
+                                                            <textarea  name="description" id="description" class="form-control"><?php echo $tmpevent->description;  ?></textarea>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class=" control-label">Fecha</label>

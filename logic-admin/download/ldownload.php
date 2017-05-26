@@ -3,11 +3,11 @@ include_once('../../Class/Seguridad.php');
 $seguridad = new Seguridad();
 $seguridad->candado();
 
-require_once ('../../Class/Alianza.php');
+require_once ('../../Class/Descarga.php');
 
 
-$tmpalianza = new Alianza(0,'','','','');
-$alianza = $tmpalianza->listar();
+$tempdownload = new Descarga(0,'','');
+$download = $tempdownload->listar();
 
 
 
@@ -20,7 +20,7 @@ $tabla = include('tabla_imagenes.php');
 <html lang="es">
 <head>
     <!-- META SECTION -->
-    <title>LOGIC SYSTEM - Listado alianzas comerciales</title>
+    <title>LOGIC SYSTEM - Listado descargas</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -92,11 +92,11 @@ $tabla = include('tabla_imagenes.php');
                 </ul>
             </li>
             <li class="xn-title">Seccion Alianzas comerciales</li>
-            <li class="xn-openable active">
+            <li class="xn-openable">
                 <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i><span class="xn-text">Alianzas Comerciales</span></a>
                 <ul>
-                    <li class="active"><a href="lalianza"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="falianza"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="../alianzas/lalianza"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../alianzas/falianza"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <li class="xn-openable">
@@ -110,16 +110,16 @@ $tabla = include('tabla_imagenes.php');
             <li class="xn-openable">
                 <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="xn-text">Eventos</span></a>
                 <ul>
-                    <li><a href="../event/levent"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="../event/fevent"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="levent"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="fevent"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <li class="xn-title">Seccion Descargas</li>
-            <li class="xn-openable">
+            <li class="xn-openable active">
                 <a href="#"><i class="fa fa-download" aria-hidden="true"></i><span class="xn-text">Descargas</span></a>
                 <ul>
-                    <li><a href="../download/ldownload"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="../download/fdownload"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li class="active"><a href="ldownload"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="fdownload"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <!--<li class="xn-title">Seccion Registros</li>
@@ -158,14 +158,14 @@ $tabla = include('tabla_imagenes.php');
         <ul class="breadcrumb">
             <li><a href="#">Home</a></li>
             <li><a href="#">Secciones administrables</a></li>
-            <li><a href="#">Alianzas comerciales</a></li>
+            <li><a href="#">Descargas</a></li>
             <li class="active">Listado</li>
         </ul>
         <!-- END BREADCRUMB -->
 
         <!-- PAGE TITLE -->
         <div class="page-title">
-            <h2><span class="fa fa-arrow-circle-o-left"></span> Alianzas comerciales</h2>
+            <h2><span class="fa fa-arrow-circle-o-left"></span> Descargas</h2>
         </div>
         <!-- END PAGE TITLE -->
 
@@ -180,9 +180,9 @@ $tabla = include('tabla_imagenes.php');
                     <!-- START DATATABLE EXPORT -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Agrega un nuevo registro</h3>
+                            <h3 class="panel-title">Agrega una nueva descargas</h3>
                             <div class="btn-group pull-right">
-                                <a href="falianza" class="btn btn-danger"><i class="fa fa-bars"></i> Agregar registro</a>
+                                <a href="fdownload" class="btn btn-danger"><i class="fa fa-bars"></i> Agregar Descarga</a>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -192,23 +192,23 @@ $tabla = include('tabla_imagenes.php');
                                     <tr>
                                         <th width="50">#</th>
                                         <th width="100">Titulo</th>
-                                        <th width="100">Fecha</th>
+                                        <th width="100">Archivo</th>
                                         <th width="150">Acciones</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <?php
                                     $cont=0;
-                                    foreach ($alianza as $e){
+                                    foreach ($download as $e){
                                         $cont++;
                                         ?>
 
                                         <tr id="trow_<?php echo $e['id']; ?>">
                                             <td><?php echo $cont; ?></td>
                                             <td><?php echo $e['title'] ?></td>
-                                            <td><?php echo $e['create_at'] ?></td>
+                                            <td>link</td>
                                             <td>
-                                                <a href="falianza?id=<?php echo $e['id']; ?>" class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></a>
+                                                <a href="fevent?id=<?php echo $e['id']; ?>" class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></a>
                                                 <button class="btn btn-danger btn-rounded btn-condensed btn-sm delte_row_data" onClick="delete_row('trow_<?php echo $e['id']; ?>',this);" data-idb="<?php echo $e['id']; ?>" data-tbl="<?php echo $tabla; ?>"><span class="fa fa-times"></span></button>
                                             </td>
                                         </tr>
@@ -336,7 +336,7 @@ $tabla = include('tabla_imagenes.php');
                 //console.log($_this);
                 $.ajax({
                     data:  {'op':'Eliminar', 'id':$_this.data('idb'), 'tbl':$_this.data('tbl') },
-                    url:   'opalianza.php',
+                    url:   'opdownload.php',
                     type:  'post',
                     success:  function (response) {
                         //alert(response);

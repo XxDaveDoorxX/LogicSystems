@@ -3,8 +3,7 @@ include_once('../../Class/Seguridad.php');
 $seguridad = new Seguridad();
 $seguridad->candado();
 
-require_once ('../../Class/Gallery.php');
-require_once ('../../Class/Product.php');
+require_once ('../../Class/Descarga.php');
 
 $id = 0;
 $op = 'Agregar';
@@ -14,16 +13,9 @@ if (isset($_REQUEST['id'])) {
 }
 
 
-$id_product = 0;
-if (isset($_REQUEST['id_product'])) {
-    $id_product = $_REQUEST['id_product'];
-}
+$tempdownload = new Descarga($id,'','');
+$tempdownload->obtener();
 
-$tmpproduct= new Product($id_product,'','','');
-$tmpproduct->obtener();
-
-$tmpgallery = new Gallery($id,'',0);
-$tmpgallery->obtener();
 
 // ** Tabla de imagenes **//
 $tabla = include('tabla_imagenes.php');
@@ -34,7 +26,7 @@ $tabla = include('tabla_imagenes.php');
 <html lang="es">
 <head>
     <!-- META SECTION -->
-    <title>LOGIC SYSTEM - Formulario galeria </title>
+    <title>LOGIC SYSTEM - Formulario descargas</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -65,12 +57,12 @@ $tabla = include('tabla_imagenes.php');
         <!-- START X-NAVIGATION -->
         <ul class="x-navigation">
             <li class="xn-logo">
-                <a href="../home">LOGIC SYSTEMS</a>
+                <a href="../home.php">LOGIC SYSTEMS</a>
                 <a href="#" class="x-navigation-control"></a>
             </li>
             <li class="xn-profile">
                 <a href="#" class="profile-mini">
-                    <img src="../assets/images/users/avatar-new.jpg" alt="LOGIC SYSTEM"/>
+                    <img src="../assets/images/users/avatar-new.jpg" alt="LOGIC SYSTEMS"/>
                 </a>
                 <div class="profile">
                     <div class="profile-image">
@@ -103,10 +95,10 @@ $tabla = include('tabla_imagenes.php');
                 </ul>
             </li>
             <li class="xn-title">Seccion productos</li>
-            <li class="xn-openable active">
+            <li class="xn-openable">
                 <a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i><span class="xn-text">Producto</span></a>
                 <ul>
-                    <li class="active"><a href="../product/lproduct"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../product/lproduct"><span class="fa fa-list"></span>Listado</a></li>
                     <li><a href="../product/fproduct"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
@@ -129,16 +121,16 @@ $tabla = include('tabla_imagenes.php');
             <li class="xn-openable">
                 <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="xn-text">Eventos</span></a>
                 <ul>
-                    <li><a href="../event/levent"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="../event/fevent"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="levent"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="fevent"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <li class="xn-title">Seccion Descargas</li>
-            <li class="xn-openable">
+            <li class="xn-openable active">
                 <a href="#"><i class="fa fa-download" aria-hidden="true"></i><span class="xn-text">Descargas</span></a>
                 <ul>
-                    <li><a href="../download/ldownload"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="../download/fdownload"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="ldownload"><span class="fa fa-list"></span>Listado</a></li>
+                    <li class="active"><a href="fdownload"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <!--<li class="xn-title">Seccion Registros</li>
@@ -178,14 +170,14 @@ $tabla = include('tabla_imagenes.php');
         <ul class="breadcrumb">
             <li><a href="#">Home</a></li>
             <li><a href="#">Secciones administrables</a></li>
-            <li><a href="#">Galería</a></li>
+            <li><a href="#">Descargas</a></li>
             <li class="active">Formulario</li>
         </ul>
         <!-- END BREADCRUMB -->
 
         <!-- PAGE TITLE -->
         <div class="page-title">
-            <h2><span class="fa fa-arrow-circle-o-left"></span> Formulario Galería</h2>
+            <h2><span class="fa fa-arrow-circle-o-left"></span> Formulario descargas</h2>
         </div>
         <!-- END PAGE TITLE -->
 
@@ -198,21 +190,20 @@ $tabla = include('tabla_imagenes.php');
                     <!-- START WIZARD WITH VALIDATION -->
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <h3>Formulario Galería</h3>
+                            <h3>Formulario descargas</h3>
                             <!-- begin form-wizard -->
                             <form action="javascript:;" method="POST" data-parsley-validate="true" name="form-wizard" class="form-input-flat">
                                 <input type="hidden" id="hdntblf1" name="tbl" value="<?php echo $tabla; ?>" />
-                                <input type="hidden" id="id_product" name="id_product" value="<?php echo $tmpproduct->id ?>">
                                 <!-- begin #wizard -->
                                 <div id="wizard">
                                     <ol>
                                         <li>
-                                            Información de la galería
-                                            <small>Escriba el nombre</small>
+                                            Información del registro
+                                            <small>Escriba la información</small>
                                         </li>
                                         <li>
                                             Imagen
-                                            <small>Arrastre o eliga la imagen o imagenes</small>
+                                            <small>Arrastre o eliga la imagen</small>
                                         </li>
                                         <li>
                                             Completo
@@ -226,14 +217,18 @@ $tabla = include('tabla_imagenes.php');
                                             <div class="row">
                                                 <!-- begin col-6 -->
                                                 <div class="col-md-12">
-                                                    <h3 class="form-header form-header-lg m-b-10">Escriba la información</h3>
+                                                    <h3 class="form-header form-header-lg m-b-10">Escriba la información del registro</h3>
                                                     <div class="height-xs">
                                                         <div class="form-group">
-                                                            <label>Titulo de la galería</label>
+                                                            <label>Titulo</label>
                                                             <div class="input-group">
                                                                 <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
-                                                                <input data-parsley-id="2967" name="titulo" id="titulo" class="form-control input-lg" data-parsley-group="wizard-step-1" value="<?php echo $tmpgallery->title  ?>" required type="text"><ul id="parsley-id-2967" class="parsley-errors-list"></ul>
+                                                                <input data-parsley-id="2967" name="titulo" id="titulo" class="form-control input-lg" data-parsley-group="wizard-step-1" value="<?php echo $tempdownload->title  ?>" required type="text"><ul id="parsley-id-2967" class="parsley-errors-list"></ul>
                                                             </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Descripción</label>
+                                                            <textarea  name="description" id="description" class="form-control"><?php echo $tempdownload->description;  ?></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -251,17 +246,17 @@ $tabla = include('tabla_imagenes.php');
                                 <div class="row">
                                     <!-- begin col-6 -->
                                     <div class="col-md-12">
-                                        <h3 class="form-header form-header-lg m-b-10">Suba su Imagen o imagenes</h3>
+                                        <h3 class="form-header form-header-lg m-b-10">Suba su Imagen</h3>
                                         <br/>
-                                        <span>El tamaño de las imagenes debe ser de 1600px de ancho por 564px de alto.</span><br/>
+                                        <span>El tamaño de la imagen debe ser de 442px de ancho por 575px de alto.</span><br/>
                                         <div class="row">
                                             <div class="col-md-12 ">
                                                 <div><button class="btn btn-info" id="btnaddimg" >Agregar im&aacute;genes</button></div>
                                                 <form action="../opimagenes/upload.php" id="frmdzone" class="dropzone">
                                                     <input type="hidden" id="hdntbl" name="tbl" value="<?php echo $tabla; ?>" />
                                                     <input type="hidden" id="hdnid_c" name="id_c" value="0" />
-                                                    <input type="hidden" id="hdniw" name="iw[]" value="360" />
-                                                    <input type="hidden" id="hdnih" name="ih[]" value="244" />
+                                                    <input type="hidden" id="hdniw" name="iw[]" value="442" />
+                                                    <input type="hidden" id="hdnih" name="ih[]" value="575" />
                                                     <div class="dz-message"></div>
                                                     <div class="dropzone-previews" id="divdzone"> </div>
                                                 </form>
@@ -283,12 +278,12 @@ $tabla = include('tabla_imagenes.php');
                                 }
 
 
-                                echo 'Galería '.$st;
+                                echo 'Informacion de descarga '.$st;
 
                                 ?>
                             </h2>
                             <!--<p class="m-b-20">Completo</p>-->
-                            <p><a href="../product/lproduct" class="btn btn-success btn-lg">Finalizar</a></p>
+                            <p><a href="ldownload" class="btn btn-success btn-lg">Finalizar</a></p>
                         </div>
                         <!-- end wizard step-5 -->
                     </div>
@@ -350,7 +345,6 @@ $tabla = include('tabla_imagenes.php');
 <script type="text/javascript" src="../js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
 <script type="text/javascript" src="../js/plugins/dropzone/dropzone.min.js"></script>
 <script type="text/javascript" src="../js/plugins/jquery-validation/jquery.validate.js"></script>
-<script type="text/javascript" src="../js/plugins/summernote/summernote.js"></script>
 
 <!-- END PAGE PLUGINS -->
 
@@ -390,10 +384,10 @@ $tabla = include('tabla_imagenes.php');
      /****/
 
     var $contd;
-    var $id_gallery = <?php echo $id; ?>;
+    var $id_download = <?php echo $id; ?>;
     jQuery(document).ready(function(){
 
-        $('#hdnid_c').val($id_gallery);
+        $('#hdnid_c').val($id_download);
         // ** Dopzone  sortable **
         $contd = $("#divdzone");
         $contd.sortable({
@@ -559,26 +553,26 @@ $tabla = include('tabla_imagenes.php');
                     });
 
 
-                    //alert("id banner: "+$id_gallery);
-                    if ($id_gallery != 0) {
+                    //alert("id banner: "+$id_download);
+                    if ($id_download != 0) {
                         $.ajax({
-                            data:  {'op':'Modificar', 'id':$id_gallery, 'titulo':$('#titulo').val(), 'id_product':$('#id_product').val()},
-                            url:   'opgallery.php',
+                            data:  {'op':'Modificar', 'id':$id_download, 'titulo':$('#titulo').val(), 'description':$('#description').val()},
+                            url:   'opdownload.php',
                             type:  'post',
                             success:  function (response) {
                                 //alert("Modif:\n\n"+response);
-                                //$id_gallery = response;
+                                //$id_download = response;
                             }
                         });
                     } else {
                         $.ajax({
-                            data:  {'op':'Agregar', 'titulo':$('#titulo').val(), 'id_product':$('#id_product').val()},
-                            url:   'opgallery.php',
+                            data:  {'op':'Agregar', 'titulo':$('#titulo').val(), 'description':$('#description').val()},
+                            url:   'opdownload.php',
                             type:  'post',
                             success:  function (response) {
                                 //alert("Insert:\n\n"+response);
-                                $id_gallery = response;
-                                $('#hdnid_c').val($id_gallery);
+                                $id_download = response;
+                                $('#hdnid_c').val($id_download);
                             }
                         });
                     }

@@ -5,20 +5,21 @@ class Descarga
 {
     var $id;
     var $title;
+    var $description;
 
+    var $tabla = "descargas";
 
-    var $tabla = "descarga";
-
-    function __construct($id = 0, $title = '')
+    function __construct($id = 0, $title = '', $description = '')
     {
         $this->id = $id;
         $this->title = $title;
+        $this->description = $description;
     }
 
     function insertar () {
         $conexion = new dbc();
-        $result = $conexion->prepare("INSERT INTO ".$this->tabla." (title) VALUES (?)");
-        $result->bind_param("s",$this->title);
+        $result = $conexion->prepare("INSERT INTO ".$this->tabla." (title, description) VALUES (?,?)");
+        $result->bind_param("ss",$this->title,$this->description);
         $result->execute();
         $nwid = $result->insert_id;
         if ($nwid) {
@@ -32,14 +33,13 @@ class Descarga
     function modificar ()
     {
         $conexion = new dbc();
-        $result = $conexion->prepare("UPDATE ".$this->tabla." SET title = ? WHERE id = ?");
-        $result->bind_param("si",$this->title,$this->id);
+        $result = $conexion->prepare("UPDATE ".$this->tabla." SET title = ?, description = ? WHERE id = ?");
+        $result->bind_param("ssi",$this->title,$this->description,$this->id);
         $result->execute();
         $result->close();
 
         return $this->id;
     }
-
 
     function eliminar ()
     {
@@ -50,14 +50,13 @@ class Descarga
         $result->close();
     }
 
-
     function obtener ()
     {
         $conexion = new dbc();
-        $result = $conexion->prepare("SELECT id,title FROM ".$this->tabla." WHERE id=?");
+        $result = $conexion->prepare("SELECT id, title, description FROM ".$this->tabla." WHERE id=?");
         $result->bind_param('i', $this->id);
         $result->execute();
-        $result->bind_result($this->id,$this->title);
+        $result->bind_result($this->id,$this->title,$this->description);
         $result->fetch();
         $result->close();
     }
@@ -65,7 +64,7 @@ class Descarga
     function listar ()
     {
         $conexion = new dbc();
-        $result = $conexion->query("SELECT id,title FROM ".$this->tabla);
+        $result = $conexion->query("SELECT id, title, description FROM ".$this->tabla);
         $resultados =array();
         while($row = $result->fetch_assoc()) {
             $resultados[] = $row;
