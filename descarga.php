@@ -136,7 +136,7 @@ include_once('layouts/partial/footer.php');
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-4">
+                                            <div class="col-xs-12 col-sm-5 col-sm-offset-4 col-md-5 col-md-offset-4">
                                                 <div class="form-group row">
                                                     <button value="Submit" id="contactForm_submit_popup" class="btn_frm_popup center-block" type="submit">ENVIAR</button>
                                                 </div>

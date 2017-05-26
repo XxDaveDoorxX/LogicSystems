@@ -112,72 +112,74 @@ include_once('layouts/partial/header.php');
 
 <section id="info-product">
     <div class="container">
-        <div class="row">
-            <div class="tittle">
-                <h1>DESCRIPCIÓN</h1>
-                <hr>
-                <p>Es el software de control y operación para financieras/SOFOMS más completo y fácil de operar. En él se reflejan más de 10 años de experiencia y mejores prácticas de operación de este giro. Toma el control total y obtén una visión global de tu negocio que te permitirá enfocar tus esfuerzos a donde más se necesiten.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-4">
-                <div class="row">
-                    <div class="tittle">
-                        <h2>CARACTERÍSTICAS</h2>
-                        <hr>
-                        <ul>
-                            <li>Multi-Empresa</li>
-                            <li>Multi-Sucursal</li>
-                            <li>Multi-Caja</li>
-                            <li>Multi-Almacen</li>
-                            <li>Multi-Divisas</li>
-                            <li>100% personalizable</li>
-                        </ul>
-                    </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="row">
+                <div class="tittle">
+                    <h1>DESCRIPCIÓN</h1>
+                    <hr>
+                    <p>Es el software de control y operación para financieras/SOFOMS más completo y fácil de operar. En él se reflejan más de 10 años de experiencia y mejores prácticas de operación de este giro. Toma el control total y obtén una visión global de tu negocio que te permitirá enfocar tus esfuerzos a donde más se necesiten.</p>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-7 col-md-offset-1">
-                <div class="row">
-                    <div class="tittle">
-                        <h2>FUNCIONALIDADES</h2>
-                        <hr>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-sm-6">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4">
+                    <div class="row">
                         <div class="tittle">
+                            <h2>CARACTERÍSTICAS</h2>
+                            <hr>
                             <ul>
-                                <li>Empeños, Refrendos, Abonos</li>
-                                <li>Oro, Plata y Artículos Varios</li>
-                                <li>Desempeños</li>
-                                <li>Adjudicaciones</li>
-                                <li>Inventario para Venta</li>
-                                <li>Supervisión y Control</li>
-                                <li>Compra de Oro y Divisas</li>
-                                <li>Manejo de promociones, Tarjetas de</li>
-                                <li>Cliente Frecuente, Competencia, etc.</li>
-                                <li>Actualización Diaria de precios de Oro y Plata.</li>
-                                <li>Más de 40 Reportes de Operación</li>
-                                <li>Indicadores de Desempeño</li>
-                                <li>Control de Bóvedas </li>
+                                <li>Multi-Empresa</li>
+                                <li>Multi-Sucursal</li>
+                                <li>Multi-Caja</li>
+                                <li>Multi-Almacen</li>
+                                <li>Multi-Divisas</li>
+                                <li>100% personalizable</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-sm-6">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-7 col-md-offset-1">
+                    <div class="row">
                         <div class="tittle">
-                            <ul>
-                                <li>Manejo de efectivo y valores</li>
-                                <li>Control de Incidencias de Nómina</li>
-                                <li>Control de Pago de Incentivos</li>
-                                <li>Control de errores, malos avaluos, faltantes, descuentos.</li>
-                                <li>Minutas</li>
-                                <li>Acuerdos</li>
-                                <li>Normatividad</li>
-                                <li>Control de Acceso</li>
-                                <li>Capacitación</li>
-                                <li>Interfaz contable</li>
-                                <li>Control de Lavado de Dinero</li>
-                                <li>Generación de archivos a la CNBV</li>
-                                <li>Actualización diaria del T.C. del dólar y UDIS</li>
-                            </ul>
+                            <h2>FUNCIONALIDADES</h2>
+                            <hr>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-sm-6">
+                            <div class="tittle">
+                                <ul>
+                                    <li>Empeños, Refrendos, Abonos</li>
+                                    <li>Oro, Plata y Artículos Varios</li>
+                                    <li>Desempeños</li>
+                                    <li>Adjudicaciones</li>
+                                    <li>Inventario para Venta</li>
+                                    <li>Supervisión y Control</li>
+                                    <li>Compra de Oro y Divisas</li>
+                                    <li>Manejo de promociones, Tarjetas de</li>
+                                    <li>Cliente Frecuente, Competencia, etc.</li>
+                                    <li>Actualización Diaria de precios de Oro y Plata.</li>
+                                    <li>Más de 40 Reportes de Operación</li>
+                                    <li>Indicadores de Desempeño</li>
+                                    <li>Control de Bóvedas </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-sm-6">
+                            <div class="tittle">
+                                <ul>
+                                    <li>Manejo de efectivo y valores</li>
+                                    <li>Control de Incidencias de Nómina</li>
+                                    <li>Control de Pago de Incentivos</li>
+                                    <li>Control de errores, malos avaluos, faltantes, descuentos.</li>
+                                    <li>Minutas</li>
+                                    <li>Acuerdos</li>
+                                    <li>Normatividad</li>
+                                    <li>Control de Acceso</li>
+                                    <li>Capacitación</li>
+                                    <li>Interfaz contable</li>
+                                    <li>Control de Lavado de Dinero</li>
+                                    <li>Generación de archivos a la CNBV</li>
+                                    <li>Actualización diaria del T.C. del dólar y UDIS</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -239,7 +241,7 @@ include_once('layouts/partial/header.php');
 <section id="demo-prod">
     <div class="bg-demo-prod">
         <div class="container">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
                 <a href="">Solicita tu demo gratis</a>
             </div>
         </div>

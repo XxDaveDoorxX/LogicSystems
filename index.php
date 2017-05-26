@@ -127,7 +127,7 @@ include_once('layouts/partial/header.php');
         <div class="row">
             <div class="col-md-4">
                 <div class="img-alianza">
-                    <img class="img-responsive" src="images/alianza-comercial.jpg">
+                    <img class="img-responsive center-block" src="images/alianza-comercial.jpg">
                 </div>
             </div>
             <div class="col-md-8">

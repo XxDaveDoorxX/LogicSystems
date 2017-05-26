@@ -45,21 +45,16 @@ and (max-device-width : 480px) {
 @media(max-width:320px) {
 
   #recaptchaContacto {
-    -ms-transform: scale(0.86);
-    transform: scale(0.86);
-    -webkit-transform: scale(0.86);
+    -ms-transform: scale(0.96);
+    transform: scale(0.96);
+    -webkit-transform: scale(0.96);
     -ms-transform-origin: 0 0;
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
   }
 
-  #recaptchaPopup {
-    -ms-transform: scale(0.71);
-    transform: scale(0.71);
-    -webkit-transform: scale(0.71);
-    -ms-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
+  iframe {
+    left: 5%;
   }
 
 }
@@ -97,13 +92,105 @@ and (max-device-width : 480px) {
   }
 
   #slider-home{
-    padding-top: 4%;
+    padding-top: 3%;
   }
 
   /*interiores*/
 
-  .bg-c, .bg-s, .bg-t, .bg-a-d {
-    padding-top: 12% ;
+  .text-call-ac span {
+    font-size: 50px;
+  }
+
+  .call-number span a {
+    font-size: 38px;
+  }
+
+  .info-product h1 {
+    font-size: 26px;
+  }
+
+  .info-product p {
+    font-size: 16px;
+  }
+
+  #demo-prod a {
+    font-size: 26px;
+  }
+
+  #servicios, #alianzas, #clientes, #descargas, #nosotros, #contacto{
+    margin-top: 3%;
+  }
+
+  #servicios h2 {
+    font-size: 18px;
+  }
+
+  #padre-servicios {
+    height: auto;
+  }
+
+  #descargas h2 {
+    font-size: 13px;
+    height: 62px;
+  }
+
+  .btn-descarga {
+    font-size: 12px;
+  }
+
+  .modal-title {
+    font-size: 22px;
+  }
+
+  .modal-txt {
+    font-size: 16px;
+  }
+
+  .caja-mision p {
+    font-size: 18px !important;
+  }
+
+  #contacto ul li a {
+    font-size: 18px;
+  }
+
+  #recaptchaContacto {
+    -ms-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-transform: scale(0.87);
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+
+  .info a {
+    font-size: 14px;
+    padding-bottom: 14px;
+  }
+
+  .contact-form input[type="text"], input[type="email"], input[type="password"], textarea, select {
+    font-size: 12px;
+  }
+
+  #recaptchaFooter {
+    transform: scale(0.65);
+    -webkit-transform: scale(0.65);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+
+  .btn_frm_contact {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+
+  .btn_frm_contact2 {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .logo-footer {
+    margin-top: 0;
   }
 
   .modal-dialog-show {
@@ -111,80 +198,6 @@ and (max-device-width : 480px) {
     margin-right: 7%;
   }
 
-  .modal-title {
-    font-size: 24px;
-  }
-
-  #recaptchaPopup {
-    -ms-transform: scale(0.63);
-    transform: scale(0.63);
-    -webkit-transform: scale(0.63);
-    -ms-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
-  }
-
-  .btn_frm_contact2 {
-    margin-top: 5px;
-  }
-
-  #blog h1 {
-    font-size: 14px;
-    height: 90px;
-  }
-
-  #blog p {
-    height: auto;
-  }
-
-  #notas-interioes h2 {
-    font-size: 14px;
-  }
-
-  #info-blog h1 {
-    font-size: 18px;
-  }
-
-  #info-blog {
-    margin-top: 7%;
-  }
-
-  #servicios h2 {
-    font-size: 14px;
-  }
-
-  #servicios p {
-    font-size: 12px;
-  }
-
-  #padre-servicios {
-    height: auto;
-  }
-
-  #tecnologia h2 {
-    font-size: 48px;
-  }
-
-  #tecnologia h3 {
-    font-size: 26px;
-  }
-
-  .map {
-    min-height: 400px;
-  }
-
-  #recaptchaContacto {
-    -ms-transform: scale(0.85);
-    transform: scale(0.85);
-    -webkit-transform: scale(0.85);
-    -ms-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
-  }
-
-  .btn_frm_contact {
-    margin-top: 10px;
-  }
 
 
 }
@@ -204,29 +217,45 @@ and (max-device-width : 480px) {
 
   /*interiores*/
 
-  .modal-title {
-    font-size: 28px;
+  #demo-prod a {
+    font-size: 34px;
   }
 
-  #recaptchaPopup {
-    -ms-transform: scale(0.63);
-    transform: scale(0.63);
-    -webkit-transform: scale(0.63);
-    -ms-transform-origin: 0 0;
-    transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
-  }
-
-  .btn_frm_contact2 {
-    margin-top: 5px;
+  #servicios h2 {
+    font-size: 24px;
   }
 
   #padre-servicios {
-    height: 220px;
+    height: 212px;
+  }
+
+  #descargas h2 {
+    font-size: 14px;
+    height: 66px;
+  }
+
+  .modal-title {
+    font-size: 22px;
+  }
+
+  .modal-txt {
+    font-size: 16px;
+  }
+
+  .caja-mision p {
+    font-size: 20px !important;
   }
 
   #contacto ul li a {
-    font-size: 12px;
+    font-size: 22px;
+  }
+
+  #recaptchaFooter {
+    -ms-transform: scale(0.68);
+    transform: scale(0.68);
+    -webkit-transform: scale(0.68);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
   }
 
   #recaptchaContacto {
@@ -238,24 +267,20 @@ and (max-device-width : 480px) {
     -webkit-transform-origin: 0 0;
   }
 
-  .map {
-    min-height: 400px;
+  .btn_frm_contact {
+    margin-top: 5px;
   }
 
-  #blog h1 {
-    height: 90px;
+  .btn_frm_contact2{
+    margin-top: 12px;
   }
 
-  #blog p {
-    height: auto;
+  .logo-footer {
+    margin-top: 0;
   }
 
-  #info-blog h1 {
-    font-size: 20px;
-  }
-
-  #notas-interioes h2 {
-    font-size: 16px;
+  .info a {
+    padding-bottom: 19px;
   }
 
 }
@@ -317,40 +342,108 @@ and (max-device-width : 480px) {
     background-color: #169fd8;
   }
 
-  /*interiores*/
-
-  .bg-c, .bg-s, .bg-t, .bg-a-d {
-    padding-top: 20% ;
+  .navbar-nav .open .dropdown-menu {
+    background: rgba(2, 15, 47, 0.8);
   }
 
-  #servicios h1, #conocenos h1, #tecnologia h1, #antes-despues h1, #contacto h1 {
-    font-size: 32px;
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff;
+  }
+
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #169fd8;
+    background-color: transparent;
+  }
+
+  /*interiores*/
+
+  .item-alianza-text span {
+    font-size: 18px;
+  }
+
+  .text-call-ac span {
+    font-size: 40px;
+  }
+
+  .call-number span a {
+    font-size: 20px;
+  }
+
+  .info a {
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+
+  .logo-footer {
+    margin-top: 20px;
+  }
+
+  .copyright p {
+    margin-top: 20px;
+  }
+
+  .info-product h1 {
+    font-size: 26px;
+  }
+
+  .btn-demo-product {
+    font-size: 18px;
+  }
+
+  h1, .h1 {
+    font-size: 30px;
+  }
+
+  #demo-prod a {
+    font-size: 20px;
+  }
+
+  #bg-product {
+    padding-bottom: 10%;
+  }
+
+  .bg-servicio-color:nth-child(2n), .bg-servicio-color {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  #servicios h1, #descargas h1, #nosotros h1, #contacto h1 {
+    font-size: 34px;
   }
 
   #servicios h2 {
-    font-size: 14px;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 20px;
   }
 
   #padre-servicios {
     height: auto;
+  }
+
+  #alianzas h1, #clientes h1 {
+    font-size: 34px;
+  }
+
+  #alianzas h2, #clientes h2 {
+    font-size: 19px;
     margin-top: 20px;
   }
 
-  #tecnologia h2 {
-    font-size: 36px;
+  .caja-mision {
+    padding: 20px;
   }
 
-  #tecnologia h3 {
-    font-size: 24px;
+  #nosotros h2 {
+    font-size: 26px;
   }
 
-  #antes-despues p {
-    font-size: 14px;
-    margin-top: -22%;
+  .caja-mision p {
+    font-size: 15px !important;
   }
 
-  #contacto p {
-    font-size: 16px;
+  #nosotros p {
+    font-size: 15px;
   }
 
   #contacto ul {
@@ -358,19 +451,11 @@ and (max-device-width : 480px) {
   }
 
   #contacto ul li a {
-    font-size: 14px;
-  }
-
-  .btn_frm_contact {
-    margin-top: 0;
-  }
-
-  .map {
-    min-height: 300px;
+    font-size: 15px;
   }
 
   .modal-content-show {
-    background: #E0E2DF;
+    background: #EEF9FD;
   }
 
   .modal-dialog-show {
@@ -379,13 +464,16 @@ and (max-device-width : 480px) {
   }
 
   .modal-title {
-    font-size: 28px;
+    font-size: 15px;
   }
 
-  .btn_frm_contact2 {
-    margin-top: 0;
+  .modal-txt {
+    font-size: 12px;
   }
 
+  .contact-form {
+    padding-top: 20px;
+  }
 
 }
 

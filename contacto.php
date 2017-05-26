@@ -68,9 +68,9 @@ include_once('layouts/partial/header.php');
                         </li>
                     </ul>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
                     <div class="row">
-                        <div class="contact-form">
+                        <div class="contact-form contact-form2">
                             <!-- Start Contact Form -->
                             <form id="formPopup" action="#" method="post" role="form">
                                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -130,7 +130,7 @@ include_once('layouts/partial/header.php');
                                         </div>
                                         <div class="col-xs-12 col-sm-5 col-md-5">
                                             <div class="form-group">
-                                                <button value="Submit" id="contactForm_submit_contacto" class="btn_frm_contact center-block" type="submit">ENVIAR</button>
+                                                <button value="Submit" id="contactForm_submit_contacto" class="btn_frm_contact2 center-block" type="submit">ENVIAR</button>
                                             </div>
                                         </div>
                                     </div>

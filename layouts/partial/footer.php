@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-sm-8 col-md-8">
                 <div class="contact-form">
                     <div class="row">
                         <div class="contactForm">

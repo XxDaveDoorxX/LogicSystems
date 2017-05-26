@@ -440,7 +440,7 @@ section {
   border-color: #676767;
 }
 
-#nosotros img {
+.img-nosotros{
   margin-top: 20px;
   margin-bottom: 40px;
 }
@@ -499,7 +499,7 @@ section {
   color: #00aeef;
 }
 
-.contact-form{
+.contact-form2{
   padding-top: 40px;
 }
 
@@ -764,6 +764,18 @@ iframe {
 
 
 .btn_frm_contact {
+  display: block;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+  background-color: #23b5ea;
+  color: #ffffff;
+  border: 1px solid #23b5ea;
+  width: 100%;
+  padding: 6px;
+  margin-top: 15px;
+}
+
+.btn_frm_contact2 {
   display: block;
   font-family: 'Titillium Web', sans-serif;
   font-size: 20px;
