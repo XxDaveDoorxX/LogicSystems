@@ -10,10 +10,12 @@ $tempdownload = new Descarga(0,'','');
 $download = $tempdownload->listar();
 
 
-
 // ** Tabla de imagenes **//
 $tabla = include('tabla_imagenes.php');
+$tablaarch = include('tabla_archivo.php');
 // ** ** //
+
+require_once ('../../Class/uarchivo.php');
 
 ?>
 <!DOCTYPE html>
@@ -206,10 +208,14 @@ $tabla = include('tabla_imagenes.php');
                                         <tr id="trow_<?php echo $e['id']; ?>">
                                             <td><?php echo $cont; ?></td>
                                             <td><?php echo $e['title'] ?></td>
-                                            <td>link</td>
+                                            <?php
+                                                $tmparch = new uArchivo($tablaarch,'','','','','', $e['id']);
+                                                $arch = $tmparch->listar_1_x_id_c();
+                                            ?>
+                                            <td><a id="btnUarchivo" href="#" class="btn btn-primary btn-block btn-rounded" rel="<?php echo $e['id']; ?>" data-archivo="<?php echo current($arch)['archivo']; ?>" data-toggle="modal" data-target="#modal_change_archivo">Subir archivo</a></td>
                                             <td>
                                                 <a href="fevent?id=<?php echo $e['id']; ?>" class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></a>
-                                                <button class="btn btn-danger btn-rounded btn-condensed btn-sm delte_row_data" onClick="delete_row('trow_<?php echo $e['id']; ?>',this);" data-idb="<?php echo $e['id']; ?>" data-tbl="<?php echo $tabla; ?>"><span class="fa fa-times"></span></button>
+                                                <button class="btn btn-danger btn-rounded btn-condensed btn-sm delte_row_data" onClick="delete_row('trow_<?php echo $e['id']; ?>',this);" data-idb="<?php echo $e['id']; ?>" data-tbl="<?php echo $tabla; ?>" data-tbla="<?php echo $tablaarch; ?>"><span class="fa fa-times"></span></button>
                                             </td>
                                         </tr>
                                     <?php }?>
@@ -230,6 +236,38 @@ $tabla = include('tabla_imagenes.php');
     <!-- END PAGE CONTENT -->
 </div>
 <!-- END PAGE CONTAINER -->
+
+<!-- MODALS -->
+<div class="modal animated fadeIn" id="modal_change_archivo" tabindex="-1" role="dialog" aria-labelledby="smallModalHead" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+                <h4 class="modal-title" id="smallModalHead">Subir Archivo</h4>
+            </div>
+            <div class="modal-body">
+                <div class="text-center" id="cp_target_a">Use el formulario para subir archivos .pdf únicamente.</div>
+            </div>
+            <form id="cp_upload_a" method="post" enctype="multipart/form-data" action="../assets/upload.php">
+                <input type="hidden" name="tbla" value="<?php echo $tablaarch; ?>" />
+                <input type="hidden" id="id_c_archivo" name="id_c" value="" />
+                <div class="modal-body form-horizontal form-group-separated">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Nuevo Archivo</label>
+                        <div class="col-md-4">
+                            <input type="file" accept="application/pdf" class="fileinput btn-success" name="file" id="cp_archivo" data-filename-placement="inside" title="Seleccionar archivo"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success disabled" id="cp_accept_a">Aceptar</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- MESSAGE BOX-->
 <div class="message-box animated fadeIn" data-sound="alert" id="mb-remove-row">
@@ -271,6 +309,7 @@ $tabla = include('tabla_imagenes.php');
     </div>
 </div>
 <!-- END MESSAGE BOX-->
+
 
 <!-- START PRELOADS -->
 <audio id="audio-alert" src="../audio/alert.mp3" preload="auto"></audio>
@@ -316,29 +355,77 @@ $tabla = include('tabla_imagenes.php');
         });
 
 
+        /* Acciones btn Archivo */
+        $(document).on("click","#btnUarchivo", function(e) {
+            var id_c = $(this).attr("rel");
+            $("#id_c_archivo").val(id_c);
+
+            var archivo = $(this).data("archivo");
+            if(archivo != "") {
+                $("#cp_target_a").html('<div class="cropping-image-wrap"><div>'+ archivo +'</div><br/><img src="../img/icons/pdf.png" class="img-thumbnail" id="crop_archivo"/></div>');
+            } else {
+                $("#cp_target_a").html("Use el formulario para subir archivos .pdf únicamente.");
+            }
+        });
 
     });
 
 
-    /*DELETE ROW DATABASE*/
+    /*MODAL ARCHIVO UPLOADER */
 
-    function delete_row(row,obj){
+    function onSuccess_uarch(){
+        $("#cp_archivo").parent("a").find("span").html("Seleccionar otro archivo.");
+
+        var img = $("#cp_target_a").find("#crop_archivo");
+
+
+        if(img.length === 1){
+            $("#btnUarchivo").data("archivo", $("#crop_archivo").attr("src"));
+
+            $("#cp_accept_a").prop("disabled",false).removeClass("disabled");
+
+            $("#cp_accept_a").on("click",function(){
+                $("#modal_change_archivo").modal("hide");
+
+                $("#cp_target_a").html("Use el formulario para subir archivos .pdf únicamente.");
+                $("#cp_archivo").val("").parent("a").find("span").html("Select file");
+                $("#cp_accept_a").prop("disabled",true).addClass("disabled");
+            });
+        }
+    }
+
+    $("#cp_archivo").on("change",function(){
+
+        if($("#cp_archivo").val() == '') return false;
+
+        $("#cp_target_a").html('<img src="../img/loaders/default.gif"/>');
+        $("#cp_upload_a").ajaxForm({target: '#cp_target_a',success: onSuccess_uarch}).submit();
+    });
+
+
+    /*DELETE ROW DATABASE*/
+    function delete_row(row,obj) {
 
         var box = $("#mb-remove-row");
         box.addClass("open");
 
         var $_this = $(obj);
 
-        box.find(".mb-control-yes").on("click",function(){
+        box.find(".mb-control-yes").on("click", function () {
             box.removeClass("open");
-            $("#"+row).hide("slow",function(){
+            $("#" + row).hide("slow", function () {
                 //alert($_this);
                 //console.log($_this);
                 $.ajax({
-                    data:  {'op':'Eliminar', 'id':$_this.data('idb'), 'tbl':$_this.data('tbl') },
-                    url:   'opdownload.php',
-                    type:  'post',
-                    success:  function (response) {
+                    data: {
+                        'op': 'Eliminar',
+                        'id': $_this.data('idb'),
+                        'tbl': $_this.data('tbl'),
+                        'tbla': $_this.data('tbla')
+                    },
+                    url: 'opdownload.php',
+                    type: 'post',
+                    success: function (response) {
                         //alert(response);
                     }
                 });
@@ -346,7 +433,6 @@ $tabla = include('tabla_imagenes.php');
                 $(this).remove();
             });
         });
-
     }
 
 
