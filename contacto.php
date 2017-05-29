@@ -33,6 +33,11 @@
 <?php
 $statnav = array("","","","","","","active");
 include_once('layouts/partial/header.php');
+
+
+$tmpproduct = new Product(0, '','','','','','','','');
+$tmpproduct->listar();
+
 ?>
 
 <section id="contacto">

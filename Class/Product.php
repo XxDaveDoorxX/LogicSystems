@@ -4,6 +4,7 @@ class Product
 {
     var $id;
     var $name;
+    var $subtitle;
     var $code;
     var $f_video;
     var $description_first;
@@ -14,10 +15,11 @@ class Product
     var $tabla = "products";
 
 
-    function __construct($id = 0, $name = "", $code = "", $f_video = '', $description_first = "", $description_second = "", $characteristics = "", $functionalities = "")
+    function __construct($id = 0, $name = "", $subtitle = "", $code = "", $f_video = '', $description_first = "", $description_second = "", $characteristics = "", $functionalities = "")
     {
         $this->id = $id;
         $this->name = $name;
+        $this->subtitle = $subtitle;
         $this->code =  $code;
         $this->f_video = $f_video;
         $this->description_first = $description_first;
@@ -28,8 +30,8 @@ class Product
 
     function insertar () {
         $conexion = new dbc();
-        $result = $conexion->prepare("INSERT INTO ".$this->tabla." (name,code,f_video,description_first,description_second,characteristics,functionalities) VALUES (?,?,?,?,?,?,?)");
-        $result->bind_param("sssssss",$this->name,$this->code,$this->f_video,$this->description_first,$this->description_second,$this->characteristics,$this->functionalities);
+        $result = $conexion->prepare("INSERT INTO ".$this->tabla." (name,subtitle,code,f_video,description_first,description_second,characteristics,functionalities) VALUES (?,?,?,?,?,?,?,?)");
+        $result->bind_param("ssssssss",$this->name,$this->subtitle,$this->code,$this->f_video,$this->description_first,$this->description_second,$this->characteristics,$this->functionalities);
         $result->execute();
         $nwid = $result->insert_id;
         if ($nwid) {
@@ -42,8 +44,8 @@ class Product
     function modificar ()
     {
         $conexion = new dbc();
-        $result = $conexion->prepare("UPDATE ".$this->tabla." SET name = ?, code = ?, f_video = ?, description_first = ?, description_second = ?, characteristics = ?, functionalities = ? WHERE id = ?");
-        $result->bind_param("sssssssi",$this->name,$this->code,$this->f_video,$this->description_first,$this->description_second,$this->characteristics,$this->functionalities,$this->id);
+        $result = $conexion->prepare("UPDATE ".$this->tabla." SET name = ?, subtitle = ?, code = ?, f_video = ?, description_first = ?, description_second = ?, characteristics = ?, functionalities = ? WHERE id = ?");
+        $result->bind_param("ssssssssi",$this->name,$this->subtitle,$this->code,$this->f_video,$this->description_first,$this->description_second,$this->characteristics,$this->functionalities,$this->id);
         $result->execute();
         $result->close();
 
@@ -63,10 +65,10 @@ class Product
     function obtener ()
     {
         $conexion = new dbc();
-        $result = $conexion->prepare("SELECT id,name,code,f_video,description_first,description_second,characteristics,functionalities FROM ".$this->tabla." WHERE id=?");
+        $result = $conexion->prepare("SELECT id,name,subtitle,code,f_video,description_first,description_second,characteristics,functionalities FROM ".$this->tabla." WHERE id=?");
         $result->bind_param('i', $this->id);
         $result->execute();
-        $result->bind_result($this->id,$this->name,$this->code,$this->f_video,$this->description_first,$this->description_second,$this->characteristics,$this->functionalities);
+        $result->bind_result($this->id,$this->name,$this->subtitle,$this->code,$this->f_video,$this->description_first,$this->description_second,$this->characteristics,$this->functionalities);
         $result->fetch();
         $result->close();
     }
@@ -74,7 +76,7 @@ class Product
     function listar ()
     {
         $conexion = new dbc();
-        $result = $conexion->query("SELECT id,name,code,f_video,description_first,description_second,characteristics,functionalities FROM ".$this->tabla);
+        $result = $conexion->query("SELECT id,name,subtitle,code,f_video,description_first,description_second,characteristics,functionalities FROM ".$this->tabla);
         $resultados =array();
         while($row = $result->fetch_assoc()) {
             $resultados[] = $row;

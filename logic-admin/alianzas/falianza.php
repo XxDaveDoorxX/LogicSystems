@@ -91,7 +91,7 @@ $tabla = include('tabla_imagenes.php');
             <li class="xn-openable">
                 <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i><span class="xn-text">Banner inicio</span></a>
                 <ul>
-                    <li><a href="lbanner"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../banner/lbanner"><span class="fa fa-list"></span>Listado</a></li>
                 </ul>
             </li>
             <li class="xn-title">Seccion productos</li>
@@ -234,11 +234,11 @@ $tabla = include('tabla_imagenes.php');
                                                         <div class="form-group">
                                                             <label class="control-label">Rating</label>
                                                                 <select class="form-control select" name="rating" id="rating">
-                                                                    <option value="1">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                    <option value="4">4</option>
-                                                                    <option value="5">5</option>
+                                                                    <option value="1" <?php if($tmpalianza->rating == '1') echo 'selected' ?>>1</option>
+                                                                    <option value="2" <?php if($tmpalianza->rating == '2') echo 'selected' ?>>2</option>
+                                                                    <option value="3" <?php if($tmpalianza->rating == '3') echo 'selected' ?>>3</option>
+                                                                    <option value="4" <?php if($tmpalianza->rating == '4') echo 'selected' ?>>4</option>
+                                                                    <option value="5" <?php if($tmpalianza->rating == '5') echo 'selected' ?>>5</option>
                                                                 </select>
                                                         </div>
                                                         <div class="form-group">

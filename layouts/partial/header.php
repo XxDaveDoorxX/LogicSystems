@@ -1,7 +1,12 @@
 <?php
+include_once ('Class/Product.php');
 if (!isset($statnav)) {
     $statnav = array("active","","","","","","");
 }
+
+$tmpproduct = new Product(0,'','','','','','','','');
+$product = $tmpproduct->listar();
+
 ?>
 <header>
     <!-- Navigation -->
@@ -30,9 +35,13 @@ if (!isset($statnav)) {
                     <li class="dropdown <?php echo $statnav[1]; ?>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <?php
+                                foreach ($product as $e){
+                            ?>
+                            <li><a href="productos?id=<?php echo $e['id'] ?>"><?php echo $e['name'] ?></a></li>
+                            <?php
+                            }
+                            ?>
                         </ul>
                     </li>
                     <li class="<?php echo $statnav[2]; ?>">

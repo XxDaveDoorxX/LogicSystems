@@ -1,3 +1,6 @@
+<?php
+include_once ('Class/imagenes.php');
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -33,6 +36,31 @@
 <?php
 $statnav = array("","active","","","","","");
 include_once('layouts/partial/header.php');
+
+include_once ('Class/Thumbs.php');
+include_once ('Class/Gallery.php');
+
+$id = (isset($_REQUEST['id'])) ? htmlentities($_REQUEST['id'], ENT_QUOTES) : 0;
+
+$tmpproduct = new Product($id, '','','','','','','','');
+$tmpproduct->obtener();
+
+if(empty($tmpproduct->id))
+    header('Location: .');
+
+
+$tmpimgprod = new Imagen('imagenes_productos','','','','','',$tmpproduct->id,0);
+$imgproduct = $tmpimgprod->listar_x_id_c();
+
+
+
+$tmpthumbs = new Thumbs(0,'', $id);
+$thumbs = $tmpthumbs->listar_x_id_product();
+
+$tmpgall = new Gallery(0,'', $id);
+$gallery = $tmpgall->listar_x_id_product();
+
+
 ?>
 
 <section id="bg-product">
@@ -41,12 +69,22 @@ include_once('layouts/partial/header.php');
             <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="product-item">
                     <div class="prod-img">
+                        <?php
+                            if (isset($imgproduct[2])) {
+                                ?>
+                                <img class="img-responsive center-block" src="assets/images/data/imagenes_productos/<?php echo $imgproduct[2]['arch_img'] ?>">
+                                <?php
+                            }else{
+                        ?>
                         <img class="img-responsive center-block" src="images/product.png">
+                        <?php
+                           }
+                        ?>
                     </div>
                     <div class="info-product">
-                        <h1>CIB - FINANCIERA</h1>
-                        <p><span>Codigo:</span> xxxxxxx</p>
-                        <p>Ideal para financieras y SOFOMS</p>
+                        <h1><?php echo $tmpproduct->name ?></h1>
+                        <p><span>Codigo:</span> <?php echo $tmpproduct->code ?></p>
+                        <p><?php echo $tmpproduct->description_first ?></p>
                     </div>
                     <div class="btn-row-produc-demo">
                         <a class="btn-demo-product" href="">Solicita tu demo gratis</a>
@@ -62,48 +100,31 @@ include_once('layouts/partial/header.php');
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="thumb">
-                            <a class="fancybox" rel="gallery1" href="images/thumb-1.jpg" title="">
-                                <img class="img-responsive center-block" src="images/thumb-1.jpg">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="thumb">
-                            <a class="fancybox" rel="gallery1" href="images/thumb-2.jpg" title="">
-                                <img class="img-responsive center-block" src="images/thumb-2.jpg">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="thumb">
-                            <a class="fancybox" rel="gallery1" href="images/thumb-3.jpg" title="">
-                                <img class="img-responsive center-block" src="images/thumb-3.jpg">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="thumb">
-                            <a class="fancybox" rel="gallery1" href="images/thumb-4.jpg" title="">
-                                <img class="img-responsive center-block" src="images/thumb-4.jpg">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="thumb">
-                            <a class="fancybox" rel="gallery1" href="images/thumb-5.jpg" title="">
-                                <img class="img-responsive center-block" src="images/thumb-5.jpg">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        <div class="thumb">
-                            <a class="fancybox" rel="gallery1" href="images/thumb-6.jpg" title="">
-                                <img class="img-responsive center-block" src="images/thumb-6.jpg">
-                            </a>
-                        </div>
-                    </div>
+                    <?php
+                        foreach ($thumbs as $t) {
+                            $tmpimgt = new Imagen("imagenes_thumbs","","",0,"","",$t['id'],0);
+                            $galthumb = $tmpimgt->listar_x_id_c();
+                            if(isset($galthumb)) {
+                                $max = (count($galthumb) < 6) ? count($galthumb) : 6;
+                                $ex = array_slice($galthumb, 0, $max);
+                                foreach ($ex as $g) {
+                                    ?>
+                                    <div class="col-xs-12 col-sm-4 col-md-4">
+                                        <div class="thumb">
+                                            <a class="fancybox" rel="gallery1"
+                                               href="assets/images/data/imagenes_thumbs/<?php echo $g['arch_img'] ?>"
+                                               title="">
+                                                <img class="img-responsive center-block"
+                                                     src="assets/images/data/imagenes_thumbs/crop_<?php echo $g['arch_img'] ?>">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <?php
+                                }
+                            }
+                        }
+                    ?>
+
                 </div>
             </div>
         </div>
@@ -117,7 +138,7 @@ include_once('layouts/partial/header.php');
                 <div class="tittle">
                     <h1>DESCRIPCIÓN</h1>
                     <hr>
-                    <p>Es el software de control y operación para financieras/SOFOMS más completo y fácil de operar. En él se reflejan más de 10 años de experiencia y mejores prácticas de operación de este giro. Toma el control total y obtén una visión global de tu negocio que te permitirá enfocar tus esfuerzos a donde más se necesiten.</p>
+                    <p><?php echo $tmpproduct->description_second ?></p>
                 </div>
             </div>
             <div class="row">
@@ -126,14 +147,9 @@ include_once('layouts/partial/header.php');
                         <div class="tittle">
                             <h2>CARACTERÍSTICAS</h2>
                             <hr>
-                            <ul>
-                                <li>Multi-Empresa</li>
-                                <li>Multi-Sucursal</li>
-                                <li>Multi-Caja</li>
-                                <li>Multi-Almacen</li>
-                                <li>Multi-Divisas</li>
-                                <li>100% personalizable</li>
-                            </ul>
+                            <?php
+                                echo htmlspecialchars_decode($tmpproduct->characteristics)
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -143,42 +159,14 @@ include_once('layouts/partial/header.php');
                             <h2>FUNCIONALIDADES</h2>
                             <hr>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-sm-6">
+                        <div class="col-xs-12 col-sm-12 col-sm-12">
                             <div class="tittle">
-                                <ul>
-                                    <li>Empeños, Refrendos, Abonos</li>
-                                    <li>Oro, Plata y Artículos Varios</li>
-                                    <li>Desempeños</li>
-                                    <li>Adjudicaciones</li>
-                                    <li>Inventario para Venta</li>
-                                    <li>Supervisión y Control</li>
-                                    <li>Compra de Oro y Divisas</li>
-                                    <li>Manejo de promociones, Tarjetas de</li>
-                                    <li>Cliente Frecuente, Competencia, etc.</li>
-                                    <li>Actualización Diaria de precios de Oro y Plata.</li>
-                                    <li>Más de 40 Reportes de Operación</li>
-                                    <li>Indicadores de Desempeño</li>
-                                    <li>Control de Bóvedas </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-sm-6">
-                            <div class="tittle">
-                                <ul>
-                                    <li>Manejo de efectivo y valores</li>
-                                    <li>Control de Incidencias de Nómina</li>
-                                    <li>Control de Pago de Incentivos</li>
-                                    <li>Control de errores, malos avaluos, faltantes, descuentos.</li>
-                                    <li>Minutas</li>
-                                    <li>Acuerdos</li>
-                                    <li>Normatividad</li>
-                                    <li>Control de Acceso</li>
-                                    <li>Capacitación</li>
-                                    <li>Interfaz contable</li>
-                                    <li>Control de Lavado de Dinero</li>
-                                    <li>Generación de archivos a la CNBV</li>
-                                    <li>Actualización diaria del T.C. del dólar y UDIS</li>
-                                </ul>
+                                <div class="list-function">
+                                    <?php
+                                        $info = htmlspecialchars_decode($tmpproduct->functionalities);
+                                        echo $info;
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -193,46 +181,21 @@ include_once('layouts/partial/header.php');
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="row">
                 <h1>CONOCE MÁS DE ESTE PRODUCTO</h1>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <a class="fancybox-prod" rel="gallery1" href="images/gallery-1.jpg" title="">
-                        <img src="images/gallery-1.jpg" alt="" class="img-responsive">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <a class="fancybox-prod" rel="gallery1" href="images/gallery-1.jpg" title="">
-                        <img src="images/gallery-1.jpg" alt="" class="img-responsive">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <a class="fancybox-prod" rel="gallery1" href="images/gallery-1.jpg" title="">
-                        <img src="images/gallery-1.jpg" alt="" class="img-responsive">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <a class="fancybox-prod" rel="gallery1" href="images/gallery-1.jpg" title="">
-                        <img src="images/gallery-1.jpg" alt="" class="img-responsive">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <a class="fancybox-prod" rel="gallery1" href="images/gallery-1.jpg" title="">
-                        <img src="images/gallery-1.jpg" alt="" class="img-responsive">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <a class="fancybox-prod" rel="gallery1" href="images/gallery-1.jpg" title="">
-                        <img src="images/gallery-1.jpg" alt="" class="img-responsive">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <a class="fancybox-prod" rel="gallery1" href="images/gallery-1.jpg" title="">
-                        <img src="images/gallery-1.jpg" alt="" class="img-responsive">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3">
-                    <a href="">
-                        <img src="images/gallery-1.jpg" alt="" class="img-responsive">
-                    </a>
-                </div>
+                <?php
+                    foreach ($gallery as $l) {
+                        $tmpimgg = new Imagen("imagenes_gallery","","",0,"","",$l['id'],0);
+                        $gal = $tmpimgg->listar_x_id_c();
+                        foreach ($gal as $x) {
+                            ?>
+                            <div class="col-xs-12 col-sm-3 col-md-3">
+                                <a class="fancybox-prod" rel="gallery1" href="assets/images/data/imagenes_gallery/<?php echo $x['arch_img'] ?>" title="">
+                                    <img src="assets/images/data/imagenes_gallery/crop_<?php echo $x['arch_img'] ?>" alt="" class="img-responsive">
+                                </a>
+                            </div>
+                            <?php
+                        }
+                    }
+                ?>
             </div>
         </div>
     </div>

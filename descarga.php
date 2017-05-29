@@ -1,3 +1,15 @@
+<?php
+include_once ('Class/Descarga.php');
+include_once ('Class/imagenes.php');
+require_once ('Class/uarchivo.php');
+
+
+$tmpdownload = new Descarga(0,'','');
+$download = $tmpdownload->listar();
+
+
+
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -50,37 +62,33 @@ include_once('layouts/partial/header.php');
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-md-4">
-                            <div class="caja-descargas">
-                                <img src="images/claves.jpg" class="img-responsive center-block">
-                                <h2>5 CLAVES PARA MEJORAR LA GESTIÓN EN TU NOTARIA</h2>
-                                <p>
+                        <?php
+                            foreach ($download as $e) {
+                                $tmpimg = new Imagen('imagenes_descargas','','','','','', $e['id'],0);
+                                $downloadimg = $tmpimg->listar_x_id_c();
+                                $dw = current($downloadimg);
 
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a mi et lacus rhoncus varius. Curabitur ultricies erat ligula, eget tempor urna volutpat id. Aliquam placerat lacus ut tortor sollicitudin rhoncus.
-                                </p>
-                                <a href="#" class="btn-descarga" data-toggle="modal" data-target="#myModal">DESCARGA GRATUITA</a>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4">
-                            <div class="caja-descargas">
-                                <img src="images/recomendaciones.jpg" class="img-responsive center-block">
-                                <h2>6 RECOMENDACIONES PARA MEJORAR EL MANEJO DE TU CARTERA DE CLIENTES</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a mi et lacus rhoncus varius. Curabitur ultricies erat ligula, eget tempor urna volutpat id. Aliquam placerat lacus ut tortor sollicitudin rhoncus.
-                                </p>
-                                <a href="#" class="btn-descarga" data-toggle="modal" data-target="#myModal">DESCARGA GRATUITA</a>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4">
-                            <div class="caja-descargas">
-                                <img src="images/instructivo.jpg" class="img-responsive center-block">
-                                <h2>INSTRUCTIVO PARA REMITIR EL INFORME DE AUDITORÍA EN MATERIA DE PLD/FT</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a mi et lacus rhoncus varius. Curabitur ultricies erat ligula, eget tempor urna volutpat id. Aliquam placerat lacus ut tortor sollicitudin rhoncus.
-                                </p>
-                                <a href="#" class="btn-descarga" data-toggle="modal" data-target="#myModal">DESCARGA GRATUITA</a>
-                            </div>
-                        </div>
+                                $tmparch = new uArchivo('archivos_descarga','','','','','', $e['id']);
+                                $arch = $tmparch->listar_1_x_id_c();
+                                ?>
+                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                    <div class="caja-descargas">
+                                        <img src="assets/images/data/imagenes_descargas/crop_<?php echo $dw['arch_img'] ?>" class="img-responsive center-block">
+                                        <h2><?php echo $e['title'] ?></h2>
+                                        <p>
+                                            <?php
+                                                echo $e['description']
+                                            ?>
+                                        </p>
+                                        <a href="#" class="btn-descarga" id="btn_download" rel="<?php echo $e['id']; ?>" data-archivo="<?php echo current($arch)['archivo']; ?>" data-title ="<?php echo $e['title'] ?>" data-toggle="modal" data-target="#myModal">DESCARGA
+                                            GRATUITA</a>
+                                    </div>
+                                </div>
+
+                                <?php
+                            }
+                        ?>
+
                     </div>
                 </div>
             </div>
@@ -95,7 +103,6 @@ include_once('layouts/partial/footer.php');
 <!-- Modal -->
 <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal-label">
     <div class="modal-dialog-show" role="document">
-
         <!-- Modal content-->
         <div class="modal-content-show">
             <div class="modal-header-show">
@@ -105,7 +112,7 @@ include_once('layouts/partial/footer.php');
                 <div class="container-fluid">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="row">
-                            <h5 class="modal-title">6 RECOMENDACIONES PARA MEJORAR EL MANEJO DE TU CARTERA DE CLIENTES</h5>
+                            <h5 class="modal-title" id="title-m">6 RECOMENDACIONES PARA MEJORAR EL MANEJO DE TU CARTERA DE CLIENTES</h5>
                             <p class="modal-txt">
                                 Llena el siguiente formulario para continuar con la descarga.<br>
                                 Recibe cada mes nuestros e-book que te ayudarán a administrar tu empresa.
@@ -152,7 +159,6 @@ include_once('layouts/partial/footer.php');
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -178,6 +184,9 @@ include_once('layouts/partial/footer.php');
             'sitekey' : '6LfMLREUAAAAALlMy1l66mbpk7rwPgzMCMWlimCf'
         });
     };
+
+
+
 </script>
 
 </body>

@@ -19,7 +19,7 @@ if (isset($_REQUEST['id_product'])) {
     $id_product = $_REQUEST['id_product'];
 }
 
-$tmpproduct= new Product($id_product,'','','');
+$tmpproduct= new Product($id_product,'','','','','','','','');
 $tmpproduct->obtener();
 
 $tmpgallery = new Gallery($id,'',0);

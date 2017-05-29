@@ -5,7 +5,26 @@
 @media (max-width: 540px) {
   .contact-form form {
     width: 100%;
-    padding: 0; } }
+    padding: 0; }
+
+  table{
+    width:100%;
+  }
+
+  td{
+    display:block;
+    width:100%;
+  }
+
+  tr{
+    display:block;
+    margin-bottom:30px;
+  }
+
+  tr tr{
+    margin-bottom:0;
+  }
+}
 @media (max-width: 400px) {
   /*360 x 640px*/
   #recaptchaContacto {
@@ -25,7 +44,26 @@
     -webkit-transform-origin: 0 0; }
 
   iframe {
-    left: 5%; } }
+    left: 5%; }
+
+    table{
+      width:100%;
+    }
+
+    td{
+      display:block;
+      width:100%;
+    }
+
+    tr{
+      display:block;
+      margin-bottom:30px;
+    }
+
+    tr tr{
+      margin-bottom:0;
+    }
+}
 /* Extra Small */
 /* Small */
 @media (min-width: 768px) and (max-width: 991px) {

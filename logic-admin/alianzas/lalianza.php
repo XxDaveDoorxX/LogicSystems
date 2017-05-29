@@ -80,7 +80,7 @@ $tabla = include('tabla_imagenes.php');
             <li class="xn-openable">
                 <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i><span class="xn-text">Banner inicio</span></a>
                 <ul>
-                    <li><a href="lbanner"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../banner/lbanner"><span class="fa fa-list"></span>Listado</a></li>
                 </ul>
             </li>
             <li class="xn-title">Seccion productos</li>

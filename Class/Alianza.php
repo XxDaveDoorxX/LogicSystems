@@ -34,6 +34,8 @@ class Alianza
         return $nwid;
     }
 
+
+
     function modificar ()
     {
         $conexion = new dbc();
@@ -70,7 +72,7 @@ class Alianza
     function listar ()
     {
         $conexion = new dbc();
-        $result = $conexion->query("SELECT id, title, comment, rating, create_at FROM ".$this->tabla);
+        $result = $conexion->query("SELECT id, title, comment, rating, create_at FROM ".$this->tabla." ORDER BY create_at");
         $resultados =array();
         while($row = $result->fetch_assoc()) {
             $resultados[] = $row;
@@ -78,5 +80,18 @@ class Alianza
         $result->free();
         return $resultados;
     }
+
+    function listar2 ($comp = 1)
+    {
+        $conexion = new dbc();
+        $result = $conexion->query("SELECT id, title, comment, rating, create_at FROM ".$this->tabla." ORDER BY create_at DESC LIMIT ".$comp);
+        $resultados =array();
+        while($row = $result->fetch_assoc()) {
+            $resultados[] = $row;
+        }
+        $result->free();
+        return $resultados;
+    }
+
 
 }

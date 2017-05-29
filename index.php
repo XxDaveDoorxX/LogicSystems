@@ -1,3 +1,23 @@
+<?php
+include_once ('Class/imagenes.php');
+include_once ('Class/Evento.php');
+include_once ('Class/Alianza.php');
+include_once ('Class/banner.php');
+
+
+$tmpevent = new Evento(0,'','','');
+$event = $tmpevent->listar();
+
+
+$tmpalianza = new Alianza(0,'','','','');
+$alianza = $tmpalianza->listar2();
+$alz = current($alianza);
+
+
+$tmpbanner = new banner(0,'');
+$banner = $tmpbanner->listar();
+
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -45,9 +65,19 @@ include_once('layouts/partial/header.php');
     <div class="flex-container-home">
         <div class="flexslider flexslider-home">
             <ul class="slides">
-                <li>
-                    <a href="#"><img src="images/slider.jpg"></a>
-                </li>
+                <?php
+                    foreach ($banner as $e) {
+                        $tmpimgbanner = new Imagen('imagenes_banner','','','','','',$e['id'],0);
+                        $imgbann = $tmpimgbanner->listar_x_id_c();
+                            foreach ($imgbann as $i) {
+                                ?>
+                                <li>
+                                    <a href="#"><img src="assets/images/data/imagenes_banner/<?php echo $i['arch_img'] ?>"></a>
+                                </li>
+                                <?php
+                            }
+                    }
+                ?>
             </ul>
         </div>
     </div>
@@ -64,53 +94,29 @@ include_once('layouts/partial/header.php');
         </div>
         <div id="owl-products">
 
-            <!--======= TEAM MEMBER 1 =========-->
-            <div class="product">
+            <?php
+                foreach ($product as $e) {
 
-                <!--======= HOVER DETAIL =========-->
-                <div class="img"> <img src="images/team-1.jpg" alt="" >
-                    <h5>CIB FINANCIERA</h5>
-                    <p><span>Operación de financieras</span></p>
-                    <p>In quam vitae turpis convallis viverra.
-                        Phasellus sed in magna.</p>
-                </div>
-            </div>
+                    $tmpimgProd = new Imagen('imagenes_productos','','','','','', $e['id'],0);
+                    $imgProd = $tmpimgProd->listar_x_id_c();
+                    $curImgProd = current($imgProd);
+                    ?>
 
-            <!--======= TEAM MEMBER 2 =========-->
-            <div class="product">
+                    <!--======= TEAM MEMBER 1 =========-->
+                    <div class="product">
 
-                <!--======= HOVER DETAIL =========-->
-                <div class="img"> <img src="images/team-2.jpg" alt="" >
-                    <h5>CIB CASA DE EMPEÑO</h5>
-                    <p><span>Control y operación de casas de empeño</span></p>
-                    <p>In quam vitae turpis convallis viverra.
-                        Phasellus sed in magna.</p>
-                </div>
-            </div>
+                        <!--======= HOVER DETAIL =========-->
+                        <div class="img"><img src="assets/images/data/imagenes_productos/<?php echo $curImgProd['arch_img']?>" alt="<?php echo $e['name'] ?>">
+                            <h5><?php echo $e['name'] ?></h5>
+                            <p><span><?php echo $e['subtitle'] ?></span></p>
+                            <p><?php echo $e['description_first'] ?></p>
+                        </div>
+                    </div>
+                    <?php
+                }
+            ?>
 
-            <!--======= TEAM MEMBER 3 =========-->
-            <div class="product">
 
-                <!--======= HOVER DETAIL =========-->
-                <div class="img"> <img src="images/team-3.jpg" alt="" >
-                    <h5>E-SIGeN NOTARIAL</h5>
-                    <p><span>Sistema integral de gestión notarial en la nube</span></p>
-                    <p>In quam vitae turpis convallis viverra.
-                        Phasellus sed in magna.</p>
-                </div>
-            </div>
-
-            <!--======= TEAM MEMBER 4 =========-->
-            <div class="product">
-
-                <!--======= HOVER DETAIL =========-->
-                <div class="img"> <img src="images/team-4.jpg" alt="" >
-                    <h5>E-SIGeN CONTRATOS</h5>
-                    <p><span>Generación y firma electrónica de documentos</span></p>
-                    <p>In quam vitae turpis convallis viverra.
-                        Phasellus sed in magna.</p>
-                </div>
-            </div>
 
 
         </div>
@@ -127,20 +133,25 @@ include_once('layouts/partial/header.php');
         <div class="row">
             <div class="col-md-4">
                 <div class="img-alianza">
-                    <img class="img-responsive center-block" src="images/alianza-comercial.jpg">
+                    <?php
+                    $tmpimgalianza = new Imagen('imagenes_alianzas','','','','','',$alz['id'],0);
+                    $imgalianza = $tmpimgalianza->listar_x_id_c();
+                    $alzimg = current($imgalianza);
+                    ?>
+                    <img class="img-responsive center-block" src="assets/images/data/imagenes_alianzas/crop_<?php echo $alzimg['arch_img'] ?>">
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="item-alianza-text">
-                    <span>SUSTAINABLE CONSTRUCTION</span>
-                    <div class="stars starrr" data-rating="1"></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis pellentesque commodo. Nullam sed diam sit amet quam vestibulum tincidunt. Curabitur posuere lectus nisl, quis congue nunc mattis eu. Proin id vulputate eros. Ut nulla lacus, dapibus a facilisis vulputate, sollicitudin eget dui. Nullam rhoncus lacus tortor, nec semper ipsum suscipit at. Curabitur purus turpis, auctor eget tristique vitae, euismod vel elit. Quisque tempor elementum augue, eu vestibulum lacus pellentesque in. Nulla quis nulla vitae dolor ornare mollis. Mauris faucibus nisi metus, eget aliquam tellus bibendum nec.</p>
+                    <span><?php echo $alz['title'] ?></span>
+                    <div class="stars starrr" data-rating="<?php echo $alz['rating'] ?>"></div>
+                    <p><?php echo $alz['comment'] ?></p>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="btn-row-alianza">
-                <a class="btn_view_all" href="">Ver todas</a>
+                <a class="btn_view_all" href="alianzas-comerciales">Ver todas</a>
             </div>
         </div>
     </div>

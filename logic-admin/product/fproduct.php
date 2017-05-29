@@ -13,7 +13,7 @@ if (isset($_REQUEST['id'])) {
 }
 
 
-$tmpproduct= new Product($id,'','','','','','','');
+$tmpproduct= new Product($id,'','','','','','','','');
 $tmpproduct->obtener();
 
 // ** Tabla de imagenes **//
@@ -227,6 +227,13 @@ $tabla = include('tabla_imagenes.php');
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
+                                                            <label>Subtitulo del producto en el index</label>
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                                                <input data-parsley-id="2967" name="subtitle" id="subtitle" class="form-control input-lg" data-parsley-group="wizard-step-1" value="<?php echo $tmpproduct->subtitle;  ?>" required type="text"><ul id="parsley-id-2967" class="parsley-errors-list"></ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
                                                             <label>Codigo del producto</label>
                                                             <div class="input-group">
                                                                 <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
@@ -254,7 +261,28 @@ $tabla = include('tabla_imagenes.php');
                                                         </div>
                                                         <div class="form-group">
                                                             <label>Funcionalidades</label>
-                                                            <textarea  name="functionalities" id="functionalities" class="functionalities"><?php echo $tmpproduct->functionalities;  ?></textarea>
+                                                            <textarea  name="functionalities" id="functionalities" class="functionalities">
+                                                                <?php
+                                                                if(!empty($tmpproduct->functionalities)) {
+                                                                    echo $tmpproduct->functionalities;
+                                                                } else {
+                                                                    echo '
+                                                                    <table border="0" cellpadding="1" cellspacing="1" style="height:auto; width:100%">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                
+                                                                                </td>
+                                                                                <td>
+                                                                               
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    ';
+                                                                }
+                                                                ?>
+                                                            </textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -314,7 +342,7 @@ $tabla = include('tabla_imagenes.php');
                                 ?>
                             </h2>
                             <!--<p class="m-b-20">Completo</p>-->
-                            <p><a href="lproduct.php" class="btn btn-success btn-lg">Finalizar</a></p>
+                            <p><a href="lproduct" class="btn btn-success btn-lg">Finalizar</a></p>
                         </div>
                         <!-- end wizard step-5 -->
                     </div>
@@ -590,7 +618,7 @@ $tabla = include('tabla_imagenes.php');
                     //alert("id banner: "+$id_product);
                     if ($id_product != 0) {
                         $.ajax({
-                            data:  {'op':'Modificar', 'id':$id_product, 'nombre':$('#nombre').val(), 'codigo':$('#codigo').val(), 'f_video':$('#f_video').val(), 'description_first':$('#description_first').val(), 'description_second':$('#description_second').val(), 'characteristics':editorC.getData(), 'functionalities':editorF.getData()},
+                            data:  {'op':'Modificar', 'id':$id_product, 'nombre':$('#nombre').val(), 'subtitle':$('#subtitle').val(), 'codigo':$('#codigo').val(), 'f_video':$('#f_video').val(), 'description_first':$('#description_first').val(), 'description_second':$('#description_second').val(), 'characteristics':editorC.getData(), 'functionalities':editorF.getData()},
                             url:   'opproduct.php',
                             type:  'post',
                             success:  function (response) {
@@ -600,7 +628,7 @@ $tabla = include('tabla_imagenes.php');
                         });
                     } else {
                         $.ajax({
-                            data:  {'op':'Agregar', 'nombre':$('#nombre').val(), 'codigo':$('#codigo').val(), 'f_video':$('#f_video').val(), 'description_first':$('#description_first').val(), 'description_second':$('#description_second').val(), 'characteristics':editorC.getData(), 'functionalities':editorF.getData()},
+                            data:  {'op':'Agregar', 'nombre':$('#nombre').val(), 'subtitle':$('#subtitle').val(), 'codigo':$('#codigo').val(), 'f_video':$('#f_video').val(), 'description_first':$('#description_first').val(), 'description_second':$('#description_second').val(), 'characteristics':editorC.getData(), 'functionalities':editorF.getData()},
                             url:   'opproduct.php',
                             type:  'post',
                             success:  function (response) {

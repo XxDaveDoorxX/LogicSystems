@@ -214,7 +214,7 @@ require_once ('../../Class/uarchivo.php');
                                             ?>
                                             <td><a id="btnUarchivo" href="#" class="btn btn-primary btn-block btn-rounded" rel="<?php echo $e['id']; ?>" data-archivo="<?php echo current($arch)['archivo']; ?>" data-toggle="modal" data-target="#modal_change_archivo">Subir archivo</a></td>
                                             <td>
-                                                <a href="fevent?id=<?php echo $e['id']; ?>" class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></a>
+                                                <a href="fdownload?id=<?php echo $e['id']; ?>" class="btn btn-default btn-rounded btn-condensed btn-sm"><span class="fa fa-pencil"></span></a>
                                                 <button class="btn btn-danger btn-rounded btn-condensed btn-sm delte_row_data" onClick="delete_row('trow_<?php echo $e['id']; ?>',this);" data-idb="<?php echo $e['id']; ?>" data-tbl="<?php echo $tabla; ?>" data-tbla="<?php echo $tablaarch; ?>"><span class="fa fa-times"></span></button>
                                             </td>
                                         </tr>

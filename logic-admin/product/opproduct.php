@@ -4,6 +4,7 @@ require_once ('../../Class/Product.php');
 $op = (isset($_REQUEST['op'])) ? htmlentities($_REQUEST['op'], ENT_QUOTES) : '';		// opcion
 $id = (isset($_REQUEST['id'])) ? htmlentities($_REQUEST['id'], ENT_QUOTES) : 0;	// id
 $nombre = (isset($_REQUEST['nombre'])) ? htmlentities($_REQUEST['nombre'], ENT_QUOTES) : '';
+$subtitle = (isset($_REQUEST['subtitle'])) ? htmlentities($_REQUEST['subtitle'], ENT_QUOTES) : '';
 $codigo = (isset($_REQUEST['codigo'])) ? htmlentities($_REQUEST['codigo'], ENT_QUOTES) : '';
 $f_video = (isset($_REQUEST['f_video'])) ? $_REQUEST['f_video'] : '';
 $description_first = (isset($_REQUEST['description_first'])) ? htmlentities($_REQUEST['description_first'], ENT_QUOTES) : '';
@@ -14,7 +15,7 @@ $functionalities = (isset($_REQUEST['functionalities'])) ? htmlentities($_REQUES
 /*IMAGENES*/
 $tbl = (isset($_REQUEST['tbl'])) ? $_REQUEST['tbl'] : '';	// tabla imagen
 
-$tmpproduct = new Product($id,$nombre,$codigo,$f_video,$description_first,$description_second,$characteristics,$functionalities);
+$tmpproduct = new Product($id,$nombre,$subtitle,$codigo,$f_video,$description_first,$description_second,$characteristics,$functionalities);
 
 switch ($op) {
     case 'Agregar':

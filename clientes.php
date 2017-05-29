@@ -1,3 +1,12 @@
+<?php
+include_once ('Class/imagenes.php');
+include_once ('Class/Cliente.php');
+
+$tmpclient = new Cliente(0,'','','','');
+$cliente = $tmpclient->listar();
+
+
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -43,206 +52,36 @@ include_once('layouts/partial/header.php');
             </div>
         </div>
     </div>
-    <div class="bg-clientes-color">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
+    <?php
+        foreach ($cliente as $e) {
+            $tmpimgclient = new Imagen('imagenes_clientes','','','','','',$e['id'],0);
+            $imgclient = $tmpimgclient->listar_x_id_c();
+            $clientimg = current($imgclient);
+            ?>
+            <div class="bg-clientes-color">
+                <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <img src="images/sustainable.jpg" alt="" class="img-responsive center-block">
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-8">
-                            <h2>SUSTAINABLE CONSTRUCTION</h2>
-                            <div class="stars starrr" data-rating="1"></div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis pellentesque commodo. Nullam sed diam sit amet quam vestibulum tincidunt. Curabitur posuere lectus nisl, quis congue nunc mattis eu. Proin id vulputate eros. Ut nulla lacus, dapibus a facilisis vulputate, sollicitudin eget dui. Nullam rhoncus lacus tortor, nec semper ipsum suscipit at. Curabitur purus turpis, auctor eget tristique vitae, euismod vel elit. Quisque tempor elementum augue, eu vestibulum lacus pellentesque in. Nulla quis nulla vitae dolor ornare mollis. Mauris faucibus nisi metus, eget aliquam tellus bibendum nec.
-                            </p>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                    <img src="assets/images/data/imagenes_clientes/crop_<?php echo $clientimg['arch_img'] ?>" alt="" class="img-responsive center-block">
+                                </div>
+                                <div class="col-xs-12 col-sm-8 col-md-8">
+                                    <h2><?php echo $e['title'] ?></h2>
+                                    <div class="stars starrr" data-rating="<?php echo $e['rating'] ?>"></div>
+                                    <p>
+                                        <?php echo $e['comment'] ?>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="bg-alianzas-color">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <img src="images/sustainable.jpg" alt="" class="img-responsive center-block">
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-8">
-                            <h2>SUSTAINABLE CONSTRUCTION</h2>
-                            <div class="stars starrr" data-rating="0"></div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis pellentesque commodo. Nullam sed diam sit amet quam vestibulum tincidunt. Curabitur posuere lectus nisl, quis congue nunc mattis eu. Proin id vulputate eros. Ut nulla lacus, dapibus a facilisis vulputate, sollicitudin eget dui. Nullam rhoncus lacus tortor, nec semper ipsum suscipit at. Curabitur purus turpis, auctor eget tristique vitae, euismod vel elit. Quisque tempor elementum augue, eu vestibulum lacus pellentesque in. Nulla quis nulla vitae dolor ornare mollis. Mauris faucibus nisi metus, eget aliquam tellus bibendum nec.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-alianzas-color">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <img src="images/sustainable.jpg" alt="" class="img-responsive center-block">
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-8">
-                            <h2>SUSTAINABLE CONSTRUCTION</h2>
-                            <div class="stars starrr" data-rating="0"></div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis pellentesque commodo. Nullam sed diam sit amet quam vestibulum tincidunt. Curabitur posuere lectus nisl, quis congue nunc mattis eu. Proin id vulputate eros. Ut nulla lacus, dapibus a facilisis vulputate, sollicitudin eget dui. Nullam rhoncus lacus tortor, nec semper ipsum suscipit at. Curabitur purus turpis, auctor eget tristique vitae, euismod vel elit. Quisque tempor elementum augue, eu vestibulum lacus pellentesque in. Nulla quis nulla vitae dolor ornare mollis. Mauris faucibus nisi metus, eget aliquam tellus bibendum nec.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-alianzas-color">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <img src="images/sustainable.jpg" alt="" class="img-responsive center-block">
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-8">
-                            <h2>SUSTAINABLE CONSTRUCTION</h2>
-                            <div class="stars starrr" data-rating="0"></div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis pellentesque commodo. Nullam sed diam sit amet quam vestibulum tincidunt. Curabitur posuere lectus nisl, quis congue nunc mattis eu. Proin id vulputate eros. Ut nulla lacus, dapibus a facilisis vulputate, sollicitudin eget dui. Nullam rhoncus lacus tortor, nec semper ipsum suscipit at. Curabitur purus turpis, auctor eget tristique vitae, euismod vel elit. Quisque tempor elementum augue, eu vestibulum lacus pellentesque in. Nulla quis nulla vitae dolor ornare mollis. Mauris faucibus nisi metus, eget aliquam tellus bibendum nec.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-alianzas-color">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <img src="images/sustainable.jpg" alt="" class="img-responsive center-block">
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-8">
-                            <h2>SUSTAINABLE CONSTRUCTION</h2>
-                            <div class="stars starrr" data-rating="0"></div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis pellentesque commodo. Nullam sed diam sit amet quam vestibulum tincidunt. Curabitur posuere lectus nisl, quis congue nunc mattis eu. Proin id vulputate eros. Ut nulla lacus, dapibus a facilisis vulputate, sollicitudin eget dui. Nullam rhoncus lacus tortor, nec semper ipsum suscipit at. Curabitur purus turpis, auctor eget tristique vitae, euismod vel elit. Quisque tempor elementum augue, eu vestibulum lacus pellentesque in. Nulla quis nulla vitae dolor ornare mollis. Mauris faucibus nisi metus, eget aliquam tellus bibendum nec.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-alianzas-color">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <img src="images/sustainable.jpg" alt="" class="img-responsive center-block">
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-8">
-                            <h2>SUSTAINABLE CONSTRUCTION</h2>
-                            <div class="stars starrr" data-rating="0"></div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis pellentesque commodo. Nullam sed diam sit amet quam vestibulum tincidunt. Curabitur posuere lectus nisl, quis congue nunc mattis eu. Proin id vulputate eros. Ut nulla lacus, dapibus a facilisis vulputate, sollicitudin eget dui. Nullam rhoncus lacus tortor, nec semper ipsum suscipit at. Curabitur purus turpis, auctor eget tristique vitae, euismod vel elit. Quisque tempor elementum augue, eu vestibulum lacus pellentesque in. Nulla quis nulla vitae dolor ornare mollis. Mauris faucibus nisi metus, eget aliquam tellus bibendum nec.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-alianzas-color">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <img src="images/sustainable.jpg" alt="" class="img-responsive center-block">
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-8">
-                            <h2>SUSTAINABLE CONSTRUCTION</h2>
-                            <div class="stars starrr" data-rating="0"></div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis pellentesque commodo. Nullam sed diam sit amet quam vestibulum tincidunt. Curabitur posuere lectus nisl, quis congue nunc mattis eu. Proin id vulputate eros. Ut nulla lacus, dapibus a facilisis vulputate, sollicitudin eget dui. Nullam rhoncus lacus tortor, nec semper ipsum suscipit at. Curabitur purus turpis, auctor eget tristique vitae, euismod vel elit. Quisque tempor elementum augue, eu vestibulum lacus pellentesque in. Nulla quis nulla vitae dolor ornare mollis. Mauris faucibus nisi metus, eget aliquam tellus bibendum nec.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-alianzas-color">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <img src="images/sustainable.jpg" alt="" class="img-responsive center-block">
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-8">
-                            <h2>SUSTAINABLE CONSTRUCTION</h2>
-                            <div class="stars starrr" data-rating="0"></div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis pellentesque commodo. Nullam sed diam sit amet quam vestibulum tincidunt. Curabitur posuere lectus nisl, quis congue nunc mattis eu. Proin id vulputate eros. Ut nulla lacus, dapibus a facilisis vulputate, sollicitudin eget dui. Nullam rhoncus lacus tortor, nec semper ipsum suscipit at. Curabitur purus turpis, auctor eget tristique vitae, euismod vel elit. Quisque tempor elementum augue, eu vestibulum lacus pellentesque in. Nulla quis nulla vitae dolor ornare mollis. Mauris faucibus nisi metus, eget aliquam tellus bibendum nec.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-alianzas-color">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <img src="images/sustainable.jpg" alt="" class="img-responsive center-block">
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-8">
-                            <h2>SUSTAINABLE CONSTRUCTION</h2>
-                            <div class="stars starrr" data-rating="0"></div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis pellentesque commodo. Nullam sed diam sit amet quam vestibulum tincidunt. Curabitur posuere lectus nisl, quis congue nunc mattis eu. Proin id vulputate eros. Ut nulla lacus, dapibus a facilisis vulputate, sollicitudin eget dui. Nullam rhoncus lacus tortor, nec semper ipsum suscipit at. Curabitur purus turpis, auctor eget tristique vitae, euismod vel elit. Quisque tempor elementum augue, eu vestibulum lacus pellentesque in. Nulla quis nulla vitae dolor ornare mollis. Mauris faucibus nisi metus, eget aliquam tellus bibendum nec.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-alianzas-color">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                            <img src="images/sustainable.jpg" alt="" class="img-responsive center-block">
-                        </div>
-                        <div class="col-xs-12 col-sm-8 col-md-8">
-                            <h2>SUSTAINABLE CONSTRUCTION</h2>
-                            <div class="stars starrr" data-rating="0"></div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis pellentesque commodo. Nullam sed diam sit amet quam vestibulum tincidunt. Curabitur posuere lectus nisl, quis congue nunc mattis eu. Proin id vulputate eros. Ut nulla lacus, dapibus a facilisis vulputate, sollicitudin eget dui. Nullam rhoncus lacus tortor, nec semper ipsum suscipit at. Curabitur purus turpis, auctor eget tristique vitae, euismod vel elit. Quisque tempor elementum augue, eu vestibulum lacus pellentesque in. Nulla quis nulla vitae dolor ornare mollis. Mauris faucibus nisi metus, eget aliquam tellus bibendum nec.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+            <?php
+        }
+    ?>
+
 </section>
 
 <?php

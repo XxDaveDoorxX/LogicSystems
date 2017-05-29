@@ -5,7 +5,7 @@ $seguridad->candado();
 
 require_once('../../Class/Product.php');
 
-$tmpproduct = new Product(0,'','','','','','','');
+$tmpproduct = new Product(0,'','','','','','','','');
 $products = $tmpproduct->listar();
 
 

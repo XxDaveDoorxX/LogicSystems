@@ -234,11 +234,11 @@ $tabla = include('tabla_imagenes.php');
                                                         <div class="form-group">
                                                             <label class="control-label">Rating</label>
                                                                 <select class="form-control select" name="rating" id="rating">
-                                                                    <option value="1">1</option>
-                                                                    <option value="2">2</option>
-                                                                    <option value="3">3</option>
-                                                                    <option value="4">4</option>
-                                                                    <option value="5">5</option>
+                                                                    <option value="1" <?php if($tmpclient->rating == '1') echo 'selected' ?>>1</option>
+                                                                    <option value="2" <?php if($tmpclient->rating == '2') echo 'selected' ?>>2</option>
+                                                                    <option value="3" <?php if($tmpclient->rating == '3') echo 'selected' ?>>3</option>
+                                                                    <option value="4" <?php if($tmpclient->rating == '4') echo 'selected' ?>>4</option>
+                                                                    <option value="5" <?php if($tmpclient->rating == '5') echo 'selected' ?>>5</option>
                                                                 </select>
                                                         </div>
                                                         <div class="form-group">
@@ -301,7 +301,7 @@ $tabla = include('tabla_imagenes.php');
                                 ?>
                             </h2>
                             <!--<p class="m-b-20">Completo</p>-->
-                            <p><a href="lalianza" class="btn btn-success btn-lg">Finalizar</a></p>
+                            <p><a href="lclient" class="btn btn-success btn-lg">Finalizar</a></p>
                         </div>
                         <!-- end wizard step-5 -->
                     </div>
