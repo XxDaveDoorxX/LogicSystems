@@ -2,31 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b8d68b-4417-4d56-a2bf-91bbe5415553" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/default.css.map" afterPath="$PROJECT_DIR$/css/default.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Class/Alianza.php" afterPath="$PROJECT_DIR$/Class/Alianza.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Class/Product.php" afterPath="$PROJECT_DIR$/Class/Product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alianzas-comerciales.php" afterPath="$PROJECT_DIR$/alianzas-comerciales.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clientes.php" afterPath="$PROJECT_DIR$/clientes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contacto.php" afterPath="$PROJECT_DIR$/contacto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/default.css" afterPath="$PROJECT_DIR$/css/default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/responsive.css" afterPath="$PROJECT_DIR$/css/responsive.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/descarga.php" afterPath="$PROJECT_DIR$/descarga.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/layouts/partial/header.php" afterPath="$PROJECT_DIR$/layouts/partial/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/alianzas/falianza.php" afterPath="$PROJECT_DIR$/logic-admin/alianzas/falianza.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/alianzas/lalianza.php" afterPath="$PROJECT_DIR$/logic-admin/alianzas/lalianza.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/client/fclient.php" afterPath="$PROJECT_DIR$/logic-admin/client/fclient.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/download/fdownload.php" afterPath="$PROJECT_DIR$/logic-admin/download/fdownload.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/download/ldownload.php" afterPath="$PROJECT_DIR$/logic-admin/download/ldownload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/gallery/fgallery.php" afterPath="$PROJECT_DIR$/logic-admin/gallery/fgallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/gallery/lgallery.php" afterPath="$PROJECT_DIR$/logic-admin/gallery/lgallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/product/fproduct.php" afterPath="$PROJECT_DIR$/logic-admin/product/fproduct.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/product/lproduct.php" afterPath="$PROJECT_DIR$/logic-admin/product/lproduct.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/product/opproduct.php" afterPath="$PROJECT_DIR$/logic-admin/product/opproduct.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/thumbs/fthumbs.php" afterPath="$PROJECT_DIR$/logic-admin/thumbs/fthumbs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic-admin/thumbs/lthumbs.php" afterPath="$PROJECT_DIR$/logic-admin/thumbs/lthumbs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/productos.php" afterPath="$PROJECT_DIR$/productos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/default.scss" afterPath="$PROJECT_DIR$/scss/default.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,45 +16,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="descarga.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/descarga.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="104" column="34" lean-forward="false" selection-start-line="104" selection-start-column="34" selection-end-line="104" selection-end-column="34" />
-              <folding>
-                <marker date="1496094508120" expanded="true" signature="1257:1457" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="1475:1541" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="1600:3877" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="1631:1905" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="1663:1894" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="1693:1879" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="1753:1860" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="1943:3866" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="1975:3855" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="2005:3840" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="2065:3821" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="2103:3798" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="2708:3674" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="2773:3635" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="3053:3266" ph="..." />
-                <marker date="1496094508120" expanded="true" signature="8322:8362" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contacto.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/contacto.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="114" column="52" lean-forward="false" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -142,7 +83,6 @@
         <option value="$PROJECT_DIR$/logic-admin/client/lclient.php" />
         <option value="$PROJECT_DIR$/logic-admin/banner/fbanner.php" />
         <option value="$PROJECT_DIR$/logic-admin/banner/lbanner.php" />
-        <option value="$PROJECT_DIR$/logic-admin/download/fdownload.php" />
         <option value="$PROJECT_DIR$/logic-admin/download/upload_arch.php" />
         <option value="$PROJECT_DIR$/logic-admin/download/tabla_archivo.php" />
         <option value="$PROJECT_DIR$/logic-admin/download/opsubir_archivo.php" />
@@ -163,15 +103,16 @@
         <option value="$PROJECT_DIR$/Class/Product.php" />
         <option value="$PROJECT_DIR$/logic-admin/alianzas/falianza.php" />
         <option value="$PROJECT_DIR$/logic-admin/client/fclient.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/alianzas-comerciales.php" />
         <option value="$PROJECT_DIR$/clientes.php" />
-        <option value="$PROJECT_DIR$/logic-admin/download/ldownload.php" />
         <option value="$PROJECT_DIR$/fuctions/download_modal.php" />
         <option value="$PROJECT_DIR$/descarga.php" />
         <option value="$PROJECT_DIR$/layouts/partial/header.php" />
         <option value="$PROJECT_DIR$/productos.php" />
         <option value="$PROJECT_DIR$/contacto.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/logic-admin/download/ldownload.php" />
+        <option value="$PROJECT_DIR$/logic-admin/download/fdownload.php" />
       </list>
     </option>
   </component>
@@ -212,24 +153,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="logicsystem" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logicsystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logicsystem" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partial" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -350,18 +273,17 @@
       <workItem from="1495807554791" duration="13297000" />
       <workItem from="1495827771142" duration="7650000" />
       <workItem from="1496066948070" duration="14814000" />
-      <workItem from="1496089597283" duration="5124000" />
+      <workItem from="1496089597283" duration="7015000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85043000" />
+    <option name="totallyTimeSpent" value="86934000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2685325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2685325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -741,14 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="140" column="141" lean-forward="false" selection-start-line="140" selection-start-column="66" selection-end-line="140" selection-end-column="141" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clientes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -801,24 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/download/ldownload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="359" column="12" lean-forward="true" selection-start-line="359" selection-start-column="12" selection-end-line="362" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logic-admin/download/fdownload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4243">
-          <caret line="558" column="68" lean-forward="true" selection-start-line="558" selection-start-column="68" selection-end-line="558" selection-end-column="68" />
-          <folding>
-            <marker date="1495812729971" expanded="true" signature="20422:20434" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fuctions/download_modal.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -827,9 +723,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/productos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="44" column="53" lean-forward="false" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layouts/partial/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="178" column="80" lean-forward="false" selection-start-line="178" selection-start-column="80" selection-end-line="178" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/descarga.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="1122">
           <caret line="104" column="34" lean-forward="false" selection-start-line="104" selection-start-column="34" selection-end-line="104" selection-end-column="34" />
           <folding>
             <marker date="1496094508120" expanded="true" signature="1257:1457" ph="..." />
@@ -852,26 +772,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/productos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="44" column="53" lean-forward="false" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/partial/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="51" lean-forward="false" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contacto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="114" column="52" lean-forward="false" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="53" />
+        <state relative-caret-position="2139">
+          <caret line="117" column="99" lean-forward="false" selection-start-line="117" selection-start-column="99" selection-end-line="117" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/download/fdownload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="123" column="65" lean-forward="true" selection-start-line="123" selection-start-column="65" selection-end-line="123" selection-end-column="65" />
+          <folding>
+            <marker date="1496096509360" expanded="true" signature="20440:20452" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic-admin/download/ldownload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="115" column="42" lean-forward="false" selection-start-line="115" selection-start-column="42" selection-end-line="115" selection-end-column="42" />
           <folding />
         </state>
       </provider>

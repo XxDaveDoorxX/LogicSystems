@@ -36,7 +36,7 @@ include_once('layouts/partial/header.php');
 
 
 $tmpproduct = new Product(0, '','','','','','','','');
-$tmpproduct->listar();
+$product = $tmpproduct->listar();
 
 ?>
 
@@ -111,11 +111,14 @@ $tmpproduct->listar();
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
                                         <select class="form-control" name="estadoc" id="estadoc">
-                                            <option>¿En cuál producto estás interesado?</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                            <option value="">¿En cuál producto estás interesado?</option>
+                                            <?php
+                                                foreach ($product as $e) {
+                                                    ?>
+                                                    <option value="<?php echo $e['name'] ?>" <?php  ?>><?php echo $e['name'] ?></option>
+                                                    <?php
+                                                }
+                                            ?>
                                         </select>
                                     </div>
                                 </div>

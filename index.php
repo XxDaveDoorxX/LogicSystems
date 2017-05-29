@@ -166,54 +166,26 @@ include_once('layouts/partial/header.php');
             <h1 class="">PRÓXIMOS EVENTOS</h1>
         </div>
         <div id="owl-events">
+            <?php
+                foreach ($event as $e) {
+                    $tmpimgevent = new Imagen('imagenes_eventos','','','','','',$e['id'],0);
+                    $imgevent = $tmpimgevent->listar_x_id_c();
+                    $eventimg = current($imgevent);
+                    ?>
+                    <!--======= TEAM MEMBER 1 =========-->
+                    <div class="event">
 
-            <!--======= TEAM MEMBER 1 =========-->
-            <div class="event">
+                        <!--======= HOVER DETAIL =========-->
+                        <div class="img"><img src="assets/images/data/imagenes_eventos/crop_<?php echo $eventimg['arch_img'] ?>" alt="">
+                            <h5><?php echo $e['title'] ?></h5>
+                            <p><span><?php echo strftime("%d-%B-%Y",strtotime($e['create_at'])) ?></span></p>
+                            <p><?php echo $e['description'] ?></p>
+                        </div>
+                    </div>
 
-                <!--======= HOVER DETAIL =========-->
-                <div class="img"> <img src="images/event-1.jpg" alt="" >
-                    <h5>NOMBRE DE EVENTO</h5>
-                    <p><span>21 DE MAYO DE 2017</span></p>
-                    <p>In quam vitae turpis convallis viverra.
-                        Phasellus sed in magna.</p>
-                </div>
-            </div>
-
-            <!--======= TEAM MEMBER 2 =========-->
-            <div class="event">
-
-                <!--======= HOVER DETAIL =========-->
-                <div class="img"> <img src="images/event-1.jpg" alt="" >
-                    <h5>NOMBRE DE EVENTO</h5>
-                    <p><span>21 DE MAYO DE 2017</span></p>
-                    <p>In quam vitae turpis convallis viverra.
-                        Phasellus sed in magna.</p>
-                </div>
-            </div>
-
-            <!--======= TEAM MEMBER 3 =========-->
-            <div class="event">
-
-                <!--======= HOVER DETAIL =========-->
-                <div class="img"> <img src="images/event-1.jpg" alt="" >
-                    <h5>NOMBRE DE EVENTO</h5>
-                    <p><span>21 DE MAYO DE 2017</span></p>
-                    <p>In quam vitae turpis convallis viverra.
-                        Phasellus sed in magna.</p>
-                </div>
-            </div>
-
-            <!--======= TEAM MEMBER 4 =========-->
-            <div class="event">
-
-                <!--======= HOVER DETAIL =========-->
-                <div class="img"> <img src="images/event-1.jpg" alt="" >
-                    <h5>NOMBRE DE EVENTO</h5>
-                    <p><span>21 DE MAYO DE 2017</span></p>
-                    <p>In quam vitae turpis convallis viverra.
-                        Phasellus sed in magna.</p>
-                </div>
-            </div>
+                    <?php
+                }
+            ?>
 
 
         </div>

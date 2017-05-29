@@ -121,8 +121,8 @@ $tabla = include('tabla_imagenes.php');
             <li class="xn-openable">
                 <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i><span class="xn-text">Eventos</span></a>
                 <ul>
-                    <li><a href="levent"><span class="fa fa-list"></span>Listado</a></li>
-                    <li><a href="fevent"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
+                    <li><a href="../event/levent"><span class="fa fa-list"></span>Listado</a></li>
+                    <li><a href="../event/fevent"><span class="fa fa-pencil-square-o"></span>Formulario</a></li>
                 </ul>
             </li>
             <li class="xn-title">Seccion Descargas</li>
