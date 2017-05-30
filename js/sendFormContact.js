@@ -3,11 +3,14 @@
  /*-----------------------------------------------------------------------------------*/
 $(document).ready(function () {
 
-    function mantenerDatos(n,p,em,m) {
-        $('#formName').val(n);
-        $('#phone').val(p);
-        $('#formEmail').val(em);
-        $('#message').html(m);
+    function mantenerDatos(n,ep,es,ct,p,em,m) {
+        $('#formNamec').val(n);
+        $('#empresac').val(ep);
+        $('#estadoc').val(es);
+        $('#ciudadc').val(ct);
+        $('#telefonoc').val(p);
+        $('#formEmailc').val(em);
+        $('#messagec').html(m);
     }
 
 
@@ -18,7 +21,7 @@ $(document).ready(function () {
     // form submit event
     form.on('submit', function (e) {
 
-        var n=$('#formName').val(); var p=$('#phone').val(); var em=$('#formEmail').val(); var m=$('#message').val();
+        var n=$('#formNamec').val(); var ep = $('#empresac').val(); var es = $('#estadoc').val(); var ct = $('#ciudadc').val(); var p=$('#telefonoc').val(); var em=$('#formEmailc').val(); var m=$('#messagec').val();
 
         var hasError = false;
         $('.requiredc').each(function () {
@@ -53,7 +56,7 @@ $(document).ready(function () {
                     setTimeout(function() {
                         alertx.html(data).fadeOut(300);
                         $('#submit').val('');
-                        mantenerDatos(n,p,em,m);
+                        mantenerDatos(n,ep,es,ct,p,em,m);
                         form.fadeIn(1800);
 
                         console.log(data);

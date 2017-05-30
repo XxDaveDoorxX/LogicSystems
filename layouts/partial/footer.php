@@ -14,17 +14,17 @@
                             <form id="contactForm" action="#" method="post" role="form">
                                 <div class="col-xs-12 col-sm-4 col-md-4">
                                     <div class="form-group">
-                                        <input id="formName" type="text" class="input required" name="nombre" placeholder="* Nombre" required>
+                                        <input id="formName" type="text" class="input requiredf" name="nombre" placeholder="* Nombre" required>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-4 col-md-4">
                                     <div class="form-group">
-                                        <input id="phone" type="text" class="input phone required" placeholder="* Teléfono" maxlength="10" size="30" name="telefono" title="Escribe un teléfono válido con 10 dígitos" required>
+                                        <input id="phone" type="text" class="input phone requiredf" placeholder="* Teléfono" maxlength="10" size="30" name="telefono" title="Escribe un teléfono válido con 10 dígitos" required>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-4 col-md-4">
                                     <div class="form-group">
-                                        <input id="formEmail" type="email" class="input email required" name="email" placeholder="* Correo Electrónico"  required>
+                                        <input id="formEmail" type="email" class="input email requiredf" name="email" placeholder="* Correo Electrónico"  required>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">

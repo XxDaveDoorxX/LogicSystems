@@ -40,7 +40,7 @@ $(document).ready(function () {
         var n=$('#formName').val(); var p=$('#phone').val(); var em=$('#formEmail').val(); var m=$('#message').val();
 
         var hasError = false;
-        $('.required').each(function () {
+        $('.requiredf').each(function () {
             if (jQuery.trim($(this).val()) === '') {
                 $(this).parent().append('<span class="error"><i class="fa fa-exclamation-triangle"></i></span>');
                 hasError = true;

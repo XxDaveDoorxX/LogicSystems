@@ -87,22 +87,22 @@ $id = (isset($_REQUEST['p'])) ? htmlentities($_REQUEST['p'], ENT_QUOTES) : 0;
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <input id="empresac" type="text" class="input requiredc" name="empresac" placeholder="Empresa" required>
+                                        <input id="empresac" type="text" class="input" name="empresac" placeholder="Empresa">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <input id="estadoc" type="text" class="input requiredc" name="estadoc" placeholder="Estado" required>
+                                        <input id="estadoc" type="text" class="input" name="estadoc" placeholder="Estado">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <input id="ciudadc" type="text" class="input requiredc" name="ciudadc" placeholder="Ciudad" required>
+                                        <input id="ciudadc" type="text" class="input" name="ciudadc" placeholder="Ciudad">
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <input id="telefonoc" type="text" class="input requiredc" name="telefonoc" placeholder="Teléfono" required>
+                                        <input id="telefonoc" type="text" class="input requiredc" name="telefonoc" placeholder="Teléfono" maxlength="10" required>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -112,7 +112,7 @@ $id = (isset($_REQUEST['p'])) ? htmlentities($_REQUEST['p'], ENT_QUOTES) : 0;
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <select class="form-control" name="estadoc" id="estadoc">
+                                        <select class="form-control requiredc" name="product" id="product" required>
                                             <option value="">¿En cuál producto estás interesado?</option>
                                             <?php
                                                 foreach ($product as $e) {
@@ -167,7 +167,8 @@ include_once('layouts/partial/footer.php');
 <script src="js/bootstrap.min.js"></script>
 
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-<script src="js/main.js"></script>
+
+<script src="js/sendFormContact.js"></script>
 
 <script type="text/javascript">
     var widgetIdC;

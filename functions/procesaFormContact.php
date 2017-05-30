@@ -10,15 +10,18 @@ $response = $recaptcha->verify($codigo);
 
 if($response->isSuccess()){
 
-    if (isset($_POST['nombre']) &&
-        isset($_POST['telefono'])&&
-        isset($_POST['email']) &&
-        isset($_POST['message'])){
+    if (isset($_POST['nombrec']) &&
+        isset($_POST['telefonoc'])&&
+        isset($_POST['emailc']) &&
+        isset($_POST['product'])){
 
-        $nombre = htmlentities($_POST['nombre'], ENT_QUOTES);
-        $telefono = htmlentities($_POST['telefono'], ENT_QUOTES);
-        $email = htmlentities($_POST['email'], ENT_QUOTES);
-        $message = htmlentities($_POST['message'], ENT_QUOTES);
+        $nombre = htmlentities($_POST['nombrec'], ENT_QUOTES);
+        $empresa = htmlentities($_POST['empresac'], ENT_QUOTES);
+        $estado = htmlentities($_POST['estadoc'], ENT_QUOTES);
+        $ciudad = htmlentities($_POST['ciudadc'], ENT_QUOTES);
+        $telefono = htmlentities($_POST['telefonoc'], ENT_QUOTES);
+        $email = htmlentities($_POST['emailc'], ENT_QUOTES);
+        $message = htmlentities($_POST['messagec'], ENT_QUOTES);
 
 
         $email_to = "eli.magana@imaginaestudio.mx";
@@ -86,6 +89,8 @@ if($response->isSuccess()){
 		   </script>";
         }
 
+    }else{
+        $msg = 'No has selecionado un producto.';
     }
 
 }else{
