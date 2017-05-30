@@ -38,6 +38,8 @@ include_once('layouts/partial/header.php');
 $tmpproduct = new Product(0, '','','','','','','','');
 $product = $tmpproduct->listar();
 
+$id = (isset($_REQUEST['p'])) ? htmlentities($_REQUEST['p'], ENT_QUOTES) : 0;
+
 ?>
 
 <section id="contacto">
@@ -77,7 +79,7 @@ $product = $tmpproduct->listar();
                     <div class="row">
                         <div class="contact-form contact-form2">
                             <!-- Start Contact Form -->
-                            <form id="formPopup" action="#" method="post" role="form">
+                            <form id="formSecctionContact" action="#" method="post" role="form">
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
                                         <input id="formNamec" type="text" class="input requiredc" name="nombrec" placeholder="Nombre" required>
@@ -115,7 +117,7 @@ $product = $tmpproduct->listar();
                                             <?php
                                                 foreach ($product as $e) {
                                                     ?>
-                                                    <option value="<?php echo $e['name'] ?>" <?php  ?>><?php echo $e['name'] ?></option>
+                                                    <option value="<?php echo $e['name'] ?>" <?php if(isset($_REQUEST['p'])&& $e['id'] == $id){ echo "selected=selected";}?>><?php echo $e['name'] ?></option>
                                                     <?php
                                                 }
                                             ?>
@@ -138,7 +140,7 @@ $product = $tmpproduct->listar();
                                         </div>
                                         <div class="col-xs-12 col-sm-5 col-md-5">
                                             <div class="form-group">
-                                                <button value="Submit" id="contactForm_submit_contacto" class="btn_frm_contact2 center-block" type="submit">ENVIAR</button>
+                                                <button value="Submit" id="contactForm_submit_contacto_c" class="btn_frm_contact2 center-block" type="submit">ENVIAR</button>
                                             </div>
                                         </div>
                                     </div>

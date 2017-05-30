@@ -1,24 +1,5 @@
-
 /*-----------------------------------------------------------------------------------*/
-/*    FLEXSLIDER HOME
- /*-----------------------------------------------------------------------------------*/
-
-$('.flexslider-home').flexslider({
-    animation: "fade",
-    slideshow: true,
-    slideshowSpeed: 4000,
-    animationSpeed: 600,
-    smoothHeight: true,
-    controlsContainer: ".flex-container-home",
-    directionNav: true,
-    controlNav: false,
-    useCSS: false
-
-});
-
-
-/*-----------------------------------------------------------------------------------*/
-/*    CONTACT FOOTER
+/*    CONTACT
  /*-----------------------------------------------------------------------------------*/
 $(document).ready(function () {
 
@@ -30,9 +11,9 @@ $(document).ready(function () {
     }
 
 
-    $('#contactForm .error').remove();
-    var form = $('#contactForm'); // contact form
-    var submit = $('#contactForm_submit_contacto'); // submit button
+    $('#formSecctionContact .error').remove();
+    var form = $('#formSecctionContact'); // contact form
+    var submit = $('#contactForm_submit_contacto_c'); // submit button
     var alertx = $('.successMsg'); // alertx div for show alert message
     // form submit event
     form.on('submit', function (e) {
@@ -40,7 +21,7 @@ $(document).ready(function () {
         var n=$('#formName').val(); var p=$('#phone').val(); var em=$('#formEmail').val(); var m=$('#message').val();
 
         var hasError = false;
-        $('.required').each(function () {
+        $('.requiredc').each(function () {
             if (jQuery.trim($(this).val()) === '') {
                 $(this).parent().append('<span class="error"><i class="fa fa-exclamation-triangle"></i></span>');
                 hasError = true;
@@ -57,7 +38,7 @@ $(document).ready(function () {
             // sending ajax request through jQuery
             $('#overlay, #PleaseWait').show();
             $.ajax({
-                url: 'functions/procesaFormFooter.php', // form action url
+                url: 'functions/procesaFormContact.php', // form action url
                 type: 'POST', // form submit method get/post
                 dataType: 'html', // request type html/json/xml
                 data: form.serialize(), // serialize form datae
@@ -97,64 +78,14 @@ $(document).ready(function () {
         return false;
     });
 
-    $('#contactForm input').focus(function () {
-        $('#contactForm .error').remove();
+    $('#formSecctionContact input').focus(function () {
+        $('#formSecctionContact .error').remove();
     });
-    $('#contactForm textarea').focus(function () {
-        $('#contactForm .error').remove();
+    $('#formSecctionContact textarea').focus(function () {
+        $('#formSecctionContact .error').remove();
     });
 
     $('body').prepend('<div id="overlay" class="ui-widget-overlay" style="z-index: 1001; display: none;"></div>');
     $('body').prepend('<div id="PleaseWait" class="wait"><img src="images/ajax-loader.gif" /></div>');
 
 });
-
-
-
-/*-----------------------------------------------------------------------------------*/
-/* 		PRODUCTS Slider
- /*-----------------------------------------------------------------------------------*/
-$(document).ready(function() {
-    $("#owl-products").owlCarousel({
-        autoPlay: 3000, //Set AutoPlay to 3 seconds
-        items : 4,
-        itemsDesktop : [1199,2],
-        itemsDesktopSmall : [979,2],
-        slideBy: 4,
-        stopOnHover : true,
-        navigation : true, // Show next and prev buttons
-        pagination : false,
-        navigationText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-    });
-});
-
-
-/*-----------------------------------------------------------------------------------*/
-/* 		EVENTS Slider
- /*-----------------------------------------------------------------------------------*/
-$(document).ready(function() {
-    $("#owl-events").owlCarousel({
-        autoPlay: 3000, //Set AutoPlay to 3 seconds
-        items : 3,
-        itemsDesktop : [1199,2],
-        itemsDesktopSmall : [979,2],
-        slideBy: 4,
-        stopOnHover : true,
-        navigation : true, // Show next and prev buttons
-        pagination : false,
-        navigationText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-    });
-});
-
-
-
-/*-----------------------------------------------------------------------------------*/
-/* 	ANIMATION
- /*-----------------------------------------------------------------------------------*/
-var wow = new WOW({
-    boxClass:     'wow',      // animated element css class (default is wow)
-    animateClass: 'animated', // animation css class (default is animated)
-    offset:       100,          // distance to the element when triggering the animation (default is 0)
-    mobile:       false        // trigger animations on mobile devices (true is default)
-});
-wow.init();

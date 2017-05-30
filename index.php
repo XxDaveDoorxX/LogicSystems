@@ -10,7 +10,7 @@ $event = $tmpevent->listar();
 
 
 $tmpalianza = new Alianza(0,'','','','');
-$alianza = $tmpalianza->listar2();
+$alianza = $tmpalianza->listar3();
 $alz = current($alianza);
 
 
@@ -239,6 +239,11 @@ include_once('layouts/partial/footer.php');
             'sitekey' : '6LfMLREUAAAAALlMy1l66mbpk7rwPgzMCMWlimCf'
         });
     };
+
+    $(function() {
+        return $(".starrr").starrr()
+    });
+
 </script>
 
 </body>

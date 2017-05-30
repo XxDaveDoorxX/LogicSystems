@@ -83,15 +83,3 @@ var __slice = [].slice;
         }
     })
 })(window.jQuery, window);
-$(function() {
-    return $(".starrr").starrr()
-});
-
-$(function() {
-
-    var ratingsField = $('#ratings-hidden');
-
-    $('.starrr').on('starrr:change', function(e, value) {
-        ratingsField.val(value);
-    });
-});

@@ -81,7 +81,19 @@ class Alianza
         return $resultados;
     }
 
-    function listar2 ($comp = 1)
+    function listar2 ($comp)
+    {
+        $conexion = new dbc();
+        $result = $conexion->query("SELECT ".$this->tabla.".id,".$this->tabla.".title,".$this->tabla.".comment,".$this->tabla.".rating,".$this->tabla.".create_at FROM ".$this->tabla.mysqli_real_escape_string($conexion,$comp));
+        $resultados =array();
+        while($row = $result->fetch_assoc()) {
+            $resultados[$row['id']] = $row;
+        }
+        $result->free();
+        return $resultados;
+    }
+
+    function listar3 ($comp = 1)
     {
         $conexion = new dbc();
         $result = $conexion->query("SELECT id, title, comment, rating, create_at FROM ".$this->tabla." ORDER BY create_at DESC LIMIT ".$comp);
@@ -91,6 +103,27 @@ class Alianza
         }
         $result->free();
         return $resultados;
+    }
+
+
+
+    function contar_total_registros()
+    {
+        $conexion = new dbc();
+        $result = $conexion->query("SELECT COUNT(id) FROM ".$this->tabla);
+        $total = $result->fetch_row();
+        $result->free();
+
+        return $total;
+    }
+
+    function contar_total_registros2($comp)
+    {
+        $conexion = new dbc();
+        $result = $conexion->query("SELECT COUNT(".$this->tabla.".id) FROM ".$this->tabla.mysqli_real_escape_string($conexion,$comp));
+        $total = $result->fetch_row();
+        $result->free();
+        return $total;
     }
 
 

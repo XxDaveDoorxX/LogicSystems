@@ -87,7 +87,7 @@ $gallery = $tmpgall->listar_x_id_product();
                         <p><?php echo $tmpproduct->description_first ?></p>
                     </div>
                     <div class="btn-row-produc-demo">
-                        <a class="btn-demo-product" href="">Solicita tu demo gratis</a>
+                        <a class="btn-demo-product" href="contacto.php?p=<?php echo $tmpproduct->id ?>">Solicita tu demo gratis</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,15 @@ $gallery = $tmpgall->listar_x_id_product();
                 <div class="row">
                     <div class="product-item">
                         <div class="video">
-                            <img class="img-responsive center-block" src="images/video.jpg">
+                            <?php
+                                if(!empty($tmpproduct->f_video)) {
+                                    echo $tmpproduct->f_video;
+                                }else{
+                                    ?>
+                                    <img class="img-responsive center-block" src="images/video.jpg">
+                                    <?php
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -205,7 +213,7 @@ $gallery = $tmpgall->listar_x_id_product();
     <div class="bg-demo-prod">
         <div class="container">
             <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
-                <a href="">Solicita tu demo gratis</a>
+                <a href="contacto.php?p=<?php echo $tmpproduct->id ?>">Solicita tu demo gratis</a>
             </div>
         </div>
     </div>

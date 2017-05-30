@@ -1,12 +1,3 @@
-<?php
-include_once ('Class/imagenes.php');
-include_once ('Class/Cliente.php');
-
-$tmpclient = new Cliente(0,'','','','');
-$cliente = $tmpclient->listar();
-
-
-?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -52,35 +43,11 @@ include_once('layouts/partial/header.php');
             </div>
         </div>
     </div>
-    <?php
-        foreach ($cliente as $e) {
-            $tmpimgclient = new Imagen('imagenes_clientes','','','','','',$e['id'],0);
-            $imgclient = $tmpimgclient->listar_x_id_c();
-            $clientimg = current($imgclient);
-            ?>
-            <div class="bg-clientes-color">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-4 col-md-4">
-                                    <img src="assets/images/data/imagenes_clientes/crop_<?php echo $clientimg['arch_img'] ?>" alt="" class="img-responsive center-block">
-                                </div>
-                                <div class="col-xs-12 col-sm-8 col-md-8">
-                                    <h2><?php echo $e['title'] ?></h2>
-                                    <div class="stars starrr" data-rating="<?php echo $e['rating'] ?>"></div>
-                                    <p>
-                                        <?php echo $e['comment'] ?>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <?php
-        }
-    ?>
+
+
+    <div id="resultados">
+
+    </div>
 
 </section>
 
@@ -107,6 +74,29 @@ include_once('layouts/partial/footer.php');
             'sitekey' : '6LfMLREUAAAAALlMy1l66mbpk7rwPgzMCMWlimCf'
         });
     };
+
+
+    $(document).ready(function() {
+
+        $("#resultados" ).load( "functions/loadClients.php", function () {
+            $(".starrr").starrr();
+        }); //load initial records
+
+
+        //executes code below when user click on pagination links
+        $("#resultados").on( "click", ".pagination a", function (e){
+            e.preventDefault();
+            //$(".loading-div").show(); //show loading element
+            var page = $(this).attr("data-page"); //get page number from link
+            if(page != "") {
+                $("#resultados").load("functions/loadClients.php",{"page":page}, function(){ //get content from PHP page
+                    //$(".loading-div").hide(); //once done, hide loading element
+                    $(".starrr").starrr();
+                });
+            }
+        });
+
+    });
 </script>
 
 </body>

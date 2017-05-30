@@ -80,7 +80,7 @@ include_once('layouts/partial/header.php');
                                                 echo $e['description']
                                             ?>
                                         </p>
-                                        <a href="#" class="btn-descarga" id="btn_download" rel="<?php echo $e['id']; ?>" data-archivo="<?php echo current($arch)['archivo']; ?>" data-title ="<?php echo $e['title'] ?>" data-toggle="modal" data-target="#myModal">DESCARGA
+                                        <a href="#" class="btn-descarga" rel="<?php echo $e['id']; ?>" data-archivo="<?php echo current($arch)['archivo']; ?>" data-title ="<?php echo $e['title'] ?>" data-toggle="modal" data-target="#myModal">DESCARGA
                                             GRATUITA</a>
                                     </div>
                                 </div>
@@ -122,6 +122,8 @@ include_once('layouts/partial/footer.php');
                                     <div class="contactForm">
                                         <!-- Start Contact Form -->
                                         <form id="formPopup" action="#" method="post" role="form">
+                                            <input type="hidden" name="arch" id="arch" value="">
+                                            <input type="hidden" name="botonDownloadSend" value="botonDownloadSend" />
                                             <div class="col-xs-12 col-sm-12 col-md-12">
                                                 <div class="form-group row">
                                                     <input id="formNamep" type="text" class="input requiredp" name="nombrep" placeholder="* Nombre" required>
@@ -135,17 +137,45 @@ include_once('layouts/partial/footer.php');
                                             <div class="col-xs-12 col-sm-12 col-md-12">
                                                 <div class="form-group row">
                                                     <select class="form-control" name="estadop" id="estadop">
-                                                        <option>Estado</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
+                                                        <option value="null">Estado</option>
+                                                        <option value="Aguascalientes">Aguascalientes</option>
+                                                        <option value="Baja California">Baja California</option>
+                                                        <option value="Baja California Sur">Baja California Sur</option>
+                                                        <option value="Campeche">Campeche</option>
+                                                        <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+                                                        <option value="Colima">Colima</option>
+                                                        <option value="Chiapas">Chiapas</option>
+                                                        <option value="Chihuahua">Chihuahua</option>
+                                                        <option value="Ciudad de México">Ciudad de México</option>
+                                                        <option value="Durango">Durango</option>
+                                                        <option value="Guanajuato">Guanajuato</option>
+                                                        <option value="Guerrero">Guerrero</option>
+                                                        <option value="Hidalgo">Hidalgo</option>
+                                                        <option value="Jalisco">Jalisco</option>
+                                                        <option value="México">México</option>
+                                                        <option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
+                                                        <option value="Morelos">Morelos</option>
+                                                        <option value="Nayarit">Nayarit</option>
+                                                        <option value="Nuevo León">Nuevo León</option>
+                                                        <option value="Oaxaca">Oaxaca</option>
+                                                        <option value="Puebla">Puebla</option>
+                                                        <option value="Querétaro">Querétaro</option>
+                                                        <option value="Quintana Roo">Quintana Roo</option>
+                                                        <option value="San Luis Potosí">San Luis Potosí</option>
+                                                        <option value="Sinaloa">Sinaloa</option>
+                                                        <option value="Sonora">Sonora</option>
+                                                        <option value="Tabasco">Tabasco</option>
+                                                        <option value="Tamaulipas">Tamaulipas</option>
+                                                        <option value="Tlaxcala">Tlaxcala</option>
+                                                        <option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave</option>
+                                                        <option value="Yucatán">Yucatán</option>
+                                                        <option value="Zacatecas">Zacatecas</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-5 col-sm-offset-4 col-md-5 col-md-offset-4">
                                                 <div class="form-group row">
-                                                    <button value="Submit" id="contactForm_submit_popup" class="btn_frm_popup center-block" type="submit">ENVIAR</button>
+                                                    <button value="Submit" id="contactForm_submit_popup" class="btn_frm_popup center-block" type="submit" name="botonDownloadSend">ENVIAR</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -170,6 +200,7 @@ include_once('layouts/partial/footer.php');
 
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <script src="js/main.js"></script>
+<script src="js/sendFormDownload.js"></script>
 
 <script type="text/javascript">
     var widgetIdP;
@@ -185,7 +216,16 @@ include_once('layouts/partial/footer.php');
         });
     };
 
-
+    $(document).ready(function(){
+      var tituloModal = $("#title-m");
+      var arch = $("#arch");
+      $(".btn-descarga").each(function(){
+        $(this).on("click", function() {
+          tituloModal.html($(this).data("title"));
+          arch.val($(this).data("archivo"));
+        });
+      });
+    });
 
 </script>
 

@@ -1,13 +1,3 @@
-<?php
-include_once ('Class/imagenes.php');
-include_once ('Class/Alianza.php');
-
-
-
-$tmpalianza = new Alianza(0,'','','','');
-$alianza = $tmpalianza->listar();
-
-?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -54,38 +44,9 @@ include_once('layouts/partial/header.php');
         </div>
     </div>
 
-    <?php
-        foreach ($alianza as $e) {
+    <div id="resultados">
 
-            $tmpimgalianza = new Imagen('imagenes_alianzas','','','','','',$e['id'],0);
-            $imgalianza = $tmpimgalianza->listar_x_id_c();
-            $alzimg = current($imgalianza);
-
-            ?>
-            <div class="bg-alianzas-color">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-4 col-md-4">
-                                    <img src="assets/images/data/imagenes_alianzas/crop_<?php echo $alzimg['arch_img'] ?>" alt="" class="img-responsive center-block">
-                                </div>
-                                <div class="col-xs-12 col-sm-8 col-md-8">
-                                    <h2><?php echo $e['title'] ?></h2>
-                                    <div class="stars starrr" data-rating="<?php echo $e['rating'] ?>"></div>
-                                    <p>
-                                        <?php echo $e['comment'] ?>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <?php
-        }
-    ?>
+    </div>
 
 </section>
 
@@ -96,8 +57,17 @@ include_once('layouts/partial/footer.php');
 <!-- jQuery -->
 <script src="js/jquery-1.9.1.min.js"></script>
 
+<!-- WOW-->
+<script src="js/wow.min.js"></script>
+
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+
+<!--slider-->
+<script type='text/javascript' src='css/slider/js/jquery.flexslider-min.js'></script>
+
+<!--OWL -->
+<script src="js/owl.carousel.min.js"></script>
 
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <script src="js/main.js"></script>
@@ -112,6 +82,29 @@ include_once('layouts/partial/footer.php');
             'sitekey' : '6LfMLREUAAAAALlMy1l66mbpk7rwPgzMCMWlimCf'
         });
     };
+
+    $(document).ready(function() {
+
+        $("#resultados" ).load( "functions/loadAlianzas.php", function () {
+            $(".starrr").starrr();
+        }); //load initial records
+
+
+        //executes code below when user click on pagination links
+        $("#resultados").on( "click", ".pagination a", function (e){
+            e.preventDefault();
+            //$(".loading-div").show(); //show loading element
+            var page = $(this).attr("data-page"); //get page number from link
+            if(page != "") {
+                $("#resultados").load("functions/loadAlianzas.php",{"page":page}, function(){ //get content from PHP page
+                    //$(".loading-div").hide(); //once done, hide loading element
+                    $(".starrr").starrr();
+                });
+            }
+        });
+
+    });
+
 </script>
 
 </body>
